@@ -47,8 +47,10 @@ namespace Splash_Screen
             if (barraProgresiva.Value == 100)
             {
                 temporizador.Enabled = false;
-                FormLogin formLogin = new FormLogin();
-                formLogin.Show();
+                /*FormLogin formLogin = new FormLogin();
+                formLogin.Show();*/
+                FormMenuPrincipal menu = new FormMenuPrincipal();
+                menu.Show();
                 this.Hide();
 
             }
