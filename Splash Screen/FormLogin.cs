@@ -50,15 +50,19 @@ namespace Splash_Screen
 
         private void ButtonRegister_Click(object sender, EventArgs e)
         {
+            previousForm = "Login";
             FormRegister Register = new FormRegister();
             Register.Show();
             this.Dispose();
             this.Close();
 
+            
+
         }
 
 
-        public static string previousForm = "Login";
+        public static string previousForm;
+
 
     }
 }
