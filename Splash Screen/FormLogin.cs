@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using Layers.Framework.ADO.Net;
+using System.Data.SqlClient;
+
 namespace Splash_Screen
 {
     public partial class FormLogin : Form
@@ -17,16 +20,23 @@ namespace Splash_Screen
             InitializeComponent();
         }
 
-        private void textBoxUser_Enter(object sender, EventArgs e)
+        public void Conectarse()
         {
-            if(textBoxUser.Text == "\r\nUser")
-            {
-                textBoxUser.Text = "\n";
-                textBoxUser.ForeColor = Color.Black;
+            SqlConnection sqlConnection = new SqlConnection();
+            sqlConnection.ConnectionString = Datos.StringConnectionSQLServer().ToString();
+            sqlConnection.Open();
 
+            if (sqlConnection.State == ConnectionState.Open)
+            {
+                label1.Text = "LA CONEXION FUE EXITOSA";
             }
         }
 
+<<<<<<< HEAD
+        private void rjButton2_Click(object sender, EventArgs e)
+        {
+            Conectarse();
+=======
         private void textBoxPassword_Enter(object sender, EventArgs e)
         {
             if(textBoxPassword.Text == "\r\nPassword")
@@ -46,6 +56,7 @@ namespace Splash_Screen
                 this.Dispose();
                 this.Close();
             }
+>>>>>>> a005cc0b9122baa9deb657b44f40b4c95c84084e
         }
     }
 }
