@@ -37,9 +37,15 @@ namespace Splash_Screen
 
         }
 
-        private void rjButton2_Click(object sender, EventArgs e)
+        private void ButtonLogin_Click(object sender, EventArgs e)
         {
-            textBoxPassword.Text = "El commit funcionó";
+            if(textBoxUser.Text == "\nadmin" | textBoxPassword.Text == "\nadmin")
+            {
+                FormMenuPrincipal menu = new FormMenuPrincipal();
+                menu.Show();
+                this.Dispose();
+                this.Close();
+            }
         }
     }
 }

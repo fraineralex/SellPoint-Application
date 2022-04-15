@@ -34,11 +34,6 @@ namespace Splash_Screen
             barraProgresiva.Value = 0;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void temporizador_Tick(object sender, EventArgs e)
         {
             barraProgresiva.Value += 1;
