@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using Layers.Framework.ADO.Net;
+using System.Data.SqlClient;
+
 namespace Splash_Screen
 {
     public partial class FormLogin : Form
@@ -17,29 +20,21 @@ namespace Splash_Screen
             InitializeComponent();
         }
 
-        private void textBoxUser_Enter(object sender, EventArgs e)
+        public void Conectarse()
         {
-            if(textBoxUser.Text == "\r\nUser")
+            SqlConnection sqlConnection = new SqlConnection();
+            sqlConnection.ConnectionString = Datos.StringConnectionSQLServer().ToString();
+            sqlConnection.Open();
+
+            if (sqlConnection.State == ConnectionState.Open)
             {
-                textBoxUser.Text = "\n";
-                textBoxUser.ForeColor = Color.Black;
-
+                label1.Text = "LA CONEXION FUE EXITOSA";
             }
-        }
-
-        private void textBoxPassword_Enter(object sender, EventArgs e)
-        {
-            if(textBoxPassword.Text == "\r\nPassword")
-            {
-                textBoxPassword.Text = "\n";
-                textBoxPassword.ForeColor = Color.Black;
-            }
-
         }
 
         private void rjButton2_Click(object sender, EventArgs e)
         {
-            textBoxPassword.Text = "El commit funcionó";
+            Conectarse();
         }
     }
 }

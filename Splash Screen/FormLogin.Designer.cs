@@ -211,7 +211,6 @@
             this.textBoxUser.Size = new System.Drawing.Size(326, 54);
             this.textBoxUser.TabIndex = 2;
             this.textBoxUser.Text = "\r\nUser";
-            this.textBoxUser.Enter += new System.EventHandler(this.textBoxUser_Enter);
             // 
             // textBoxPassword
             // 
@@ -226,7 +225,6 @@
             this.textBoxPassword.Size = new System.Drawing.Size(326, 54);
             this.textBoxPassword.TabIndex = 4;
             this.textBoxPassword.Text = "\r\nPassword";
-            this.textBoxPassword.Enter += new System.EventHandler(this.textBoxPassword_Enter);
             // 
             // pictureBox7
             // 
