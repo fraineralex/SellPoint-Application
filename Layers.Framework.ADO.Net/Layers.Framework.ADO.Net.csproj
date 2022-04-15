@@ -54,5 +54,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Splash Screen\WinFormsAppSellPoint.csproj">
+      <Project>{98c6e70c-6725-4edd-853a-dd97c1338f2d}</Project>
+      <Name>WinFormsAppSellPoint</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

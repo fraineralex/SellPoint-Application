@@ -32,9 +32,31 @@ namespace Splash_Screen
             }
         }
 
+<<<<<<< HEAD
         private void rjButton2_Click(object sender, EventArgs e)
         {
             Conectarse();
+=======
+        private void textBoxPassword_Enter(object sender, EventArgs e)
+        {
+            if(textBoxPassword.Text == "\r\nPassword")
+            {
+                textBoxPassword.Text = "\n";
+                textBoxPassword.ForeColor = Color.Black;
+            }
+
+        }
+
+        private void ButtonLogin_Click(object sender, EventArgs e)
+        {
+            if(textBoxUser.Text == "\nadmin" | textBoxPassword.Text == "\nadmin")
+            {
+                FormMenuPrincipal menu = new FormMenuPrincipal();
+                menu.Show();
+                this.Dispose();
+                this.Close();
+            }
+>>>>>>> a005cc0b9122baa9deb657b44f40b4c95c84084e
         }
     }
 }
