@@ -46,7 +46,7 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.rjButton2 = new Splash_Screen.RJButton();
+            this.ButtonLogin = new Splash_Screen.RJButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -219,7 +219,7 @@
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.pictureBox7.Image = global::Splash_Screen.Properties.Resources.Candado_32;
-            this.pictureBox7.Location = new System.Drawing.Point(455, 323);
+            this.pictureBox7.Location = new System.Drawing.Point(450, 323);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(72, 66);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -230,7 +230,7 @@
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.pictureBox6.Image = global::Splash_Screen.Properties.Resources.usuario_64;
-            this.pictureBox6.Location = new System.Drawing.Point(455, 242);
+            this.pictureBox6.Location = new System.Drawing.Point(450, 242);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(72, 66);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -263,24 +263,25 @@
             this.linkLabel1.Text = "¿Olvidaste tu contraseña?";
             this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // rjButton2
+            // ButtonLogin
             // 
-            this.rjButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(180)))), ((int)(((byte)(148)))));
-            this.rjButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(180)))), ((int)(((byte)(148)))));
-            this.rjButton2.BorderColor = System.Drawing.Color.White;
-            this.rjButton2.BorderRadius = 20;
-            this.rjButton2.BorderSize = 1;
-            this.rjButton2.FlatAppearance.BorderSize = 0;
-            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton2.Font = new System.Drawing.Font("Roboto", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Location = new System.Drawing.Point(617, 469);
-            this.rjButton2.Name = "rjButton2";
-            this.rjButton2.Size = new System.Drawing.Size(208, 64);
-            this.rjButton2.TabIndex = 9;
-            this.rjButton2.Text = "LOGIN";
-            this.rjButton2.TextColor = System.Drawing.Color.White;
-            this.rjButton2.UseVisualStyleBackColor = false;
+            this.ButtonLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(180)))), ((int)(((byte)(148)))));
+            this.ButtonLogin.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(180)))), ((int)(((byte)(148)))));
+            this.ButtonLogin.BorderColor = System.Drawing.Color.White;
+            this.ButtonLogin.BorderRadius = 20;
+            this.ButtonLogin.BorderSize = 1;
+            this.ButtonLogin.FlatAppearance.BorderSize = 0;
+            this.ButtonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonLogin.Font = new System.Drawing.Font("Roboto", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonLogin.ForeColor = System.Drawing.Color.White;
+            this.ButtonLogin.Location = new System.Drawing.Point(617, 469);
+            this.ButtonLogin.Name = "ButtonLogin";
+            this.ButtonLogin.Size = new System.Drawing.Size(208, 64);
+            this.ButtonLogin.TabIndex = 9;
+            this.ButtonLogin.Text = "LOGIN";
+            this.ButtonLogin.TextColor = System.Drawing.Color.White;
+            this.ButtonLogin.UseVisualStyleBackColor = false;
+            this.ButtonLogin.Click += new System.EventHandler(this.ButtonLogin_Click);
             // 
             // FormLogin
             // 
@@ -290,7 +291,7 @@
             this.ClientSize = new System.Drawing.Size(1056, 594);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.rjButton2);
+            this.Controls.Add(this.ButtonLogin);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.pictureBox6);
@@ -332,7 +333,7 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.TextBox textBoxPassword;
-        private RJButton rjButton2;
+        private RJButton ButtonLogin;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.LinkLabel linkLabel1;
     }

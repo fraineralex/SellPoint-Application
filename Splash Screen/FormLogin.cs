@@ -36,5 +36,16 @@ namespace Splash_Screen
             }
 
         }
+
+        private void ButtonLogin_Click(object sender, EventArgs e)
+        {
+            if(textBoxUser.Text == "\nadmin" | textBoxPassword.Text == "\nadmin")
+            {
+                FormMenuPrincipal menu = new FormMenuPrincipal();
+                menu.Show();
+                this.Dispose();
+                this.Close();
+            }
+        }
     }
 }
