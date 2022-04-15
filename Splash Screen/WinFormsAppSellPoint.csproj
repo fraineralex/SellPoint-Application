@@ -154,5 +154,20 @@
   <ItemGroup>
     <None Include="Resources\Candado 32.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Atras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button atras trasparente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button atras negro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button atras borde verde.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atras 32.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

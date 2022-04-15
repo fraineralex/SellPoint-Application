@@ -72,5 +72,14 @@ namespace Splash_Screen
         {
             labelTablaSeleccionada.Text = "Información correspondiente a Entidades";
         }
+
+        private void ButtonAñadir_Click(object sender, EventArgs e)
+        {
+            FormLogin.previousForm = "MenuPrincipal";
+            FormRegister Register = new FormRegister();
+            Register.Show();
+            this.Dispose();
+            this.Close();
+        }
     }
 }

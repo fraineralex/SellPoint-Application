@@ -47,5 +47,18 @@ namespace Splash_Screen
                 this.Close();
             }
         }
+
+        private void ButtonRegister_Click(object sender, EventArgs e)
+        {
+            FormRegister Register = new FormRegister();
+            Register.Show();
+            this.Dispose();
+            this.Close();
+
+        }
+
+
+        public static string previousForm = "Login";
+
     }
 }
