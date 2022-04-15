@@ -58,5 +58,19 @@ namespace Splash_Screen
 
         }
 
+        private void gruposEntidadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            labelTablaSeleccionada.Text = "Información correspondiente a Grupos Entidades";
+        }
+
+        private void tiposEntidadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            labelTablaSeleccionada.Text = "Información correspondiente a Tipos Entidades";
+        }
+
+        private void entitadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            labelTablaSeleccionada.Text = "Información correspondiente a Entidades";
+        }
     }
 }

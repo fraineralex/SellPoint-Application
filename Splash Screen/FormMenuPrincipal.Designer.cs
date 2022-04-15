@@ -44,7 +44,7 @@
             this.statusBarAdv1 = new Syncfusion.Windows.Forms.Tools.StatusBarAdv();
             this.statusBarName = new Syncfusion.Windows.Forms.Tools.StatusBarAdvPanel();
             this.statusBarFecha = new Syncfusion.Windows.Forms.Tools.StatusBarAdvPanel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelTablaSeleccionada = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -103,18 +103,21 @@
             this.gruposEntidadesToolStripMenuItem.Name = "gruposEntidadesToolStripMenuItem";
             this.gruposEntidadesToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
             this.gruposEntidadesToolStripMenuItem.Text = "Grupos Entidades";
+            this.gruposEntidadesToolStripMenuItem.Click += new System.EventHandler(this.gruposEntidadesToolStripMenuItem_Click);
             // 
             // tiposEntidadesToolStripMenuItem
             // 
             this.tiposEntidadesToolStripMenuItem.Name = "tiposEntidadesToolStripMenuItem";
             this.tiposEntidadesToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
             this.tiposEntidadesToolStripMenuItem.Text = "Tipos Entidades";
+            this.tiposEntidadesToolStripMenuItem.Click += new System.EventHandler(this.tiposEntidadesToolStripMenuItem_Click);
             // 
             // entitadesToolStripMenuItem
             // 
             this.entitadesToolStripMenuItem.Name = "entitadesToolStripMenuItem";
             this.entitadesToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
             this.entitadesToolStripMenuItem.Text = "Entitades";
+            this.entitadesToolStripMenuItem.Click += new System.EventHandler(this.entitadesToolStripMenuItem_Click);
             // 
             // editMenu
             // 
@@ -148,7 +151,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.panel1.Controls.Add(this.statusBarAdv1);
-            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.labelTablaSeleccionada);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 30);
@@ -183,6 +186,7 @@
             this.statusBarName.Name = "statusBarName";
             this.statusBarName.Size = new System.Drawing.Size(545, 45);
             this.statusBarName.TabIndex = 0;
+            this.statusBarName.Text = null;
             // 
             // statusBarFecha
             // 
@@ -198,16 +202,16 @@
             this.statusBarFecha.TabIndex = 1;
             this.statusBarFecha.Text = null;
             // 
-            // label3
+            // labelTablaSeleccionada
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Roboto", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(180)))), ((int)(((byte)(148)))));
-            this.label3.Location = new System.Drawing.Point(127, 482);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(476, 30);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Información correspondiente a Entidades";
+            this.labelTablaSeleccionada.Font = new System.Drawing.Font("Roboto", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTablaSeleccionada.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(180)))), ((int)(((byte)(148)))));
+            this.labelTablaSeleccionada.Location = new System.Drawing.Point(0, 482);
+            this.labelTablaSeleccionada.Name = "labelTablaSeleccionada";
+            this.labelTablaSeleccionada.Size = new System.Drawing.Size(766, 30);
+            this.labelTablaSeleccionada.TabIndex = 3;
+            this.labelTablaSeleccionada.Text = "Información correspondiente a Entidades";
+            this.labelTablaSeleccionada.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dataGridView1
             // 
@@ -261,9 +265,9 @@
             this.labelWelcome.AutoSize = true;
             this.labelWelcome.Font = new System.Drawing.Font("Roboto", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelWelcome.ForeColor = System.Drawing.Color.White;
-            this.labelWelcome.Location = new System.Drawing.Point(42, 19);
+            this.labelWelcome.Location = new System.Drawing.Point(38, 19);
             this.labelWelcome.Name = "labelWelcome";
-            this.labelWelcome.Size = new System.Drawing.Size(247, 41);
+            this.labelWelcome.Size = new System.Drawing.Size(242, 39);
             this.labelWelcome.TabIndex = 0;
             this.labelWelcome.Text = "Mantenimiento";
             // 
@@ -406,7 +410,6 @@
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.statusBarAdv1)).EndInit();
             this.statusBarAdv1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.statusBarName)).EndInit();
@@ -438,7 +441,7 @@
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelTablaSeleccionada;
         private System.Windows.Forms.Panel panel2;
         private RJButton rjButton4;
         private RJButton rjButton3;
