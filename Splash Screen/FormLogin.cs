@@ -36,5 +36,10 @@ namespace Splash_Screen
             }
 
         }
+
+        private void rjButton2_Click(object sender, EventArgs e)
+        {
+            textBoxPassword.Text = "El commit funcionó";
+        }
     }
 }
