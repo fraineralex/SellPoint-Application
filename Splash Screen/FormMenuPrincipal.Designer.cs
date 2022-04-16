@@ -47,17 +47,17 @@
             this.labelTablaSeleccionada = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.labelWelcome = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.ButtonEliminar = new Splash_Screen.RJButton();
             this.ButtonEditar = new Splash_Screen.RJButton();
             this.ButtonAñadir = new Splash_Screen.RJButton();
             this.ButtonBuscar = new Splash_Screen.RJButton();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.labelWelcome = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.statusBarAdv1)).BeginInit();
@@ -83,7 +83,7 @@
             this.editMenu});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(1082, 30);
+            this.menuStrip.Size = new System.Drawing.Size(1082, 28);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
             // 
@@ -95,7 +95,7 @@
             this.entitadesToolStripMenuItem});
             this.fileMenu.ImageTransparentColor = System.Drawing.SystemColors.ActiveBorder;
             this.fileMenu.Name = "fileMenu";
-            this.fileMenu.Size = new System.Drawing.Size(80, 26);
+            this.fileMenu.Size = new System.Drawing.Size(80, 24);
             this.fileMenu.Text = "&Archivo";
             // 
             // gruposEntidadesToolStripMenuItem
@@ -126,7 +126,7 @@
             this.loginToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.editMenu.Name = "editMenu";
-            this.editMenu.Size = new System.Drawing.Size(85, 26);
+            this.editMenu.Size = new System.Drawing.Size(85, 24);
             this.editMenu.Text = "Sistema";
             // 
             // acercaDeToolStripMenuItem
@@ -154,9 +154,9 @@
             this.panel1.Controls.Add(this.labelTablaSeleccionada);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 30);
+            this.panel1.Location = new System.Drawing.Point(0, 28);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1082, 583);
+            this.panel1.Size = new System.Drawing.Size(1082, 585);
             this.panel1.TabIndex = 4;
             // 
             // statusBarAdv1
@@ -167,7 +167,7 @@
             this.statusBarAdv1.Controls.Add(this.statusBarFecha);
             this.statusBarAdv1.CustomLayoutBounds = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.statusBarAdv1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.statusBarAdv1.Location = new System.Drawing.Point(0, 530);
+            this.statusBarAdv1.Location = new System.Drawing.Point(0, 532);
             this.statusBarAdv1.Name = "statusBarAdv1";
             this.statusBarAdv1.Padding = new System.Windows.Forms.Padding(3);
             this.statusBarAdv1.Size = new System.Drawing.Size(1082, 53);
@@ -177,14 +177,14 @@
             // statusBarName
             // 
             this.statusBarName.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.statusBarName.BeforeTouchSize = new System.Drawing.Size(545, 45);
+            this.statusBarName.BeforeTouchSize = new System.Drawing.Size(496, 45);
             this.statusBarName.Border3DStyle = System.Windows.Forms.Border3DStyle.Adjust;
             this.statusBarName.Font = new System.Drawing.Font("Roboto", 10.2F);
             this.statusBarName.ForeColor = System.Drawing.Color.Black;
             this.statusBarName.Location = new System.Drawing.Point(0, 2);
             this.statusBarName.Margin = new System.Windows.Forms.Padding(0);
             this.statusBarName.Name = "statusBarName";
-            this.statusBarName.Size = new System.Drawing.Size(545, 45);
+            this.statusBarName.Size = new System.Drawing.Size(496, 45);
             this.statusBarName.TabIndex = 0;
             this.statusBarName.Text = null;
             // 
@@ -195,7 +195,7 @@
             this.statusBarFecha.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.statusBarFecha.Font = new System.Drawing.Font("Roboto", 10.2F);
             this.statusBarFecha.ForeColor = System.Drawing.Color.Black;
-            this.statusBarFecha.Location = new System.Drawing.Point(547, 2);
+            this.statusBarFecha.Location = new System.Drawing.Point(498, 2);
             this.statusBarFecha.Margin = new System.Windows.Forms.Padding(0);
             this.statusBarFecha.Name = "statusBarFecha";
             this.statusBarFecha.Size = new System.Drawing.Size(217, 45);
@@ -229,7 +229,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(803, 451);
+            this.dataGridView1.Size = new System.Drawing.Size(766, 451);
             this.dataGridView1.TabIndex = 1;
             // 
             // panel2
@@ -249,22 +249,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(322, 639);
             this.panel2.TabIndex = 4;
-            // 
-            // labelWelcome
-            // 
-            this.labelWelcome.AutoSize = true;
-            this.labelWelcome.Font = new System.Drawing.Font("Roboto", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelWelcome.ForeColor = System.Drawing.Color.White;
-            this.labelWelcome.Location = new System.Drawing.Point(38, 19);
-            this.labelWelcome.Name = "labelWelcome";
-            this.labelWelcome.Size = new System.Drawing.Size(242, 39);
-            this.labelWelcome.TabIndex = 0;
-            this.labelWelcome.Text = "Mantenimiento";
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // ButtonEliminar
             // 
@@ -353,6 +337,17 @@
             this.pictureBox5.TabIndex = 7;
             this.pictureBox5.TabStop = false;
             // 
+            // labelWelcome
+            // 
+            this.labelWelcome.AutoSize = true;
+            this.labelWelcome.Font = new System.Drawing.Font("Roboto", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWelcome.ForeColor = System.Drawing.Color.White;
+            this.labelWelcome.Location = new System.Drawing.Point(38, 19);
+            this.labelWelcome.Name = "labelWelcome";
+            this.labelWelcome.Size = new System.Drawing.Size(242, 39);
+            this.labelWelcome.TabIndex = 0;
+            this.labelWelcome.Text = "Mantenimiento";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Splash_Screen.Properties.Resources.Estrella_5;
@@ -392,6 +387,11 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 6;
             this.pictureBox4.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // FormMenuPrincipal
             // 
@@ -454,10 +454,10 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private Syncfusion.Windows.Forms.Tools.StatusBarAdv statusBarAdv1;
-        private Syncfusion.Windows.Forms.Tools.StatusBarAdvPanel statusBarName;
         private System.Windows.Forms.Timer timer1;
         private Syncfusion.Windows.Forms.Tools.StatusBarAdvPanel statusBarFecha;
+        public Syncfusion.Windows.Forms.Tools.StatusBarAdvPanel statusBarName;
+        public Syncfusion.Windows.Forms.Tools.StatusBarAdv statusBarAdv1;
     }
 }
 

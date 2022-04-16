@@ -19,13 +19,14 @@ namespace Splash_Screen
         public FormLogin()
         {
             InitializeComponent();
+            string F = textBoxUser.Text;
         }
 
         private void textBoxUser_Enter(object sender, EventArgs e)
         {
             if(textBoxUser.Text == "\r\nUser")
             {
-                textBoxUser.Text = "";
+                textBoxUser.Text = ($"{Environment.NewLine}");
                 textBoxUser.ForeColor = Color.Black;
 
             }
@@ -35,10 +36,10 @@ namespace Splash_Screen
         {
             if(textBoxPassword.Text == "\r\nPassword")
             {
-                textBoxPassword.Text = "";
+                //textBoxPassword.Text = "\n";
                 textBoxPassword.ForeColor = Color.Black;
-                textBoxPassword.UseSystemPasswordChar = false;
-                
+                textBoxPassword.Text = ($"{Environment.NewLine}");
+
             }
 
         }
@@ -58,23 +59,26 @@ namespace Splash_Screen
             sqlConnection.ConnectionString = ClassData.stringConnection.ToString();
             sqlConnection.Open();
 
+
+        
+
             SqlCommand sqlCommand = new SqlCommand();
             sqlCommand.Connection = sqlConnection;
             sqlCommand.CommandType = CommandType.Text;
-            sqlCommand.CommandText = "SELECT userEntidad, passwordEntidad FROM Entidades" +
-                "WHERE userNameEntidad = '" + textBoxUser.Text + "' AND passwordEntidad = '"
-                + textBoxPassword.Text + "';";
+            sqlCommand.CommandText = $"SELECT descripcion FROM Entidades WHERE userNameEntidad = '{textBoxUser.Text.ToString().Trim()}' AND passwordEntidad = '{textBoxPassword.Text.ToString().Trim()}';";
 
-            SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
-            sqlDataReader.Read();
+            SqlDataReader reader = sqlCommand.ExecuteReader();
+            reader.Read();
 
-            if(sqlDataReader.HasRows == false)
+            if(reader.HasRows == false)
             {
                 MessageBox.Show("No se pudo iniciar sesión, revise sus credenciales", "Error");
             }
             else
             {
+                
                 FormMenuPrincipal menu = new FormMenuPrincipal();
+                menu.statusBarAdv1.Panels[0].Text = String.Format("{0}", reader[0]);
                 menu.Show();
                 this.Close();
                 this.Dispose();

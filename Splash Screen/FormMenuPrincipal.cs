@@ -54,7 +54,7 @@ namespace Splash_Screen
         private void timer1_Tick(object sender, EventArgs e)
         {
             statusBarAdv1.Panels[1].Text = DateTime.Now.ToString("g");
-            statusBarAdv1.Panels[0].Text = "   Frainer Alexander Encarnación Valenzuela";
+            //statusBarAdv1.Panels[0].Text = "   Frainer Alexander Encarnación Valenzuela";
 
         }
 

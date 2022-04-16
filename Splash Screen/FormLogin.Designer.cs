@@ -247,7 +247,7 @@
             this.textBoxUser.Size = new System.Drawing.Size(434, 66);
             this.textBoxUser.TabIndex = 12;
             this.textBoxUser.Text = "\r\nUser";
-            this.textBoxUser.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxUser_Enter);
+            this.textBoxUser.Enter += new System.EventHandler(this.textBoxUser_Enter);
             // 
             // ButtonLogin
             // 
