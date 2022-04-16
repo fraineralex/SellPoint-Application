@@ -24,7 +24,7 @@ namespace Splash_Screen
         {
             if(textBoxUser.Text == "\r\nUser")
             {
-                textBoxUser.Text = "\n";
+                textBoxUser.Text = "";
                 textBoxUser.ForeColor = Color.Black;
 
             }
@@ -34,8 +34,9 @@ namespace Splash_Screen
         {
             if(textBoxPassword.Text == "\r\nPassword")
             {
-                textBoxPassword.Text = "\n";
+                textBoxPassword.Text = "";
                 textBoxPassword.ForeColor = Color.Black;
+                
             }
 
         }
@@ -61,6 +62,28 @@ namespace Splash_Screen
             sqlCommand.CommandText = "SELECT userEntidad, passwordEntidad FROM SellPoint" +
                 "WHERE userEntidad = '" + textBoxUser.Text + "' AND passwordEntidad = '"
                 + textBoxPassword.Text + "';";
+
+            SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+            sqlDataReader.Read();
+
+            if(sqlDataReader.HasRows == false)
+            {
+                MessageBox.Show("No se pudo iniciar sesión, revise sus credenciales", "Error");
+            }
+            else
+            {
+                FormMenuPrincipal menu = new FormMenuPrincipal();
+                menu.Show();
+                this.Close();
+                this.Dispose();
+                
+            }
+
+            sqlConnection.Close();
+            sqlConnection.Dispose();
+            sqlConnection = null;
+
+
 
 
 
@@ -88,7 +111,6 @@ namespace Splash_Screen
 
 
         public static string previousForm;
-
 
     }
 }
