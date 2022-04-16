@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using System.Data.SqlClient;
+using System.Configuration;
 using Layers.Framework.ADO.Net.Data;
 
 namespace Splash_Screen
@@ -36,6 +37,7 @@ namespace Splash_Screen
             {
                 textBoxPassword.Text = "";
                 textBoxPassword.ForeColor = Color.Black;
+                textBoxPassword.UseSystemPasswordChar = false;
                 
             }
 
@@ -59,8 +61,8 @@ namespace Splash_Screen
             SqlCommand sqlCommand = new SqlCommand();
             sqlCommand.Connection = sqlConnection;
             sqlCommand.CommandType = CommandType.Text;
-            sqlCommand.CommandText = "SELECT userEntidad, passwordEntidad FROM SellPoint" +
-                "WHERE userEntidad = '" + textBoxUser.Text + "' AND passwordEntidad = '"
+            sqlCommand.CommandText = "SELECT userEntidad, passwordEntidad FROM Entidades" +
+                "WHERE userNameEntidad = '" + textBoxUser.Text + "' AND passwordEntidad = '"
                 + textBoxPassword.Text + "';";
 
             SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
@@ -82,18 +84,6 @@ namespace Splash_Screen
             sqlConnection.Close();
             sqlConnection.Dispose();
             sqlConnection = null;
-
-
-
-
-
-
-
-
-
-
-
-
 
         }
 
