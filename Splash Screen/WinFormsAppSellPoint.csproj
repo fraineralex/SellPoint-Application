@@ -169,5 +169,11 @@
   <ItemGroup>
     <None Include="Resources\atras 32.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Layers.Framework.ADO.Net\Layers.Framework.ADO.Net.csproj">
+      <Project>{7f1e6b37-94b1-4550-b1ce-9c281fa1d3de}</Project>
+      <Name>Layers.Framework.ADO.Net</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.Data.SqlClient;
+using Layers.Framework.ADO.Net.Data;
+
 namespace Splash_Screen
 {
     public partial class FormLogin : Form
@@ -37,6 +40,7 @@ namespace Splash_Screen
 
         }
 
+
         private void ButtonLogin_Click(object sender, EventArgs e)
         {
             if(textBoxUser.Text == "\nadmin" | textBoxPassword.Text == "\nadmin")
@@ -46,6 +50,28 @@ namespace Splash_Screen
                 this.Dispose();
                 this.Close();
             }
+
+            SqlConnection sqlConnection = new SqlConnection();
+            sqlConnection.ConnectionString = ClassData.stringConnection.ToString();
+            sqlConnection.Open();
+
+            SqlCommand sqlCommand = new SqlCommand();
+            sqlCommand.Connection = sqlConnection;
+            sqlCommand.CommandType = CommandType.Text;
+            sqlCommand.CommandText = "SELECT userEntidad, passwordEntidad FROM SellPoint" +
+                "WHERE userEntidad = '" + textBoxUser.Text + "' AND passwordEntidad = '"
+                + textBoxPassword.Text + "';";
+
+
+
+
+
+
+
+
+
+
+
         }
 
         private void ButtonRegister_Click(object sender, EventArgs e)
