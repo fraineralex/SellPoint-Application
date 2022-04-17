@@ -8,8 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using Layers.Framework.ADO.Net;
 using System.Data.SqlClient;
+using System.Configuration;
+using Layers.Framework.ADO.Net.Data;
 
 namespace Splash_Screen
 {
@@ -18,34 +19,33 @@ namespace Splash_Screen
         public FormLogin()
         {
             InitializeComponent();
+            string F = textBoxUser.Text;
         }
 
         public void Conectarse()
         {
-            SqlConnection sqlConnection = new SqlConnection();
-            sqlConnection.ConnectionString = Datos.StringConnectionSQLServer().ToString();
-            sqlConnection.Open();
+            if(textBoxUser.Text == "\r\nUser")
+            {
+                textBoxUser.Text = ($"{Environment.NewLine}");
+                textBoxUser.ForeColor = Color.Black;
 
             if (sqlConnection.State == ConnectionState.Open)
             {
                 label1.Text = "LA CONEXION FUE EXITOSA";
             }
         }
-
-<<<<<<< HEAD
-        private void rjButton2_Click(object sender, EventArgs e)
-        {
-            Conectarse();
-=======
         private void textBoxPassword_Enter(object sender, EventArgs e)
         {
             if(textBoxPassword.Text == "\r\nPassword")
             {
-                textBoxPassword.Text = "\n";
+                //textBoxPassword.Text = "\n";
                 textBoxPassword.ForeColor = Color.Black;
+                textBoxPassword.Text = ($"{Environment.NewLine}");
+
             }
 
         }
+
 
         private void ButtonLogin_Click(object sender, EventArgs e)
         {
@@ -56,7 +56,52 @@ namespace Splash_Screen
                 this.Dispose();
                 this.Close();
             }
->>>>>>> a005cc0b9122baa9deb657b44f40b4c95c84084e
+
+            SqlConnection sqlConnection = new SqlConnection();
+            sqlConnection.ConnectionString = ClassData.stringConnection.ToString();
+            sqlConnection.Open();
+
+
+        
+
+            SqlCommand sqlCommand = new SqlCommand();
+            sqlCommand.Connection = sqlConnection;
+            sqlCommand.CommandType = CommandType.Text;
+            sqlCommand.CommandText = $"SELECT descripcion FROM Entidades WHERE userNameEntidad = '{textBoxUser.Text.ToString().Trim()}' AND passwordEntidad = '{textBoxPassword.Text.ToString().Trim()}';";
+
+            SqlDataReader reader = sqlCommand.ExecuteReader();
+            reader.Read();
+
+            if(reader.HasRows == false)
+            {
+                MessageBox.Show("No se pudo iniciar sesión, revise sus credenciales", "Error");
+            }
+            else
+            {
+                
+                FormMenuPrincipal menu = new FormMenuPrincipal();
+                menu.statusBarAdv1.Panels[0].Text = String.Format("{0}", reader[0]);
+                menu.Show();
+                this.Close();
+                this.Dispose();
+                
+            }
+
+            sqlConnection.Close();
+            sqlConnection.Dispose();
+            sqlConnection = null;
+
+        }
+
+        private void ButtonRegister_Click(object sender, EventArgs e)
+        {
+            previousForm = "Login";
+            FormRegister Register = new FormRegister();
+            Register.Show();
+            this.Dispose();
+            this.Close();
+        }
+        public static string previousForm;
         }
     }
 }

@@ -45,20 +45,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Datos\Datos.cs" />
-    <Compile Include="Negocio\Negocio.cs" />
-    <Compile Include="Presentacion\Presentacion.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Data\ClassData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Splash Screen\WinFormsAppSellPoint.csproj">
-      <Project>{98c6e70c-6725-4edd-853a-dd97c1338f2d}</Project>
-      <Name>WinFormsAppSellPoint</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

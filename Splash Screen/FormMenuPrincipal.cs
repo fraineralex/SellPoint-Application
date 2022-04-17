@@ -54,9 +54,32 @@ namespace Splash_Screen
         private void timer1_Tick(object sender, EventArgs e)
         {
             statusBarAdv1.Panels[1].Text = DateTime.Now.ToString("g");
-            statusBarAdv1.Panels[0].Text = "   Frainer Alexander Encarnación Valenzuela";
+            //statusBarAdv1.Panels[0].Text = "   Frainer Alexander Encarnación Valenzuela";
 
         }
 
+        private void gruposEntidadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            labelTablaSeleccionada.Text = "Información correspondiente a Grupos Entidades";
+        }
+
+        private void tiposEntidadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            labelTablaSeleccionada.Text = "Información correspondiente a Tipos Entidades";
+        }
+
+        private void entitadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            labelTablaSeleccionada.Text = "Información correspondiente a Entidades";
+        }
+
+        private void ButtonAñadir_Click(object sender, EventArgs e)
+        {
+            FormLogin.previousForm = "MenuPrincipal";
+            FormRegister Register = new FormRegister();
+            Register.Show();
+            this.Dispose();
+            this.Close();
+        }
     }
 }

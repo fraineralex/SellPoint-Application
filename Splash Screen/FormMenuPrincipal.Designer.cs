@@ -44,9 +44,13 @@
             this.statusBarAdv1 = new Syncfusion.Windows.Forms.Tools.StatusBarAdv();
             this.statusBarName = new Syncfusion.Windows.Forms.Tools.StatusBarAdvPanel();
             this.statusBarFecha = new Syncfusion.Windows.Forms.Tools.StatusBarAdvPanel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelTablaSeleccionada = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.ButtonEliminar = new Splash_Screen.RJButton();
+            this.ButtonEditar = new Splash_Screen.RJButton();
+            this.ButtonAñadir = new Splash_Screen.RJButton();
+            this.ButtonBuscar = new Splash_Screen.RJButton();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.labelWelcome = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -54,10 +58,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.rjButton4 = new Splash_Screen.RJButton();
-            this.rjButton3 = new Splash_Screen.RJButton();
-            this.rjButton2 = new Splash_Screen.RJButton();
-            this.rjButton1 = new Splash_Screen.RJButton();
             this.menuStrip.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.statusBarAdv1)).BeginInit();
@@ -83,7 +83,7 @@
             this.editMenu});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(1082, 30);
+            this.menuStrip.Size = new System.Drawing.Size(1082, 28);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
             // 
@@ -95,7 +95,7 @@
             this.entitadesToolStripMenuItem});
             this.fileMenu.ImageTransparentColor = System.Drawing.SystemColors.ActiveBorder;
             this.fileMenu.Name = "fileMenu";
-            this.fileMenu.Size = new System.Drawing.Size(80, 26);
+            this.fileMenu.Size = new System.Drawing.Size(80, 24);
             this.fileMenu.Text = "&Archivo";
             // 
             // gruposEntidadesToolStripMenuItem
@@ -103,18 +103,21 @@
             this.gruposEntidadesToolStripMenuItem.Name = "gruposEntidadesToolStripMenuItem";
             this.gruposEntidadesToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
             this.gruposEntidadesToolStripMenuItem.Text = "Grupos Entidades";
+            this.gruposEntidadesToolStripMenuItem.Click += new System.EventHandler(this.gruposEntidadesToolStripMenuItem_Click);
             // 
             // tiposEntidadesToolStripMenuItem
             // 
             this.tiposEntidadesToolStripMenuItem.Name = "tiposEntidadesToolStripMenuItem";
             this.tiposEntidadesToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
             this.tiposEntidadesToolStripMenuItem.Text = "Tipos Entidades";
+            this.tiposEntidadesToolStripMenuItem.Click += new System.EventHandler(this.tiposEntidadesToolStripMenuItem_Click);
             // 
             // entitadesToolStripMenuItem
             // 
             this.entitadesToolStripMenuItem.Name = "entitadesToolStripMenuItem";
             this.entitadesToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
             this.entitadesToolStripMenuItem.Text = "Entitades";
+            this.entitadesToolStripMenuItem.Click += new System.EventHandler(this.entitadesToolStripMenuItem_Click);
             // 
             // editMenu
             // 
@@ -123,7 +126,7 @@
             this.loginToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.editMenu.Name = "editMenu";
-            this.editMenu.Size = new System.Drawing.Size(85, 26);
+            this.editMenu.Size = new System.Drawing.Size(85, 24);
             this.editMenu.Text = "Sistema";
             // 
             // acercaDeToolStripMenuItem
@@ -148,12 +151,12 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.panel1.Controls.Add(this.statusBarAdv1);
-            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.labelTablaSeleccionada);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 30);
+            this.panel1.Location = new System.Drawing.Point(0, 28);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1082, 583);
+            this.panel1.Size = new System.Drawing.Size(1082, 585);
             this.panel1.TabIndex = 4;
             // 
             // statusBarAdv1
@@ -164,7 +167,7 @@
             this.statusBarAdv1.Controls.Add(this.statusBarFecha);
             this.statusBarAdv1.CustomLayoutBounds = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.statusBarAdv1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.statusBarAdv1.Location = new System.Drawing.Point(0, 530);
+            this.statusBarAdv1.Location = new System.Drawing.Point(0, 532);
             this.statusBarAdv1.Name = "statusBarAdv1";
             this.statusBarAdv1.Padding = new System.Windows.Forms.Padding(3);
             this.statusBarAdv1.Size = new System.Drawing.Size(1082, 53);
@@ -174,15 +177,16 @@
             // statusBarName
             // 
             this.statusBarName.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.statusBarName.BeforeTouchSize = new System.Drawing.Size(545, 45);
+            this.statusBarName.BeforeTouchSize = new System.Drawing.Size(496, 45);
             this.statusBarName.Border3DStyle = System.Windows.Forms.Border3DStyle.Adjust;
             this.statusBarName.Font = new System.Drawing.Font("Roboto", 10.2F);
             this.statusBarName.ForeColor = System.Drawing.Color.Black;
             this.statusBarName.Location = new System.Drawing.Point(0, 2);
             this.statusBarName.Margin = new System.Windows.Forms.Padding(0);
             this.statusBarName.Name = "statusBarName";
-            this.statusBarName.Size = new System.Drawing.Size(545, 45);
+            this.statusBarName.Size = new System.Drawing.Size(496, 45);
             this.statusBarName.TabIndex = 0;
+            this.statusBarName.Text = null;
             // 
             // statusBarFecha
             // 
@@ -191,23 +195,23 @@
             this.statusBarFecha.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.statusBarFecha.Font = new System.Drawing.Font("Roboto", 10.2F);
             this.statusBarFecha.ForeColor = System.Drawing.Color.Black;
-            this.statusBarFecha.Location = new System.Drawing.Point(547, 2);
+            this.statusBarFecha.Location = new System.Drawing.Point(498, 2);
             this.statusBarFecha.Margin = new System.Windows.Forms.Padding(0);
             this.statusBarFecha.Name = "statusBarFecha";
             this.statusBarFecha.Size = new System.Drawing.Size(217, 45);
             this.statusBarFecha.TabIndex = 1;
             this.statusBarFecha.Text = null;
             // 
-            // label3
+            // labelTablaSeleccionada
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Roboto", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(180)))), ((int)(((byte)(148)))));
-            this.label3.Location = new System.Drawing.Point(127, 482);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(476, 30);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Información correspondiente a Entidades";
+            this.labelTablaSeleccionada.Font = new System.Drawing.Font("Roboto", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTablaSeleccionada.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(180)))), ((int)(((byte)(148)))));
+            this.labelTablaSeleccionada.Location = new System.Drawing.Point(0, 482);
+            this.labelTablaSeleccionada.Name = "labelTablaSeleccionada";
+            this.labelTablaSeleccionada.Size = new System.Drawing.Size(766, 30);
+            this.labelTablaSeleccionada.TabIndex = 3;
+            this.labelTablaSeleccionada.Text = "Información correspondiente a Entidades";
+            this.labelTablaSeleccionada.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dataGridView1
             // 
@@ -225,16 +229,16 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(803, 451);
+            this.dataGridView1.Size = new System.Drawing.Size(766, 451);
             this.dataGridView1.TabIndex = 1;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(180)))), ((int)(((byte)(148)))));
-            this.panel2.Controls.Add(this.rjButton4);
-            this.panel2.Controls.Add(this.rjButton3);
-            this.panel2.Controls.Add(this.rjButton2);
-            this.panel2.Controls.Add(this.rjButton1);
+            this.panel2.Controls.Add(this.ButtonEliminar);
+            this.panel2.Controls.Add(this.ButtonEditar);
+            this.panel2.Controls.Add(this.ButtonAñadir);
+            this.panel2.Controls.Add(this.ButtonBuscar);
             this.panel2.Controls.Add(this.pictureBox5);
             this.panel2.Controls.Add(this.labelWelcome);
             this.panel2.Controls.Add(this.pictureBox1);
@@ -245,6 +249,83 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(322, 639);
             this.panel2.TabIndex = 4;
+            // 
+            // ButtonEliminar
+            // 
+            this.ButtonEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(180)))), ((int)(((byte)(148)))));
+            this.ButtonEliminar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(180)))), ((int)(((byte)(148)))));
+            this.ButtonEliminar.BorderColor = System.Drawing.Color.White;
+            this.ButtonEliminar.BorderRadius = 20;
+            this.ButtonEliminar.BorderSize = 1;
+            this.ButtonEliminar.FlatAppearance.BorderSize = 0;
+            this.ButtonEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonEliminar.Font = new System.Drawing.Font("Roboto", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonEliminar.ForeColor = System.Drawing.Color.White;
+            this.ButtonEliminar.Location = new System.Drawing.Point(57, 468);
+            this.ButtonEliminar.Name = "ButtonEliminar";
+            this.ButtonEliminar.Size = new System.Drawing.Size(217, 69);
+            this.ButtonEliminar.TabIndex = 11;
+            this.ButtonEliminar.Text = "ELIMINAR";
+            this.ButtonEliminar.TextColor = System.Drawing.Color.White;
+            this.ButtonEliminar.UseVisualStyleBackColor = false;
+            // 
+            // ButtonEditar
+            // 
+            this.ButtonEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(180)))), ((int)(((byte)(148)))));
+            this.ButtonEditar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(180)))), ((int)(((byte)(148)))));
+            this.ButtonEditar.BorderColor = System.Drawing.Color.White;
+            this.ButtonEditar.BorderRadius = 20;
+            this.ButtonEditar.BorderSize = 1;
+            this.ButtonEditar.FlatAppearance.BorderSize = 0;
+            this.ButtonEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonEditar.Font = new System.Drawing.Font("Roboto", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonEditar.ForeColor = System.Drawing.Color.White;
+            this.ButtonEditar.Location = new System.Drawing.Point(57, 357);
+            this.ButtonEditar.Name = "ButtonEditar";
+            this.ButtonEditar.Size = new System.Drawing.Size(217, 69);
+            this.ButtonEditar.TabIndex = 10;
+            this.ButtonEditar.Text = "EDITAR";
+            this.ButtonEditar.TextColor = System.Drawing.Color.White;
+            this.ButtonEditar.UseVisualStyleBackColor = false;
+            // 
+            // ButtonAñadir
+            // 
+            this.ButtonAñadir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(180)))), ((int)(((byte)(148)))));
+            this.ButtonAñadir.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(180)))), ((int)(((byte)(148)))));
+            this.ButtonAñadir.BorderColor = System.Drawing.Color.White;
+            this.ButtonAñadir.BorderRadius = 20;
+            this.ButtonAñadir.BorderSize = 1;
+            this.ButtonAñadir.FlatAppearance.BorderSize = 0;
+            this.ButtonAñadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonAñadir.Font = new System.Drawing.Font("Roboto", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonAñadir.ForeColor = System.Drawing.Color.White;
+            this.ButtonAñadir.Location = new System.Drawing.Point(57, 245);
+            this.ButtonAñadir.Name = "ButtonAñadir";
+            this.ButtonAñadir.Size = new System.Drawing.Size(217, 69);
+            this.ButtonAñadir.TabIndex = 9;
+            this.ButtonAñadir.Text = "AÑADIR";
+            this.ButtonAñadir.TextColor = System.Drawing.Color.White;
+            this.ButtonAñadir.UseVisualStyleBackColor = false;
+            this.ButtonAñadir.Click += new System.EventHandler(this.ButtonAñadir_Click);
+            // 
+            // ButtonBuscar
+            // 
+            this.ButtonBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(180)))), ((int)(((byte)(148)))));
+            this.ButtonBuscar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(180)))), ((int)(((byte)(148)))));
+            this.ButtonBuscar.BorderColor = System.Drawing.Color.White;
+            this.ButtonBuscar.BorderRadius = 20;
+            this.ButtonBuscar.BorderSize = 1;
+            this.ButtonBuscar.FlatAppearance.BorderSize = 0;
+            this.ButtonBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonBuscar.Font = new System.Drawing.Font("Roboto", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonBuscar.ForeColor = System.Drawing.Color.White;
+            this.ButtonBuscar.Location = new System.Drawing.Point(57, 128);
+            this.ButtonBuscar.Name = "ButtonBuscar";
+            this.ButtonBuscar.Size = new System.Drawing.Size(217, 69);
+            this.ButtonBuscar.TabIndex = 8;
+            this.ButtonBuscar.Text = "BUSCAR";
+            this.ButtonBuscar.TextColor = System.Drawing.Color.White;
+            this.ButtonBuscar.UseVisualStyleBackColor = false;
             // 
             // pictureBox5
             // 
@@ -261,9 +342,9 @@
             this.labelWelcome.AutoSize = true;
             this.labelWelcome.Font = new System.Drawing.Font("Roboto", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelWelcome.ForeColor = System.Drawing.Color.White;
-            this.labelWelcome.Location = new System.Drawing.Point(42, 19);
+            this.labelWelcome.Location = new System.Drawing.Point(38, 19);
             this.labelWelcome.Name = "labelWelcome";
-            this.labelWelcome.Size = new System.Drawing.Size(247, 41);
+            this.labelWelcome.Size = new System.Drawing.Size(242, 39);
             this.labelWelcome.TabIndex = 0;
             this.labelWelcome.Text = "Mantenimiento";
             // 
@@ -312,82 +393,6 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // rjButton4
-            // 
-            this.rjButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(180)))), ((int)(((byte)(148)))));
-            this.rjButton4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(180)))), ((int)(((byte)(148)))));
-            this.rjButton4.BorderColor = System.Drawing.Color.White;
-            this.rjButton4.BorderRadius = 20;
-            this.rjButton4.BorderSize = 1;
-            this.rjButton4.FlatAppearance.BorderSize = 0;
-            this.rjButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton4.Font = new System.Drawing.Font("Roboto", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton4.ForeColor = System.Drawing.Color.White;
-            this.rjButton4.Location = new System.Drawing.Point(57, 468);
-            this.rjButton4.Name = "rjButton4";
-            this.rjButton4.Size = new System.Drawing.Size(217, 69);
-            this.rjButton4.TabIndex = 11;
-            this.rjButton4.Text = "ELIMINAR";
-            this.rjButton4.TextColor = System.Drawing.Color.White;
-            this.rjButton4.UseVisualStyleBackColor = false;
-            // 
-            // rjButton3
-            // 
-            this.rjButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(180)))), ((int)(((byte)(148)))));
-            this.rjButton3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(180)))), ((int)(((byte)(148)))));
-            this.rjButton3.BorderColor = System.Drawing.Color.White;
-            this.rjButton3.BorderRadius = 20;
-            this.rjButton3.BorderSize = 1;
-            this.rjButton3.FlatAppearance.BorderSize = 0;
-            this.rjButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton3.Font = new System.Drawing.Font("Roboto", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton3.ForeColor = System.Drawing.Color.White;
-            this.rjButton3.Location = new System.Drawing.Point(57, 357);
-            this.rjButton3.Name = "rjButton3";
-            this.rjButton3.Size = new System.Drawing.Size(217, 69);
-            this.rjButton3.TabIndex = 10;
-            this.rjButton3.Text = "EDITAR";
-            this.rjButton3.TextColor = System.Drawing.Color.White;
-            this.rjButton3.UseVisualStyleBackColor = false;
-            // 
-            // rjButton2
-            // 
-            this.rjButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(180)))), ((int)(((byte)(148)))));
-            this.rjButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(180)))), ((int)(((byte)(148)))));
-            this.rjButton2.BorderColor = System.Drawing.Color.White;
-            this.rjButton2.BorderRadius = 20;
-            this.rjButton2.BorderSize = 1;
-            this.rjButton2.FlatAppearance.BorderSize = 0;
-            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton2.Font = new System.Drawing.Font("Roboto", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Location = new System.Drawing.Point(57, 245);
-            this.rjButton2.Name = "rjButton2";
-            this.rjButton2.Size = new System.Drawing.Size(217, 69);
-            this.rjButton2.TabIndex = 9;
-            this.rjButton2.Text = "AÑADIR";
-            this.rjButton2.TextColor = System.Drawing.Color.White;
-            this.rjButton2.UseVisualStyleBackColor = false;
-            // 
-            // rjButton1
-            // 
-            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(180)))), ((int)(((byte)(148)))));
-            this.rjButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(180)))), ((int)(((byte)(148)))));
-            this.rjButton1.BorderColor = System.Drawing.Color.White;
-            this.rjButton1.BorderRadius = 20;
-            this.rjButton1.BorderSize = 1;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Roboto", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(57, 128);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(217, 69);
-            this.rjButton1.TabIndex = 8;
-            this.rjButton1.Text = "BUSCAR";
-            this.rjButton1.TextColor = System.Drawing.Color.White;
-            this.rjButton1.UseVisualStyleBackColor = false;
-            // 
             // FormMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -406,7 +411,6 @@
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.statusBarAdv1)).EndInit();
             this.statusBarAdv1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.statusBarName)).EndInit();
@@ -438,22 +442,22 @@
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelTablaSeleccionada;
         private System.Windows.Forms.Panel panel2;
-        private RJButton rjButton4;
-        private RJButton rjButton3;
-        private RJButton rjButton2;
-        private RJButton rjButton1;
+        private RJButton ButtonEliminar;
+        private RJButton ButtonEditar;
+        private RJButton ButtonAñadir;
+        private RJButton ButtonBuscar;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label labelWelcome;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private Syncfusion.Windows.Forms.Tools.StatusBarAdv statusBarAdv1;
-        private Syncfusion.Windows.Forms.Tools.StatusBarAdvPanel statusBarName;
         private System.Windows.Forms.Timer timer1;
         private Syncfusion.Windows.Forms.Tools.StatusBarAdvPanel statusBarFecha;
+        public Syncfusion.Windows.Forms.Tools.StatusBarAdvPanel statusBarName;
+        public Syncfusion.Windows.Forms.Tools.StatusBarAdv statusBarAdv1;
     }
 }
 
