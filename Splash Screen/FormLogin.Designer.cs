@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.rjButton1 = new Splash_Screen.RJButton();
+            this.ButtonRegister = new Splash_Screen.RJButton();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -78,23 +78,23 @@
             // 
             // rjButton1
             // 
-            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(180)))), ((int)(((byte)(148)))));
-            this.rjButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(180)))), ((int)(((byte)(148)))));
-            this.rjButton1.BorderColor = System.Drawing.Color.White;
-            this.rjButton1.BorderRadius = 20;
-            this.rjButton1.BorderSize = 1;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Roboto", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(50, 390);
-            this.rjButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(263, 69);
-            this.rjButton1.TabIndex = 8;
-            this.rjButton1.Text = "REGISTER";
-            this.rjButton1.TextColor = System.Drawing.Color.White;
-            this.rjButton1.UseVisualStyleBackColor = false;
+            this.ButtonRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(180)))), ((int)(((byte)(148)))));
+            this.ButtonRegister.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(180)))), ((int)(((byte)(148)))));
+            this.ButtonRegister.BorderColor = System.Drawing.Color.White;
+            this.ButtonRegister.BorderRadius = 20;
+            this.ButtonRegister.BorderSize = 1;
+            this.ButtonRegister.FlatAppearance.BorderSize = 0;
+            this.ButtonRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonRegister.Font = new System.Drawing.Font("Roboto", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonRegister.ForeColor = System.Drawing.Color.White;
+            this.ButtonRegister.Location = new System.Drawing.Point(50, 390);
+            this.ButtonRegister.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ButtonRegister.Name = "rjButton1";
+            this.ButtonRegister.Size = new System.Drawing.Size(263, 69);
+            this.ButtonRegister.TabIndex = 8;
+            this.ButtonRegister.Text = "REGISTER";
+            this.ButtonRegister.TextColor = System.Drawing.Color.White;
+            this.ButtonRegister.UseVisualStyleBackColor = false;
             // 
             // pictureBox5
             // 
@@ -275,7 +275,6 @@
             this.textBoxUser.Size = new System.Drawing.Size(434, 66);
             this.textBoxUser.TabIndex = 12;
             this.textBoxUser.Text = "\r\nUser";
-            this.textBoxUser.Enter += new System.EventHandler(this.textBoxUser_Enter);
             // 
             // ButtonLogin
             // 
@@ -348,7 +347,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
