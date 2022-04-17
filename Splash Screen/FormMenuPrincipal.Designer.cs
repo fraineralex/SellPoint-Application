@@ -41,9 +41,6 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.statusBarAdv1 = new Syncfusion.Windows.Forms.Tools.StatusBarAdv();
-            this.statusBarName = new Syncfusion.Windows.Forms.Tools.StatusBarAdvPanel();
-            this.statusBarFecha = new Syncfusion.Windows.Forms.Tools.StatusBarAdvPanel();
             this.labelTablaSeleccionada = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -60,10 +57,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.statusBarAdv1)).BeginInit();
-            this.statusBarAdv1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.statusBarName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.statusBarFecha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -150,7 +143,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.panel1.Controls.Add(this.statusBarAdv1);
             this.panel1.Controls.Add(this.labelTablaSeleccionada);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -158,50 +150,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1082, 585);
             this.panel1.TabIndex = 4;
-            // 
-            // statusBarAdv1
-            // 
-            this.statusBarAdv1.BeforeTouchSize = new System.Drawing.Size(1082, 53);
-            this.statusBarAdv1.Border3DStyle = System.Windows.Forms.Border3DStyle.Adjust;
-            this.statusBarAdv1.Controls.Add(this.statusBarName);
-            this.statusBarAdv1.Controls.Add(this.statusBarFecha);
-            this.statusBarAdv1.CustomLayoutBounds = new System.Drawing.Rectangle(0, 0, 0, 0);
-            this.statusBarAdv1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.statusBarAdv1.Location = new System.Drawing.Point(0, 532);
-            this.statusBarAdv1.Name = "statusBarAdv1";
-            this.statusBarAdv1.Padding = new System.Windows.Forms.Padding(3);
-            this.statusBarAdv1.Size = new System.Drawing.Size(1082, 53);
-            this.statusBarAdv1.Spacing = new System.Drawing.Size(2, 2);
-            this.statusBarAdv1.TabIndex = 4;
-            // 
-            // statusBarName
-            // 
-            this.statusBarName.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.statusBarName.BeforeTouchSize = new System.Drawing.Size(496, 45);
-            this.statusBarName.Border3DStyle = System.Windows.Forms.Border3DStyle.Adjust;
-            this.statusBarName.Font = new System.Drawing.Font("Roboto", 10.2F);
-            this.statusBarName.ForeColor = System.Drawing.Color.Black;
-            this.statusBarName.Location = new System.Drawing.Point(0, 2);
-            this.statusBarName.Margin = new System.Windows.Forms.Padding(0);
-            this.statusBarName.Name = "statusBarName";
-            this.statusBarName.Size = new System.Drawing.Size(496, 45);
-            this.statusBarName.TabIndex = 0;
-            this.statusBarName.Text = null;
-            // 
-            // statusBarFecha
-            // 
-            this.statusBarFecha.BeforeTouchSize = new System.Drawing.Size(217, 45);
-            this.statusBarFecha.BorderSingle = System.Windows.Forms.ButtonBorderStyle.Inset;
-            this.statusBarFecha.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.statusBarFecha.Font = new System.Drawing.Font("Roboto", 10.2F);
-            this.statusBarFecha.ForeColor = System.Drawing.Color.Black;
-            this.statusBarFecha.Location = new System.Drawing.Point(498, 2);
-            this.statusBarFecha.Margin = new System.Windows.Forms.Padding(0);
-            this.statusBarFecha.Name = "statusBarFecha";
-            this.statusBarFecha.Size = new System.Drawing.Size(217, 45);
-            this.statusBarFecha.TabIndex = 1;
-            this.statusBarFecha.Text = null;
-            // 
             // labelTablaSeleccionada
             // 
             this.labelTablaSeleccionada.Font = new System.Drawing.Font("Roboto", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -391,7 +339,6 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // FormMenuPrincipal
             // 
@@ -411,10 +358,6 @@
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.statusBarAdv1)).EndInit();
-            this.statusBarAdv1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.statusBarName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.statusBarFecha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -455,9 +398,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Timer timer1;
-        private Syncfusion.Windows.Forms.Tools.StatusBarAdvPanel statusBarFecha;
-        public Syncfusion.Windows.Forms.Tools.StatusBarAdvPanel statusBarName;
-        public Syncfusion.Windows.Forms.Tools.StatusBarAdv statusBarAdv1;
     }
 }
 

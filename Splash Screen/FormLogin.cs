@@ -9,13 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using System.Data.SqlClient;
-using System.Configuration;
 using Layers.Framework.ADO.Net.Data;
 
 namespace Splash_Screen
 {
     public partial class FormLogin : Form
     {
+
+        public static string previousForm;
+
         public FormLogin()
         {
             InitializeComponent();
@@ -28,10 +30,6 @@ namespace Splash_Screen
             {
                 textBoxUser.Text = ($"{Environment.NewLine}");
                 textBoxUser.ForeColor = Color.Black;
-
-            if (sqlConnection.State == ConnectionState.Open)
-            {
-                label1.Text = "LA CONEXION FUE EXITOSA";
             }
         }
         private void textBoxPassword_Enter(object sender, EventArgs e)
@@ -41,11 +39,8 @@ namespace Splash_Screen
                 //textBoxPassword.Text = "\n";
                 textBoxPassword.ForeColor = Color.Black;
                 textBoxPassword.Text = ($"{Environment.NewLine}");
-
             }
-
         }
-
 
         private void ButtonLogin_Click(object sender, EventArgs e)
         {
@@ -60,9 +55,6 @@ namespace Splash_Screen
             SqlConnection sqlConnection = new SqlConnection();
             sqlConnection.ConnectionString = ClassData.stringConnection.ToString();
             sqlConnection.Open();
-
-
-        
 
             SqlCommand sqlCommand = new SqlCommand();
             sqlCommand.Connection = sqlConnection;
@@ -80,7 +72,6 @@ namespace Splash_Screen
             {
                 
                 FormMenuPrincipal menu = new FormMenuPrincipal();
-                menu.statusBarAdv1.Panels[0].Text = String.Format("{0}", reader[0]);
                 menu.Show();
                 this.Close();
                 this.Dispose();
@@ -100,8 +91,6 @@ namespace Splash_Screen
             Register.Show();
             this.Dispose();
             this.Close();
-        }
-        public static string previousForm;
         }
     }
 }
