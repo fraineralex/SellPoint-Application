@@ -22,16 +22,18 @@ namespace Splash_Screen
             string F = textBoxUser.Text;
         }
 
-        private void textBoxUser_Enter(object sender, EventArgs e)
+        public void Conectarse()
         {
             if(textBoxUser.Text == "\r\nUser")
             {
                 textBoxUser.Text = ($"{Environment.NewLine}");
                 textBoxUser.ForeColor = Color.Black;
 
+            if (sqlConnection.State == ConnectionState.Open)
+            {
+                label1.Text = "LA CONEXION FUE EXITOSA";
             }
         }
-
         private void textBoxPassword_Enter(object sender, EventArgs e)
         {
             if(textBoxPassword.Text == "\r\nPassword")
@@ -98,13 +100,8 @@ namespace Splash_Screen
             Register.Show();
             this.Dispose();
             this.Close();
-
-            
-
         }
-
-
         public static string previousForm;
-
+        }
     }
 }
