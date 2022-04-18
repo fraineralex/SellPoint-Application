@@ -47,7 +47,6 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.textBoxUser = new System.Windows.Forms.TextBox();
             this.ButtonLogin = new Splash_Screen.RJButton();
-            this.ButtonRegister = new Splash_Screen.RJButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -75,26 +74,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(363, 639);
             this.panel1.TabIndex = 0;
-            // 
-            // rjButton1
-            // 
-            this.ButtonRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(180)))), ((int)(((byte)(148)))));
-            this.ButtonRegister.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(180)))), ((int)(((byte)(148)))));
-            this.ButtonRegister.BorderColor = System.Drawing.Color.White;
-            this.ButtonRegister.BorderRadius = 20;
-            this.ButtonRegister.BorderSize = 1;
-            this.ButtonRegister.FlatAppearance.BorderSize = 0;
-            this.ButtonRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonRegister.Font = new System.Drawing.Font("Roboto", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonRegister.ForeColor = System.Drawing.Color.White;
-            this.ButtonRegister.Location = new System.Drawing.Point(50, 390);
-            this.ButtonRegister.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.ButtonRegister.Name = "rjButton1";
-            this.ButtonRegister.Size = new System.Drawing.Size(263, 69);
-            this.ButtonRegister.TabIndex = 8;
-            this.ButtonRegister.Text = "REGISTER";
-            this.ButtonRegister.TextColor = System.Drawing.Color.White;
-            this.ButtonRegister.UseVisualStyleBackColor = false;
             // 
             // pictureBox5
             // 
