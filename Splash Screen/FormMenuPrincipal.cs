@@ -19,14 +19,6 @@ namespace Splash_Screen
             InitializeComponent();
         }
 
-        private void ShowNewForm(object sender, EventArgs e)
-        {
-            Form childForm = new Form();
-            childForm.MdiParent = this;
-            childForm.Text = "Ventana " + childFormNumber++;
-            childForm.Show();
-        }
-
         private void OpenFile(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -62,15 +54,6 @@ namespace Splash_Screen
         private void entitadesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             labelTablaSeleccionada.Text = "Información correspondiente a Entidades";
-        }
-
-        private void ButtonAñadir_Click(object sender, EventArgs e)
-        {
-            FormLogin.previousForm = "MenuPrincipal";
-            FormRegister Register = new FormRegister();
-            Register.Show();
-            this.Dispose();
-            this.Close();
         }
     }
 }

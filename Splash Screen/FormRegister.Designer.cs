@@ -84,7 +84,6 @@
             this.ButtonLogin.Text = "LOGIN";
             this.ButtonLogin.TextColor = System.Drawing.Color.White;
             this.ButtonLogin.UseVisualStyleBackColor = false;
-            this.ButtonLogin.Click += new System.EventHandler(this.ButtonLogin_Click);
             // 
             // pictureBox5
             // 
@@ -198,7 +197,6 @@
             this.ButtonAtras.TabIndex = 4;
             this.ButtonAtras.TextColor = System.Drawing.Color.White;
             this.ButtonAtras.UseVisualStyleBackColor = false;
-            this.ButtonAtras.Click += new System.EventHandler(this.ButtonAtras_Click);
             // 
             // FormRegister
             // 

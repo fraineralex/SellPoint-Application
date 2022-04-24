@@ -1,0 +1,25 @@
+[33m1ac1339[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mbachiito[m[33m)[m boton register estaba 2 veces
+[33m04aa57e[m Delete Layers.Framework.ADO.Net/Datos directory
+[33m10d28d7[m todo arreglado
+[33m0f88439[m todo arreglado
+[33m4373a08[m Merge pull request #1 from Fraineralex/Frainer
+[33mb2fe822[m[33m ([m[1;31morigin/Frainer[m[33m, [m[1;32mFrainer[m[33m)[m Merge branch 'master' into Frainer
+[33m184fced[m Validación de credenciales completada
+[33m3768e3c[m Todo por hoy
+[33m13d9aa0[m Validando credenciales en la base de datos
+[33m649122c[m Creando la conexión con SQL Server
+[33m76a7bfa[m Sincronizando el boton de regresar
+[33mc458050[m Configurando el Formulario de Registro
+[33md1090e9[m Eliminación de FormRegister
+[33m68518f4[m Merge branch 'master' of https://github.com/Fraineralex/SellPoint-Application
+[33m1c7bff5[m limpiando archivos
+[33m1b7314d[m Alineando el Login
+[33m65689ac[m depurando archivos
+[33ma005cc0[m Resolviendo conflicto
+[33m59eaa16[m Configurando el StatusBar
+[33m88a5908[m Dandole formato al Menú Principal
+[33m205393b[m commit de prueba
+[33m10e1785[m Creando el Menú Principal
+[33m2b8eb92[m Agregando Librería de Clases
+[33m68b8cf9[m Agregar archivos de proyecto.
+[33m7f31b79[m Agregar .gitignore y .gitattributes.

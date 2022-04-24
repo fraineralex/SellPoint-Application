@@ -15,82 +15,55 @@ namespace Splash_Screen
 {
     public partial class FormLogin : Form
     {
-
-        public static string previousForm;
-
         public FormLogin()
         {
             InitializeComponent();
-            string F = textBoxUser.Text;
         }
 
-        public void Conectarse()
+        private void Login(object sender, EventArgs e)
         {
-            if(textBoxUser.Text == "\r\nUser")
-            {
-                textBoxUser.Text = ($"{Environment.NewLine}");
-                textBoxUser.ForeColor = Color.Black;
-            }
-        }
-        private void textBoxPassword_Enter(object sender, EventArgs e)
-        {
-            if(textBoxPassword.Text == "\r\nPassword")
-            {
-                //textBoxPassword.Text = "\n";
-                textBoxPassword.ForeColor = Color.Black;
-                textBoxPassword.Text = ($"{Environment.NewLine}");
-            }
+            if (!InputValido()) return;
+            if (!ComprobarCredenciales()) return;
         }
 
-        private void ButtonLogin_Click(object sender, EventArgs e)
+        private bool InputValido()
         {
-            if(textBoxUser.Text == "\nadmin" | textBoxPassword.Text == "\nadmin")
+            bool inputValido = true;
+
+            List<TextBox> textBoxes = new List<TextBox>()
             {
-                FormMenuPrincipal menu = new FormMenuPrincipal();
-                menu.Show();
-                this.Dispose();
-                this.Close();
+                textBoxUserLogin,
+                textBoxPasswordLogin
+            };
+
+            foreach (TextBox textBox in textBoxes)
+            {
+                string input = textBox.Text.ToString().Trim();
+
+                if (string.IsNullOrEmpty(input) || string.IsNullOrWhiteSpace(input))
+                {
+                    textBox.BackColor = Color.Red;
+                    MessageBox.Show("Asegúrese de proveer la información necesaria para poder ingresar al sistema" +
+                        "", "Atención!");
+                    textBox.BackColor = Color.White;
+                    break;
+                }
             }
 
-            SqlConnection sqlConnection = new SqlConnection();
-            sqlConnection.ConnectionString = ClassData.stringConnection.ToString();
-            sqlConnection.Open();
+            return inputValido;
+        }
 
-            SqlCommand sqlCommand = new SqlCommand();
-            sqlCommand.Connection = sqlConnection;
-            sqlCommand.CommandType = CommandType.Text;
-            sqlCommand.CommandText = $"SELECT descripcion FROM Entidades WHERE userNameEntidad = '{textBoxUser.Text.ToString().Trim()}' AND passwordEntidad = '{textBoxPassword.Text.ToString().Trim()}';";
-
-            SqlDataReader reader = sqlCommand.ExecuteReader();
-            reader.Read();
-
-            if(reader.HasRows == false)
-            {
-                MessageBox.Show("No se pudo iniciar sesión, revise sus credenciales", "Error");
-            }
-            else
-            {
-                
-                FormMenuPrincipal menu = new FormMenuPrincipal();
-                menu.Show();
-                this.Close();
-                this.Dispose();
-                
-            }
-
-            sqlConnection.Close();
-            sqlConnection.Dispose();
-            sqlConnection = null;
+        private bool ComprobarCredenciales()
+        {
+            bool credencialesValidas = true;
+            return credencialesValidas;
 
         }
 
-        private void ButtonRegister_Click(object sender, EventArgs e)
+        private void Registrarse(object sender, EventArgs e)
         {
-            previousForm = "Login";
-            FormRegister Register = new FormRegister();
-            Register.Show();
-            this.Dispose();
-            this.Close();
+            this.Hide();
+            new FormRegister().Show();
         }
     }
 }

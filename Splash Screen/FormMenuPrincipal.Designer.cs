@@ -254,7 +254,6 @@
             this.ButtonAñadir.Text = "AÑADIR";
             this.ButtonAñadir.TextColor = System.Drawing.Color.White;
             this.ButtonAñadir.UseVisualStyleBackColor = false;
-            this.ButtonAñadir.Click += new System.EventHandler(this.ButtonAñadir_Click);
             // 
             // ButtonBuscar
             // 
