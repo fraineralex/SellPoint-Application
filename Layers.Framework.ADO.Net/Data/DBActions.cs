@@ -10,7 +10,7 @@ using System.Data;
 
 namespace Layers.Framework.ADO.Net.Data
 {
-    public static class ClassData
+    public static class DBActions
     {
         public static SqlConnection StringConnectionSQLServer()
         {

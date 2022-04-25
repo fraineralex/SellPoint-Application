@@ -18,7 +18,6 @@ namespace Splash_Screen
         private int borderRadius = 20;
         private Color borderColor = Color.PaleVioletRed;
 
-
         //Properties
         [Category("RJ Code Advance")]
         public int BorderSize
