@@ -1,14 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-
-using System.Data.SqlClient;
 using Layers.Framework.ADO.Net;
 
 namespace Splash_Screen
@@ -36,7 +27,7 @@ namespace Splash_Screen
                 return;
             }
 
-            MessageBox.Show("Revise sus credenciales.", "Error!");
+            MessageBox.Show("Revise sus credenciales e inténtelo nuevamente.", "Error!");
         }
 
         private void Registrarse(object sender, EventArgs e)

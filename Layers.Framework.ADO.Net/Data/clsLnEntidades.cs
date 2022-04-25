@@ -178,17 +178,14 @@ public class clsLnEntidades
             if ((dataTable.Rows.Count == 1))
             {
                 Cargar(ref oBeEntidades, dataTable.Rows[0]);
-            }
-            else
-            {
-                throw new Exception("No se pudo obtener el registro");
+                return true;
             }
 
-            return true;
+            return false;
         }
-        catch (Exception ex)
+        catch (Exception)
         {
-            throw ex;
+            return false;
         }
     }
 }

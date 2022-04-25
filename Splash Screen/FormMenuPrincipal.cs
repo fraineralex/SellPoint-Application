@@ -12,6 +12,9 @@ namespace Splash_Screen
 {
     public partial class FormMenuPrincipal : Form
     {
-
+        public FormMenuPrincipal()
+        {
+            InitializeComponent();
+        }
     }
 }
