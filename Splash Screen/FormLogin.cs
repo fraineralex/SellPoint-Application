@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using System.Data.SqlClient;
-using Layers.Framework.ADO.Net.Data;
+using Layers.Framework.ADO.Net;
 
 namespace Splash_Screen
 {
@@ -22,42 +22,21 @@ namespace Splash_Screen
 
         private void Login(object sender, EventArgs e)
         {
-            if (!InputValido()) return;
-            if (!ComprobarCredenciales()) return;
-        }
+            clsLnEntidades entidad = new clsLnEntidades();
+            clsBeEntidades entidadesModel = new clsBeEntidades();
 
-        private bool InputValido()
-        {
-            bool inputValido = true;
+            entidadesModel.UserNameEntidad = textBoxUserLogin.Text.ToString().Trim();
+            entidadesModel.PasswordEntidad = textBoxPasswordLogin.Text.ToString().Trim();
 
-            List<TextBox> textBoxes = new List<TextBox>()
+            if (entidad.Obtener(ref entidadesModel))
             {
-                textBoxUserLogin,
-                textBoxPasswordLogin
-            };
+                this.Hide();
+                new FormMenuPrincipal().Show();
 
-            foreach (TextBox textBox in textBoxes)
-            {
-                string input = textBox.Text.ToString().Trim();
-
-                if (string.IsNullOrEmpty(input) || string.IsNullOrWhiteSpace(input))
-                {
-                    textBox.BackColor = Color.Red;
-                    MessageBox.Show("Asegúrese de proveer la información necesaria para poder ingresar al sistema" +
-                        "", "Atención!");
-                    textBox.BackColor = Color.White;
-                    break;
-                }
+                return;
             }
 
-            return inputValido;
-        }
-
-        private bool ComprobarCredenciales()
-        {
-            bool credencialesValidas = true;
-            return credencialesValidas;
-
+            MessageBox.Show("Revise sus credenciales.", "Error!");
         }
 
         private void Registrarse(object sender, EventArgs e)

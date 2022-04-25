@@ -10,29 +10,8 @@ public class clsLnEntidades
     {
         try
         {
-            oBeEntidades.IdEntidad = Convert.ToInt32(dr["IdEntidad"].ToString());
-            oBeEntidades.Descripcion = string.IsNullOrEmpty(dr["Descripcion"].ToString()) == true ? "" : dr["Descripcion"].ToString();
-            oBeEntidades.Direccion = string.IsNullOrEmpty(dr["Direccion"].ToString()) == true ? "" : dr["Direccion"].ToString();
-            oBeEntidades.Localidad = string.IsNullOrEmpty(dr["Localidad"].ToString()) == true ? "" : dr["Localidad"].ToString();
-            oBeEntidades.TipoEntidad = string.IsNullOrEmpty(dr["TipoEntidad"].ToString()) == true ? "" : dr["TipoEntidad"].ToString();
-            oBeEntidades.TipoDocumento = string.IsNullOrEmpty(dr["TipoDocumento"].ToString()) == true ? "" : dr["TipoDocumento"].ToString();
-            oBeEntidades.NumeroDocumento = Convert.ToInt32(dr["NumeroDocumento"].ToString());
-            oBeEntidades.Telefono = string.IsNullOrEmpty(dr["Telefono"].ToString()) == true ? "" : dr["Telefono"].ToString();
-            oBeEntidades.URLPaginaWeb = string.IsNullOrEmpty(dr["URLPaginaWeb"].ToString()) == true ? "" : dr["URLPaginaWeb"].ToString();
-            oBeEntidades.URLFacebook = string.IsNullOrEmpty(dr["URLFacebook"].ToString()) == true ? "" : dr["URLFacebook"].ToString();
-            oBeEntidades.URLInstagram = string.IsNullOrEmpty(dr["URLInstagram"].ToString()) == true ? "" : dr["URLInstagram"].ToString();
-            oBeEntidades.URLTwitter = string.IsNullOrEmpty(dr["URLTwitter"].ToString()) == true ? "" : dr["URLTwitter"].ToString();
-            oBeEntidades.URLTiktok = string.IsNullOrEmpty(dr["URLTiktok"].ToString()) == true ? "" : dr["URLTiktok"].ToString();
-            oBeEntidades.IdGrupoEntidad = Convert.ToInt32(dr["IdGrupoEntidad"].ToString());
-            oBeEntidades.IdTipoEntidad = Convert.ToInt32(dr["IdTipoEntidad"].ToString());
-            oBeEntidades.LimiteCredito = Convert.ToInt32(dr["LimiteCredito"].ToString());
             oBeEntidades.UserNameEntidad = string.IsNullOrEmpty(dr["UserNameEntidad"].ToString()) == true ? "" : dr["UserNameEntidad"].ToString();
             oBeEntidades.PasswordEntidad = string.IsNullOrEmpty(dr["PasswordEntidad"].ToString()) == true ? "" : dr["PasswordEntidad"].ToString();
-            oBeEntidades.RolUserEntidad = string.IsNullOrEmpty(dr["RolUserEntidad"].ToString()) == true ? "" : dr["RolUserEntidad"].ToString();
-            oBeEntidades.Comentario = string.IsNullOrEmpty(dr["Comentario"].ToString()) == true ? "" : dr["Comentario"].ToString();
-            oBeEntidades.Status = string.IsNullOrEmpty(dr["Status"].ToString()) == true ? "" : dr["Status"].ToString();
-            oBeEntidades.NoEliminable = Convert.ToBoolean(dr["IdEntidad"].ToString());
-            oBeEntidades.FechaRegistro = Convert.ToDateTime(dr["IdEntidad"].ToString());
         }
         catch (Exception ex)
         {
@@ -183,7 +162,7 @@ public class clsLnEntidades
     {
         try
         {
-            string storedProcedure = "SpEntidadesObtener";
+            string storedProcedure = "SPLoginEntidades";
 
             DataTable dataTable = new DataTable();
             SqlConnection sqlConnection = new SqlConnection(Datos.DBConnection);
@@ -192,13 +171,13 @@ public class clsLnEntidades
             sqlCommand.CommandType = CommandType.StoredProcedure;
 
             SqlDataAdapter sqlAdapter = new SqlDataAdapter(sqlCommand);
-            sqlAdapter.SelectCommand.Parameters.Add(new SqlParameter("@IDENTIDAD", oBeEntidades.IdEntidad));
+            sqlAdapter.SelectCommand.Parameters.Add(new SqlParameter("@UserNameEntidad", oBeEntidades.UserNameEntidad));
+            sqlAdapter.SelectCommand.Parameters.Add(new SqlParameter("@PasswordEntidad", oBeEntidades.PasswordEntidad));
             sqlAdapter.Fill(dataTable);
 
             if ((dataTable.Rows.Count == 1))
             {
                 Cargar(ref oBeEntidades, dataTable.Rows[0]);
-
             }
             else
             {
