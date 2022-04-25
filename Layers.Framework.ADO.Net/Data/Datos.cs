@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using System.Configuration;
+﻿using System.Data;
 using System.Data.SqlClient;
-using System.Data;
+using System.Configuration;
 
 namespace Layers.Framework.ADO.Net.Data
 {
-    public static class DBActions
+    public static class Datos
     {
+        public static string DBConnection = ConfigurationManager.ConnectionStrings["DBConnection"].ConnectionString.ToString();
+
         public static SqlConnection StringConnectionSQLServer()
         {
             SqlConnection DBConnection = new SqlConnection();
