@@ -1,271 +1,165 @@
-using BE;
-using System.Data.SqlClient;
+using System;
 using System.Data;
+using System.Data.SqlClient;
+using Layers.Framework.ADO.Net;
+using Layers.Framework.ADO.Net.Data;
 
-public class clsLnGruposEntidades {
+public class clsLnGruposEntidades
+{
 
-	private ConnectionManager oConexion = null;
+    public void Cargar(ref clsBeGruposEntidades oBeGruposEntidades, DataRow dr)
+    {
+        try
+        {
+            oBeGruposEntidades.IdGrupoEntidad = Convert.ToInt32(dr["IdGrupoEntidad"].ToString());
+            oBeGruposEntidades.Descripcion = string.IsNullOrEmpty(dr["Descripcion"].ToString()) == true ? "" : dr["Descripcion"].ToString();
+            oBeGruposEntidades.Comentario = string.IsNullOrEmpty(dr["Comentario"].ToString()) == true ? "" : dr["Comentario"].ToString();
+            oBeGruposEntidades.Status = string.IsNullOrEmpty(dr["Status"].ToString()) == true ? "" : dr["Status"].ToString();
+            oBeGruposEntidades.NoEliminable = Convert.ToBoolean(dr["IdEntidad"].ToString());
+            oBeGruposEntidades.FechaRegistro = Convert.ToDateTime(dr["IdEntidad"].ToString());
+        }
+        catch (Exception ex)
+        {
+            throw ex;
+        }
+    }
 
-	 public clsLnGruposEntidades(ConnectionManager oConexion) {
-		try {
-			this.oConexion = oConexion;
-		}
-		catch (Exception ex) {
-			throw ex;
-		}
-	}
+    public int Insertar(ref clsBeGruposEntidades oBeGruposEntidades)
+    {
+        try
+        {
+            int rowsAffected = 0;
+            string storedProcedure = "SpGruposEntidadesInsertar";
 
-	public void Cargar(ref clsBeTbUsuarios oBeGruposEntidades, ref DataRow dr) {
-		try {
-				oBeGruposEntidades.IdGrupoEntidad = ( IsDBNull(dr.Item['IdGrupoEntidad']) ? 0 : dr.Item['IdGrupoEntidad'] )
-				oBeGruposEntidades.Descripcion = ( IsDBNull(dr.Item['Descripcion']) ? '' : dr.Item['Descripcion'] )
-				oBeGruposEntidades.Comentario = ( IsDBNull(dr.Item['Comentario']) ? '' : dr.Item['Comentario'] )
-				oBeGruposEntidades.Status = ( IsDBNull(dr.Item['Status']) ? '' : dr.Item['Status'] )
-				oBeGruposEntidades.NoEliminable = ( IsDBNull(dr.Item['NoEliminable']) ? False : dr.Item['NoEliminable'] )
-				oBeGruposEntidades.FechaRegistro = ( IsDBNull(dr.Item['FechaRegistro']) ? Date.Now() : dr.Item['FechaRegistro'] )
-		catch (Exception ex) {
-			throw ex;
-		}
-	}
+            SqlConnection sqlConnection = new SqlConnection(Datos.DBConnection);
+            SqlCommand sqlCommand = new SqlCommand(storedProcedure, sqlConnection);
+            
+            sqlConnection.Open();
 
-	public int Insertar(ref clsBeGruposEntidades oBeGruposEntidades) {
-		try {
-			string sp = 'SpGruposEntidadesInsertar';
-			
-			SqlConnection cnn = new SqlConnection(oConexion.ConexionLocal);
-			SqlClient.SqlCommand cmd = new SqlClient.SqlCommand(sp, cnn);
-			
-			int rowsAffected = 0;
-			cmd.Open();
-			
-			cmd.Parameters.Add(new SqlClient.SqlParameter("@IDGRUPOENTIDAD", oBeGruposEntidades.IdGrupoEntidad));
-			cmd.Parameters("@IDGRUPOENTIDAD").Direction = ParameterDirection.Output;
-			cmd.Parameters.Add(new SqlClient.SqlParameter("@DESCRIPCION", oBeGruposEntidades.Descripcion));
-			cmd.Parameters.Add(new SqlClient.SqlParameter("@COMENTARIO", oBeGruposEntidades.Comentario));
-			cmd.Parameters.Add(new SqlClient.SqlParameter("@STATUS", oBeGruposEntidades.Status));
-			cmd.Parameters.Add(new SqlClient.SqlParameter("@NOELIMINABLE", oBeGruposEntidades.NoEliminable));
-			cmd.Parameters.Add(new SqlClient.SqlParameter("@FECHAREGISTRO", oBeGruposEntidades.FechaRegistro));
-			
-			rowsAffected = cmd.ExecuteNonQuery();
-			oBeGruposEntidades.IdGrupoEntidad = int.Parse(cmd.Parameters['@IDGRUPOENTIDAD'].Value);
-			
-			return rowsAffected;
-			
-		}
-		catch (Exception ex) {
-			throw ex;
-		}
-	}
+            sqlCommand.Parameters.Add(new SqlParameter("@IDGRUPOENTIDAD", oBeGruposEntidades.IdGrupoEntidad));
+            sqlCommand.Parameters["@IDGRUPOENTIDAD"].Direction = ParameterDirection.Output;
+            sqlCommand.Parameters.Add(new SqlParameter("@DESCRIPCION", oBeGruposEntidades.Descripcion));
+            sqlCommand.Parameters.Add(new SqlParameter("@COMENTARIO", oBeGruposEntidades.Comentario));
+            sqlCommand.Parameters.Add(new SqlParameter("@STATUS", oBeGruposEntidades.Status));
+            sqlCommand.Parameters.Add(new SqlParameter("@NOELIMINABLE", oBeGruposEntidades.NoEliminable));
+            sqlCommand.Parameters.Add(new SqlParameter("@FECHAREGISTRO", oBeGruposEntidades.FechaRegistro));
 
-	public int Actualizar(ref clsBeGruposEntidades oBeGruposEntidades) {
-		try {
-			string sp = 'SpGruposEntidadesActualizar';
-			
-			SqlConnection cnn = new SqlConnection(oConexion.ConexionLocal);
-			SqlClient.SqlCommand cmd = new SqlClient.SqlCommand(sp, cnn);
-			
-			int rowsAffected = 0;
-			cmd.Open();
-			
-			cmd.Parameters.Add(new SqlClient.SqlParameter("@IDGRUPOENTIDAD", oBeGruposEntidades.IdGrupoEntidad));
-			cmd.Parameters.Add(new SqlClient.SqlParameter("@DESCRIPCION", oBeGruposEntidades.Descripcion));
-			cmd.Parameters.Add(new SqlClient.SqlParameter("@COMENTARIO", oBeGruposEntidades.Comentario));
-			cmd.Parameters.Add(new SqlClient.SqlParameter("@STATUS", oBeGruposEntidades.Status));
-			cmd.Parameters.Add(new SqlClient.SqlParameter("@NOELIMINABLE", oBeGruposEntidades.NoEliminable));
-			cmd.Parameters.Add(new SqlClient.SqlParameter("@FECHAREGISTRO", oBeGruposEntidades.FechaRegistro));
-			
-			rowsAffected = cmd.ExecuteNonQuery();
-			
-			return rowsAffected;
-			
-		}
-		catch (Exception ex) {
-			throw ex;
-		}
-	}
+            rowsAffected = sqlCommand.ExecuteNonQuery();
+            oBeGruposEntidades.IdGrupoEntidad = Convert.ToInt32(sqlCommand.Parameters["@IDGRUPOENTIDAD"].Value.ToString());
 
-	public int Eliminar(ref clsBeGruposEntidades oBeGruposEntidades) {
-		try {
-			string sp = 'SpGruposEntidadesEliminar';
-			
-			SqlConnection cnn = new SqlConnection(oConexion.ConexionLocal);
-			SqlClient.SqlCommand cmd = new SqlClient.SqlCommand(sp, cnn);
-			
-			int rowsAffected = 0;
-			cmd.Open();
-			
-			cmd.Parameters.Add(new SqlClient.SqlParameter("@IDGRUPOENTIDAD", oBeGruposEntidades.IdGrupoEntidad));
-			
-			rowsAffected = cmd.ExecuteNonQuery();
-			
-			return rowsAffected;
-			
-		}
-		catch (Exception ex) {
-			throw ex;
-		}
-	}
+            return rowsAffected;
+        }
+        catch (Exception ex)
+        {
+            throw ex;
+        }
+    }
 
-	public DataTable Listar() {
-		try {
-			string sp = 'SpGruposEntidadesListar';
-			
-			SqlConnection cnn = new SqlConnection(oConexion.ConexionLocal);
-			SqlCommand cmd = new SqlCommand(sp, cnn);
-			cmd.CommandType = CommandType.StoredProcedure;
-			
-			SqlDataAdapter dad = new SqlDataAdapter(cmd);
-			
-			DataTable dt = new DataTable();
-			dad.Fill(dt);
-			
-			return dt;
-			
-		}
-		catch (Exception ex) {
-			throw ex;
-		}
-	}
+    public int Actualizar(ref clsBeGruposEntidades oBeGruposEntidades)
+    {
+        try
+        {
+            int rowsAffected = 0;
+            string storedProcedure = "SpGruposEntidadesActualizar";
 
-	public bool Obtener(ref clsBeGruposEntidades oBeGruposEntidades) {
-		try {
-			string sp = 'SpGruposEntidadesObtener';
-			
-			SqlConnection cnn = new SqlConnection(oConexion.ConexionLocal);
-			SqlCommand cmd = new SqlCommand(sp, cnn);
-			cmd.CommandType = CommandType.StoredProcedure;
-			
-			SqlDataAdapter dad = new SqlDataAdapter(cmd);
-			dad.SelectCommand.Parameters.Add(new SqlClient.SqlParameter("@IDGRUPOENTIDAD", oBeGruposEntidades.IdGrupoEntidad));
-			
-			DataTable dt = new DataTable();
-			dad.Fill(dt);
-			
-			if ((dt.Rows.Count == 1)) {
-				Cargar(oBeGruposEntidades, dt.Rows(0))
-			}
-			else {
-				throw new Exception('No se pudo obtener el registro');
-			}
-			
-			return true;
-			
-		}
-		catch (Exception ex) {
-			throw ex;
-		}
-	}
+            SqlConnection sqlConnection = new SqlConnection(Datos.DBConnection);
+            SqlCommand sqlCommand = new SqlCommand(storedProcedure, sqlConnection);
+            
+            sqlConnection.Open();
 
-	public bool Primero(ref clsBeGruposEntidades oBeGruposEntidades) {
-		Try
-			string sp = 'SpGruposEntidadesPrimero';
-			
-			SqlConnection cnn = new SqlConnection(oConexion.ConexionLocal);
-			SqlCommand cmd = new SqlCommand(sp, cnn);
-			cmd.CommandType = CommandType.StoredProcedure;
-			
-			SqlDataAdapter dad = new SqlDataAdapter(cmd);
-			
-			DataTable dt = new DataTable();
-			dad.Fill(dt);
-			
-			if ((dt.Rows.Count == 1)) {
-				Cargar(oBeGruposEntidades, dt.Rows[0]);
-			}
-			else {
-				throw new Exception('No se pudo obtener el primer registro');
-			}
-			
-			return true;
-		}
-		catch (Exception ex) {
-			throw ex;
-		}
-	}
+            sqlCommand.Parameters.Add(new SqlParameter("@IDGRUPOENTIDAD", oBeGruposEntidades.IdGrupoEntidad));
+            sqlCommand.Parameters.Add(new SqlParameter("@DESCRIPCION", oBeGruposEntidades.Descripcion));
+            sqlCommand.Parameters.Add(new SqlParameter("@COMENTARIO", oBeGruposEntidades.Comentario));
+            sqlCommand.Parameters.Add(new SqlParameter("@STATUS", oBeGruposEntidades.Status));
+            sqlCommand.Parameters.Add(new SqlParameter("@NOELIMINABLE", oBeGruposEntidades.NoEliminable));
+            sqlCommand.Parameters.Add(new SqlParameter("@FECHAREGISTRO", oBeGruposEntidades.FechaRegistro));
 
-	public bool Primero(ref clsBeGruposEntidades oBeGruposEntidades) {
-		try {
-			string sp = 'SpGruposEntidadesUltimo';
-			
-			SqlConnection cnn = new SqlConnection(oConexion.ConexionLocal);
-			SqlCommand cmd = new SqlCommand(sp, cnn);
-			cmd.CommandType = CommandType.StoredProcedure;
-			
-			SqlDataAdapter dad = new SqlDataAdapter(cmd);
-			
-			DataTable dt = new DataTable();
-			dad.Fill(dt);
-			
-			if ((dt.Rows.Count == 1)) {
-				Cargar(oBeGruposEntidades, dt.Rows[0]);
-			}
-			else {
-				throw new Exception('No se pudo obtener el primer registro');
-			}
-			
-			return true;
-		}
-		catch (Exception ex) {
-			throw ex;
-		}
-	}
+            rowsAffected = sqlCommand.ExecuteNonQuery();
 
-	public bool Anterior(ref clsBeGruposEntidades oBeGruposEntidades) {
-		Try
-			string sp = 'SpGruposEntidadesAnterior';
-			
-			SqlConnection cnn = new SqlConnection(oConexion.ConexionLocal);
-			SqlCommand cmd = new SqlCommand(sp, cnn);
-			cmd.CommandType = CommandType.StoredProcedure;
-			
-			SqlDataAdapter dad = new SqlDataAdapter(cmd);
-			dad.SelectCommand.Parameters.Add(new SqlClient.SqlParameter("@IDGRUPOENTIDAD", oBeGruposEntidades.IdGrupoEntidad));
-			
-			DataTable dt = new DataTable();
-			dad.Fill(dt);
-			
-			if ((dt.Rows.Count == 1)) {
-				Cargar(oBeGruposEntidades, dt.Rows[0]);
-			}
-			else {
-				throw new Exception('No se pudo obtener el anterior registro');
-			End If
-			}
-			
-			return true;
-		}
-		catch (Exception ex) {
-			throw ex;
-		}
-	}
+            return rowsAffected;
+        }
+        catch (Exception ex)
+        {
+            throw ex;
+        }
+    }
 
-	public bool Siguiente(ref clsBeGruposEntidades oBeGruposEntidades) {
-		Try
-			string sp = 'SpGruposEntidadesSiguiente';
-			
-			SqlConnection cnn = new SqlConnection(oConexion.ConexionLocal);
-			SqlCommand cmd = new SqlCommand(sp, cnn);
-			cmd.CommandType = CommandType.StoredProcedure;
-			
-			SqlDataAdapter dad = new SqlDataAdapter(cmd);
-			dad.SelectCommand.Parameters.Add(new SqlClient.SqlParameter("@IDGRUPOENTIDAD", oBeGruposEntidades.IdGrupoEntidad));
-			
-			DataTable dt = new DataTable();
-			dad.Fill(dt);
-			
-			if ((dt.Rows.Count == 1)) {
-				Cargar(oBeGruposEntidades, dt.Rows[0]);
-			}
-			else {
-				throw new Exception('No se pudo obtener el siguiente registro');
-			End If
-			}
-			
-			return true;
-		}
-		catch (Exception ex) {
-			throw ex;
-		}
-	}
+    public int Eliminar(ref clsBeGruposEntidades oBeGruposEntidades)
+    {
+        try
+        {
+            int rowsAffected = 0;
+            string storedProcedure = "SpGruposEntidadesEliminar";
 
+            SqlConnection sqlConnection = new SqlConnection(Datos.DBConnection);
+            SqlCommand sqlCommand = new SqlCommand(storedProcedure, sqlConnection);
+            
+            sqlConnection.Open();
+            sqlCommand.Parameters.Add(new SqlParameter("@IDGRUPOENTIDAD", oBeGruposEntidades.IdGrupoEntidad));
+            rowsAffected = sqlCommand.ExecuteNonQuery();
+
+            return rowsAffected;
+        }
+        catch (Exception ex)
+        {
+            throw ex;
+        }
+    }
+
+    public DataTable Listar()
+    {
+        try
+        {
+            string storedProcedure = "SpGruposEntidadesListar";
+
+            DataTable dataTable = new DataTable();
+            SqlConnection sqlConnection = new SqlConnection(Datos.DBConnection);
+            
+            SqlCommand sqlCommand = new SqlCommand(storedProcedure, sqlConnection);
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+            sqlDataAdapter.Fill(dataTable);
+
+            return dataTable;
+        }
+        catch (Exception ex)
+        {
+            throw ex;
+        }
+    }
+
+    public bool Obtener(ref clsBeGruposEntidades oBeGruposEntidades)
+    {
+        try
+        {
+            string storedProcedure = "SpGruposEntidadesObtener";
+
+            DataTable dataTable = new DataTable();
+            SqlConnection sqlConnection = new SqlConnection(Datos.DBConnection);
+            
+            SqlCommand sqlCommand = new SqlCommand(storedProcedure, sqlConnection);
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+            sqlDataAdapter.SelectCommand.Parameters.Add(new SqlParameter("@IDGRUPOENTIDAD", oBeGruposEntidades.IdGrupoEntidad));
+            sqlDataAdapter.Fill(dataTable);
+
+            if ((dataTable.Rows.Count == 1))
+            {
+                Cargar(ref oBeGruposEntidades, dataTable.Rows[0]);
+
+            }
+            else
+            {
+                throw new Exception("No se pudo obtener el registro");
+            }
+
+            return true;
+        }
+        catch (Exception ex)
+        {
+            throw ex;
+        }
+    }
 }
