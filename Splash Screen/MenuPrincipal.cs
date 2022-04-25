@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Splash_Screen
 {
-    public partial class FormMenuPrincipal : Form
+    public partial class MenuPrincipal : Form
     {
-        public FormMenuPrincipal()
+        public MenuPrincipal()
         {
             InitializeComponent();
         }
 
-        private void entitadesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void IrAlCrudEntidades(object sender, EventArgs e)
         {
             FormEntidadesCRUD crud = new FormEntidadesCRUD();
             crud.MdiParent = this;

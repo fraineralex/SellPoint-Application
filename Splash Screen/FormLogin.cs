@@ -22,7 +22,7 @@ namespace Splash_Screen
             if (entidad.Obtener(ref entidadesModel))
             {
                 this.Hide();
-                new FormMenuPrincipal().Show();
+                new MenuPrincipal().Show();
 
                 return;
             }
