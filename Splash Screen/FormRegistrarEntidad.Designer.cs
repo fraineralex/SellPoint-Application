@@ -30,23 +30,22 @@
         {
             this.labelTituloRegistrarEntidad = new System.Windows.Forms.Label();
             this.groupBoxDatosGeneralesRegistrarEntidad = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBoxIdEntidadRegistrarEntidad = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBoxTipoEntidadRegistrarEntidad = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.textBoxTelefonoRegistrarEntidad = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBoxNumeroDocumentoRegistrarEntidad = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.comboBoxTipoDocumentoRegistrarEntidad = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBoxNumeroDocumentoRegistrarIdentidad = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBoxTelefonoRegistrarEntidad = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboBoxTipoEntidadRegistrarEntidad = new System.Windows.Forms.ComboBox();
+            this.textBoxLocalidadRegistrarEntidad = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBoxDireccionResgistrarEntidad = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBoxDescripcionRegistrarEntidad = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBoxURLTikTokRegistrarEntidad = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.textBoxURLTwitterRegistrarEntidad = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -56,29 +55,29 @@
             this.label15 = new System.Windows.Forms.Label();
             this.textBoxURLPáginaWebRegistrarEntidad = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBoxURLTikTokRegistrarEntidad = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBoxLimiteCreditoRegistrarEntidad = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.comboBoxIdGrupoEntidadRegistrarEntidad = new System.Windows.Forms.ComboBox();
-            this.comboBoxIdTipoEntidadRegistrarEntidad = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.comboBoxRolUserRegistrarEntidad = new System.Windows.Forms.ComboBox();
+            this.textBoxPasswordRegistrarEntidad = new System.Windows.Forms.TextBox();
+            this.dateTimePickerRegistrarEntidad = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxNoEliminableRegistrarEntidad = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBoxStatusRegistrarEntidad = new System.Windows.Forms.ComboBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBoxComentarioRegistrarEntidad = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBoxUsernameRegistrarEntidad = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.buttonGuardarRegistrarEntidad = new System.Windows.Forms.Button();
+            this.textBoxIdTipoEntidadRegistrarEntidad = new System.Windows.Forms.TextBox();
+            this.textBoxIdGrupoEntidadRegistrarEntidad = new System.Windows.Forms.TextBox();
             this.groupBoxDatosGeneralesRegistrarEntidad.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -99,20 +98,18 @@
             // 
             this.groupBoxDatosGeneralesRegistrarEntidad.Controls.Add(this.textBoxTelefonoRegistrarEntidad);
             this.groupBoxDatosGeneralesRegistrarEntidad.Controls.Add(this.label8);
-            this.groupBoxDatosGeneralesRegistrarEntidad.Controls.Add(this.textBoxNumeroDocumentoRegistrarIdentidad);
+            this.groupBoxDatosGeneralesRegistrarEntidad.Controls.Add(this.textBoxNumeroDocumentoRegistrarEntidad);
             this.groupBoxDatosGeneralesRegistrarEntidad.Controls.Add(this.label7);
             this.groupBoxDatosGeneralesRegistrarEntidad.Controls.Add(this.label6);
             this.groupBoxDatosGeneralesRegistrarEntidad.Controls.Add(this.comboBoxTipoDocumentoRegistrarEntidad);
             this.groupBoxDatosGeneralesRegistrarEntidad.Controls.Add(this.label5);
             this.groupBoxDatosGeneralesRegistrarEntidad.Controls.Add(this.comboBoxTipoEntidadRegistrarEntidad);
-            this.groupBoxDatosGeneralesRegistrarEntidad.Controls.Add(this.textBox3);
+            this.groupBoxDatosGeneralesRegistrarEntidad.Controls.Add(this.textBoxLocalidadRegistrarEntidad);
             this.groupBoxDatosGeneralesRegistrarEntidad.Controls.Add(this.label4);
-            this.groupBoxDatosGeneralesRegistrarEntidad.Controls.Add(this.textBox2);
+            this.groupBoxDatosGeneralesRegistrarEntidad.Controls.Add(this.textBoxDireccionResgistrarEntidad);
             this.groupBoxDatosGeneralesRegistrarEntidad.Controls.Add(this.label3);
-            this.groupBoxDatosGeneralesRegistrarEntidad.Controls.Add(this.textBox1);
+            this.groupBoxDatosGeneralesRegistrarEntidad.Controls.Add(this.textBoxDescripcionRegistrarEntidad);
             this.groupBoxDatosGeneralesRegistrarEntidad.Controls.Add(this.label2);
-            this.groupBoxDatosGeneralesRegistrarEntidad.Controls.Add(this.textBoxIdEntidadRegistrarEntidad);
-            this.groupBoxDatosGeneralesRegistrarEntidad.Controls.Add(this.label1);
             this.groupBoxDatosGeneralesRegistrarEntidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxDatosGeneralesRegistrarEntidad.Location = new System.Drawing.Point(29, 77);
             this.groupBoxDatosGeneralesRegistrarEntidad.Name = "groupBoxDatosGeneralesRegistrarEntidad";
@@ -121,94 +118,43 @@
             this.groupBoxDatosGeneralesRegistrarEntidad.TabStop = false;
             this.groupBoxDatosGeneralesRegistrarEntidad.Text = "Datos Generales";
             // 
-            // label1
+            // textBoxTelefonoRegistrarEntidad
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ID entidad:";
+            this.textBoxTelefonoRegistrarEntidad.Location = new System.Drawing.Point(0, 320);
+            this.textBoxTelefonoRegistrarEntidad.Name = "textBoxTelefonoRegistrarEntidad";
+            this.textBoxTelefonoRegistrarEntidad.Size = new System.Drawing.Size(188, 22);
+            this.textBoxTelefonoRegistrarEntidad.TabIndex = 15;
             // 
-            // textBoxIdEntidadRegistrarEntidad
+            // label8
             // 
-            this.textBoxIdEntidadRegistrarEntidad.Location = new System.Drawing.Point(16, 52);
-            this.textBoxIdEntidadRegistrarEntidad.Name = "textBoxIdEntidadRegistrarEntidad";
-            this.textBoxIdEntidadRegistrarEntidad.Size = new System.Drawing.Size(188, 22);
-            this.textBoxIdEntidadRegistrarEntidad.TabIndex = 1;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 301);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(69, 16);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Teléfono";
             // 
-            // textBox1
+            // textBoxNumeroDocumentoRegistrarEntidad
             // 
-            this.textBox1.Location = new System.Drawing.Point(16, 96);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(188, 22);
-            this.textBox1.TabIndex = 3;
+            this.textBoxNumeroDocumentoRegistrarEntidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNumeroDocumentoRegistrarEntidad.Location = new System.Drawing.Point(3, 276);
+            this.textBoxNumeroDocumentoRegistrarEntidad.Name = "textBoxNumeroDocumentoRegistrarEntidad";
+            this.textBoxNumeroDocumentoRegistrarEntidad.Size = new System.Drawing.Size(188, 22);
+            this.textBoxNumeroDocumentoRegistrarEntidad.TabIndex = 13;
             // 
-            // label2
+            // label7
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 76);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 16);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Descripción";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(16, 140);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(188, 22);
-            this.textBox2.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 121);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 16);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Dirección:";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(19, 184);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(188, 22);
-            this.textBox3.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 165);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 16);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Localidad:";
-            // 
-            // comboBoxTipoEntidadRegistrarEntidad
-            // 
-            this.comboBoxTipoEntidadRegistrarEntidad.FormattingEnabled = true;
-            this.comboBoxTipoEntidadRegistrarEntidad.Items.AddRange(new object[] {
-            "Fisica",
-            "Juridica"});
-            this.comboBoxTipoEntidadRegistrarEntidad.Location = new System.Drawing.Point(16, 228);
-            this.comboBoxTipoEntidadRegistrarEntidad.Name = "comboBoxTipoEntidadRegistrarEntidad";
-            this.comboBoxTipoEntidadRegistrarEntidad.Size = new System.Drawing.Size(185, 24);
-            this.comboBoxTipoEntidadRegistrarEntidad.TabIndex = 8;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 209);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(121, 16);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Tipo de entidad:";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 257);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(167, 16);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Número de documento:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(16, 255);
+            this.label6.Location = new System.Drawing.Point(6, 211);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(145, 16);
             this.label6.TabIndex = 11;
@@ -216,46 +162,84 @@
             // 
             // comboBoxTipoDocumentoRegistrarEntidad
             // 
+            this.comboBoxTipoDocumentoRegistrarEntidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTipoDocumentoRegistrarEntidad.FormattingEnabled = true;
             this.comboBoxTipoDocumentoRegistrarEntidad.Items.AddRange(new object[] {
             "RNC",
             "CEDULA"});
-            this.comboBoxTipoDocumentoRegistrarEntidad.Location = new System.Drawing.Point(16, 274);
+            this.comboBoxTipoDocumentoRegistrarEntidad.Location = new System.Drawing.Point(6, 230);
             this.comboBoxTipoDocumentoRegistrarEntidad.Name = "comboBoxTipoDocumentoRegistrarEntidad";
             this.comboBoxTipoDocumentoRegistrarEntidad.Size = new System.Drawing.Size(185, 24);
             this.comboBoxTipoDocumentoRegistrarEntidad.TabIndex = 10;
             // 
-            // label7
+            // label5
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(16, 301);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(167, 16);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Número de documento:";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 165);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(121, 16);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Tipo de entidad:";
             // 
-            // textBoxNumeroDocumentoRegistrarIdentidad
+            // comboBoxTipoEntidadRegistrarEntidad
             // 
-            this.textBoxNumeroDocumentoRegistrarIdentidad.Location = new System.Drawing.Point(13, 320);
-            this.textBoxNumeroDocumentoRegistrarIdentidad.Name = "textBoxNumeroDocumentoRegistrarIdentidad";
-            this.textBoxNumeroDocumentoRegistrarIdentidad.Size = new System.Drawing.Size(188, 22);
-            this.textBoxNumeroDocumentoRegistrarIdentidad.TabIndex = 13;
+            this.comboBoxTipoEntidadRegistrarEntidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxTipoEntidadRegistrarEntidad.FormattingEnabled = true;
+            this.comboBoxTipoEntidadRegistrarEntidad.Items.AddRange(new object[] {
+            "Fisica",
+            "Juridica"});
+            this.comboBoxTipoEntidadRegistrarEntidad.Location = new System.Drawing.Point(6, 184);
+            this.comboBoxTipoEntidadRegistrarEntidad.Name = "comboBoxTipoEntidadRegistrarEntidad";
+            this.comboBoxTipoEntidadRegistrarEntidad.Size = new System.Drawing.Size(185, 24);
+            this.comboBoxTipoEntidadRegistrarEntidad.TabIndex = 8;
             // 
-            // label8
+            // textBoxLocalidadRegistrarEntidad
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(16, 345);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(69, 16);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Teléfono";
+            this.textBoxLocalidadRegistrarEntidad.Location = new System.Drawing.Point(9, 140);
+            this.textBoxLocalidadRegistrarEntidad.Name = "textBoxLocalidadRegistrarEntidad";
+            this.textBoxLocalidadRegistrarEntidad.Size = new System.Drawing.Size(188, 22);
+            this.textBoxLocalidadRegistrarEntidad.TabIndex = 7;
             // 
-            // textBoxTelefonoRegistrarEntidad
+            // label4
             // 
-            this.textBoxTelefonoRegistrarEntidad.Location = new System.Drawing.Point(10, 364);
-            this.textBoxTelefonoRegistrarEntidad.Name = "textBoxTelefonoRegistrarEntidad";
-            this.textBoxTelefonoRegistrarEntidad.Size = new System.Drawing.Size(188, 22);
-            this.textBoxTelefonoRegistrarEntidad.TabIndex = 15;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 121);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 16);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Localidad:";
+            // 
+            // textBoxDireccionResgistrarEntidad
+            // 
+            this.textBoxDireccionResgistrarEntidad.Location = new System.Drawing.Point(6, 96);
+            this.textBoxDireccionResgistrarEntidad.Name = "textBoxDireccionResgistrarEntidad";
+            this.textBoxDireccionResgistrarEntidad.Size = new System.Drawing.Size(188, 22);
+            this.textBoxDireccionResgistrarEntidad.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 77);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(77, 16);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Dirección:";
+            // 
+            // textBoxDescripcionRegistrarEntidad
+            // 
+            this.textBoxDescripcionRegistrarEntidad.Location = new System.Drawing.Point(6, 52);
+            this.textBoxDescripcionRegistrarEntidad.Name = "textBoxDescripcionRegistrarEntidad";
+            this.textBoxDescripcionRegistrarEntidad.Size = new System.Drawing.Size(188, 22);
+            this.textBoxDescripcionRegistrarEntidad.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 32);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 16);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Descripción";
             // 
             // groupBox1
             // 
@@ -270,12 +254,19 @@
             this.groupBox1.Controls.Add(this.textBoxURLPáginaWebRegistrarEntidad);
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(327, 76);
+            this.groupBox1.Location = new System.Drawing.Point(314, 77);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(235, 272);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Redes Sociales";
+            // 
+            // textBoxURLTikTokRegistrarEntidad
+            // 
+            this.textBoxURLTikTokRegistrarEntidad.Location = new System.Drawing.Point(16, 228);
+            this.textBoxURLTikTokRegistrarEntidad.Name = "textBoxURLTikTokRegistrarEntidad";
+            this.textBoxURLTikTokRegistrarEntidad.Size = new System.Drawing.Size(188, 22);
+            this.textBoxURLTikTokRegistrarEntidad.TabIndex = 10;
             // 
             // label12
             // 
@@ -350,23 +341,16 @@
             this.label16.TabIndex = 0;
             this.label16.Text = "URL Página Web:";
             // 
-            // textBoxURLTikTokRegistrarEntidad
-            // 
-            this.textBoxURLTikTokRegistrarEntidad.Location = new System.Drawing.Point(16, 228);
-            this.textBoxURLTikTokRegistrarEntidad.Name = "textBoxURLTikTokRegistrarEntidad";
-            this.textBoxURLTikTokRegistrarEntidad.Size = new System.Drawing.Size(188, 22);
-            this.textBoxURLTikTokRegistrarEntidad.TabIndex = 10;
-            // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.comboBoxIdTipoEntidadRegistrarEntidad);
-            this.groupBox2.Controls.Add(this.comboBoxIdGrupoEntidadRegistrarEntidad);
+            this.groupBox2.Controls.Add(this.textBoxIdGrupoEntidadRegistrarEntidad);
+            this.groupBox2.Controls.Add(this.textBoxIdTipoEntidadRegistrarEntidad);
             this.groupBox2.Controls.Add(this.textBoxLimiteCreditoRegistrarEntidad);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(327, 371);
+            this.groupBox2.Location = new System.Drawing.Point(314, 369);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(235, 210);
             this.groupBox2.TabIndex = 3;
@@ -407,51 +391,57 @@
             this.label18.TabIndex = 0;
             this.label18.Text = "ID Grupo de entidad:";
             // 
-            // comboBoxIdGrupoEntidadRegistrarEntidad
-            // 
-            this.comboBoxIdGrupoEntidadRegistrarEntidad.FormattingEnabled = true;
-            this.comboBoxIdGrupoEntidadRegistrarEntidad.Items.AddRange(new object[] {
-            "Fisica",
-            "Juridica"});
-            this.comboBoxIdGrupoEntidadRegistrarEntidad.Location = new System.Drawing.Point(16, 50);
-            this.comboBoxIdGrupoEntidadRegistrarEntidad.Name = "comboBoxIdGrupoEntidadRegistrarEntidad";
-            this.comboBoxIdGrupoEntidadRegistrarEntidad.Size = new System.Drawing.Size(185, 24);
-            this.comboBoxIdGrupoEntidadRegistrarEntidad.TabIndex = 11;
-            // 
-            // comboBoxIdTipoEntidadRegistrarEntidad
-            // 
-            this.comboBoxIdTipoEntidadRegistrarEntidad.FormattingEnabled = true;
-            this.comboBoxIdTipoEntidadRegistrarEntidad.Items.AddRange(new object[] {
-            "Fisica",
-            "Juridica"});
-            this.comboBoxIdTipoEntidadRegistrarEntidad.Location = new System.Drawing.Point(19, 96);
-            this.comboBoxIdTipoEntidadRegistrarEntidad.Name = "comboBoxIdTipoEntidadRegistrarEntidad";
-            this.comboBoxIdTipoEntidadRegistrarEntidad.Size = new System.Drawing.Size(185, 24);
-            this.comboBoxIdTipoEntidadRegistrarEntidad.TabIndex = 12;
-            // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.comboBox3);
-            this.groupBox3.Controls.Add(this.textBox4);
-            this.groupBox3.Controls.Add(this.dateTimePicker1);
+            this.groupBox3.Controls.Add(this.comboBoxRolUserRegistrarEntidad);
+            this.groupBox3.Controls.Add(this.textBoxPasswordRegistrarEntidad);
+            this.groupBox3.Controls.Add(this.dateTimePickerRegistrarEntidad);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.label19);
-            this.groupBox3.Controls.Add(this.comboBox1);
+            this.groupBox3.Controls.Add(this.comboBoxNoEliminableRegistrarEntidad);
             this.groupBox3.Controls.Add(this.label20);
-            this.groupBox3.Controls.Add(this.comboBox2);
+            this.groupBox3.Controls.Add(this.comboBoxStatusRegistrarEntidad);
             this.groupBox3.Controls.Add(this.label21);
             this.groupBox3.Controls.Add(this.label22);
-            this.groupBox3.Controls.Add(this.textBox8);
+            this.groupBox3.Controls.Add(this.textBoxComentarioRegistrarEntidad);
             this.groupBox3.Controls.Add(this.label23);
-            this.groupBox3.Controls.Add(this.textBox9);
+            this.groupBox3.Controls.Add(this.textBoxUsernameRegistrarEntidad);
             this.groupBox3.Controls.Add(this.label24);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(594, 77);
+            this.groupBox3.Location = new System.Drawing.Point(579, 77);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(235, 472);
+            this.groupBox3.Size = new System.Drawing.Size(280, 472);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Registro";
+            // 
+            // comboBoxRolUserRegistrarEntidad
+            // 
+            this.comboBoxRolUserRegistrarEntidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxRolUserRegistrarEntidad.FormattingEnabled = true;
+            this.comboBoxRolUserRegistrarEntidad.Items.AddRange(new object[] {
+            "Admin",
+            "Supervisor",
+            "User"});
+            this.comboBoxRolUserRegistrarEntidad.Location = new System.Drawing.Point(13, 140);
+            this.comboBoxRolUserRegistrarEntidad.Name = "comboBoxRolUserRegistrarEntidad";
+            this.comboBoxRolUserRegistrarEntidad.Size = new System.Drawing.Size(185, 24);
+            this.comboBoxRolUserRegistrarEntidad.TabIndex = 9;
+            // 
+            // textBoxPasswordRegistrarEntidad
+            // 
+            this.textBoxPasswordRegistrarEntidad.Location = new System.Drawing.Point(13, 96);
+            this.textBoxPasswordRegistrarEntidad.Name = "textBoxPasswordRegistrarEntidad";
+            this.textBoxPasswordRegistrarEntidad.Size = new System.Drawing.Size(188, 22);
+            this.textBoxPasswordRegistrarEntidad.TabIndex = 14;
+            this.textBoxPasswordRegistrarEntidad.UseSystemPasswordChar = true;
+            // 
+            // dateTimePickerRegistrarEntidad
+            // 
+            this.dateTimePickerRegistrarEntidad.Location = new System.Drawing.Point(13, 393);
+            this.dateTimePickerRegistrarEntidad.Name = "dateTimePickerRegistrarEntidad";
+            this.dateTimePickerRegistrarEntidad.Size = new System.Drawing.Size(251, 22);
+            this.dateTimePickerRegistrarEntidad.TabIndex = 13;
             // 
             // label11
             // 
@@ -471,16 +461,17 @@
             this.label19.TabIndex = 11;
             this.label19.Text = "No eliminable:";
             // 
-            // comboBox1
+            // comboBoxNoEliminableRegistrarEntidad
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "0",
-            "1"});
-            this.comboBox1.Location = new System.Drawing.Point(16, 347);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(185, 24);
-            this.comboBox1.TabIndex = 10;
+            this.comboBoxNoEliminableRegistrarEntidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxNoEliminableRegistrarEntidad.FormattingEnabled = true;
+            this.comboBoxNoEliminableRegistrarEntidad.Items.AddRange(new object[] {
+            "false",
+            "true"});
+            this.comboBoxNoEliminableRegistrarEntidad.Location = new System.Drawing.Point(16, 347);
+            this.comboBoxNoEliminableRegistrarEntidad.Name = "comboBoxNoEliminableRegistrarEntidad";
+            this.comboBoxNoEliminableRegistrarEntidad.Size = new System.Drawing.Size(185, 24);
+            this.comboBoxNoEliminableRegistrarEntidad.TabIndex = 10;
             // 
             // label20
             // 
@@ -491,16 +482,17 @@
             this.label20.TabIndex = 9;
             this.label20.Text = "Status:";
             // 
-            // comboBox2
+            // comboBoxStatusRegistrarEntidad
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.comboBoxStatusRegistrarEntidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxStatusRegistrarEntidad.FormattingEnabled = true;
+            this.comboBoxStatusRegistrarEntidad.Items.AddRange(new object[] {
             "Activa",
             "Inactiva"});
-            this.comboBox2.Location = new System.Drawing.Point(16, 301);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(185, 24);
-            this.comboBox2.TabIndex = 8;
+            this.comboBoxStatusRegistrarEntidad.Location = new System.Drawing.Point(16, 301);
+            this.comboBoxStatusRegistrarEntidad.Name = "comboBoxStatusRegistrarEntidad";
+            this.comboBoxStatusRegistrarEntidad.Size = new System.Drawing.Size(185, 24);
+            this.comboBoxStatusRegistrarEntidad.TabIndex = 8;
             // 
             // label21
             // 
@@ -520,13 +512,13 @@
             this.label22.TabIndex = 4;
             this.label22.Text = "Role user:";
             // 
-            // textBox8
+            // textBoxComentarioRegistrarEntidad
             // 
-            this.textBox8.Location = new System.Drawing.Point(13, 183);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(188, 96);
-            this.textBox8.TabIndex = 3;
+            this.textBoxComentarioRegistrarEntidad.Location = new System.Drawing.Point(13, 183);
+            this.textBoxComentarioRegistrarEntidad.Multiline = true;
+            this.textBoxComentarioRegistrarEntidad.Name = "textBoxComentarioRegistrarEntidad";
+            this.textBoxComentarioRegistrarEntidad.Size = new System.Drawing.Size(188, 96);
+            this.textBoxComentarioRegistrarEntidad.TabIndex = 3;
             // 
             // label23
             // 
@@ -537,12 +529,12 @@
             this.label23.TabIndex = 2;
             this.label23.Text = "Password:";
             // 
-            // textBox9
+            // textBoxUsernameRegistrarEntidad
             // 
-            this.textBox9.Location = new System.Drawing.Point(16, 52);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(188, 22);
-            this.textBox9.TabIndex = 1;
+            this.textBoxUsernameRegistrarEntidad.Location = new System.Drawing.Point(16, 52);
+            this.textBoxUsernameRegistrarEntidad.Name = "textBoxUsernameRegistrarEntidad";
+            this.textBoxUsernameRegistrarEntidad.Size = new System.Drawing.Size(188, 22);
+            this.textBoxUsernameRegistrarEntidad.TabIndex = 1;
             // 
             // label24
             // 
@@ -553,38 +545,36 @@
             this.label24.TabIndex = 0;
             this.label24.Text = "Username:";
             // 
-            // dateTimePicker1
+            // buttonGuardarRegistrarEntidad
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(16, 393);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 13;
+            this.buttonGuardarRegistrarEntidad.Location = new System.Drawing.Point(408, 601);
+            this.buttonGuardarRegistrarEntidad.Name = "buttonGuardarRegistrarEntidad";
+            this.buttonGuardarRegistrarEntidad.Size = new System.Drawing.Size(75, 23);
+            this.buttonGuardarRegistrarEntidad.TabIndex = 5;
+            this.buttonGuardarRegistrarEntidad.Text = "Guardar";
+            this.buttonGuardarRegistrarEntidad.UseVisualStyleBackColor = true;
+            this.buttonGuardarRegistrarEntidad.Click += new System.EventHandler(this.RegistrarEntidad);
             // 
-            // textBox4
+            // textBoxIdTipoEntidadRegistrarEntidad
             // 
-            this.textBox4.Location = new System.Drawing.Point(13, 96);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(188, 22);
-            this.textBox4.TabIndex = 14;
-            this.textBox4.UseSystemPasswordChar = true;
+            this.textBoxIdTipoEntidadRegistrarEntidad.Location = new System.Drawing.Point(16, 96);
+            this.textBoxIdTipoEntidadRegistrarEntidad.Name = "textBoxIdTipoEntidadRegistrarEntidad";
+            this.textBoxIdTipoEntidadRegistrarEntidad.Size = new System.Drawing.Size(188, 22);
+            this.textBoxIdTipoEntidadRegistrarEntidad.TabIndex = 11;
             // 
-            // comboBox3
+            // textBoxIdGrupoEntidadRegistrarEntidad
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Admin",
-            "Supervisor",
-            "User"});
-            this.comboBox3.Location = new System.Drawing.Point(13, 140);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(185, 24);
-            this.comboBox3.TabIndex = 9;
+            this.textBoxIdGrupoEntidadRegistrarEntidad.Location = new System.Drawing.Point(16, 55);
+            this.textBoxIdGrupoEntidadRegistrarEntidad.Name = "textBoxIdGrupoEntidadRegistrarEntidad";
+            this.textBoxIdGrupoEntidadRegistrarEntidad.Size = new System.Drawing.Size(188, 22);
+            this.textBoxIdGrupoEntidadRegistrarEntidad.TabIndex = 12;
             // 
             // FormRegistrarEntidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 612);
+            this.ClientSize = new System.Drawing.Size(884, 636);
+            this.Controls.Add(this.buttonGuardarRegistrarEntidad);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -612,14 +602,12 @@
 
         private System.Windows.Forms.Label labelTituloRegistrarEntidad;
         private System.Windows.Forms.GroupBox groupBoxDatosGeneralesRegistrarEntidad;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxLocalidadRegistrarEntidad;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxDireccionResgistrarEntidad;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxDescripcionRegistrarEntidad;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxIdEntidadRegistrarEntidad;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBoxTipoEntidadRegistrarEntidad;
         private System.Windows.Forms.Label label6;
@@ -627,7 +615,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBoxTelefonoRegistrarEntidad;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBoxNumeroDocumentoRegistrarIdentidad;
+        private System.Windows.Forms.TextBox textBoxNumeroDocumentoRegistrarEntidad;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBoxURLTwitterRegistrarEntidad;
@@ -644,22 +632,23 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.ComboBox comboBoxIdTipoEntidadRegistrarEntidad;
-        private System.Windows.Forms.ComboBox comboBoxIdGrupoEntidadRegistrarEntidad;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxNoEliminableRegistrarEntidad;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBoxStatusRegistrarEntidad;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBoxComentarioRegistrarEntidad;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBoxUsernameRegistrarEntidad;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.DateTimePicker dateTimePickerRegistrarEntidad;
+        private System.Windows.Forms.TextBox textBoxPasswordRegistrarEntidad;
+        private System.Windows.Forms.ComboBox comboBoxRolUserRegistrarEntidad;
+        private System.Windows.Forms.Button buttonGuardarRegistrarEntidad;
+        private System.Windows.Forms.TextBox textBoxIdGrupoEntidadRegistrarEntidad;
+        private System.Windows.Forms.TextBox textBoxIdTipoEntidadRegistrarEntidad;
     }
 }

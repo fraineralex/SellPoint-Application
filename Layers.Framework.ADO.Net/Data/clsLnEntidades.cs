@@ -27,12 +27,11 @@ public class clsLnEntidades
             string storedProcedure = "SpEntidadesInsertar";
 
             SqlConnection sqlConnection = new SqlConnection(Datos.DBConnection);
-            SqlCommand sqlCommand = new SqlCommand(storedProcedure, sqlConnection);
-            
             sqlConnection.Open();
 
-            sqlCommand.Parameters.Add(new SqlParameter("@IDENTIDAD", oBeEntidades.IdEntidad));
-            sqlCommand.Parameters["@IDENTIDAD"].Direction = ParameterDirection.Output;
+            SqlCommand sqlCommand = new SqlCommand(storedProcedure, sqlConnection);
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+
             sqlCommand.Parameters.Add(new SqlParameter("@DESCRIPCION", oBeEntidades.Descripcion));
             sqlCommand.Parameters.Add(new SqlParameter("@DIRECCION", oBeEntidades.Direccion));
             sqlCommand.Parameters.Add(new SqlParameter("@LOCALIDAD", oBeEntidades.Localidad));
@@ -57,7 +56,6 @@ public class clsLnEntidades
             sqlCommand.Parameters.Add(new SqlParameter("@FECHAREGISTRO", oBeEntidades.FechaRegistro));
 
             rowsAffected = sqlCommand.ExecuteNonQuery();
-            oBeEntidades.IdEntidad = Convert.ToInt32(sqlCommand.Parameters["@IDENTIDAD"].Value.ToString());
 
             return rowsAffected;
         }
@@ -75,11 +73,11 @@ public class clsLnEntidades
             string storedProcedure = "SpEntidadesActualizar";
 
             SqlConnection sqlConnection = new SqlConnection(Datos.DBConnection);
-            SqlCommand sqlCommand = new SqlCommand(storedProcedure, sqlConnection);
-
             sqlConnection.Open();
 
-            sqlCommand.Parameters.Add(new SqlParameter("@IDENTIDAD", oBeEntidades.IdEntidad));
+            SqlCommand sqlCommand = new SqlCommand(storedProcedure, sqlConnection);
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+
             sqlCommand.Parameters.Add(new SqlParameter("@DESCRIPCION", oBeEntidades.Descripcion));
             sqlCommand.Parameters.Add(new SqlParameter("@DIRECCION", oBeEntidades.Direccion));
             sqlCommand.Parameters.Add(new SqlParameter("@LOCALIDAD", oBeEntidades.Localidad));
@@ -121,10 +119,12 @@ public class clsLnEntidades
             string storedProcedure = "SpEntidadesEliminar";
 
             SqlConnection sqlConnection = new SqlConnection(Datos.DBConnection);
-            SqlCommand sqlCommand = new SqlCommand(storedProcedure, sqlConnection);
-
             sqlConnection.Open();
+
+            SqlCommand sqlCommand = new SqlCommand(storedProcedure, sqlConnection);
+            sqlCommand.CommandType = CommandType.StoredProcedure;
             sqlCommand.Parameters.Add(new SqlParameter("@IDENTIDAD", oBeEntidades.IdEntidad));
+            
             rowsAffected = sqlCommand.ExecuteNonQuery();
 
             return rowsAffected;

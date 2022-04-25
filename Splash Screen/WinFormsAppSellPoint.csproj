@@ -83,6 +83,12 @@
     <Compile Include="FormRegister.Designer.cs">
       <DependentUpon>FormRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRegistrarEntidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegistrarEntidad.Designer.cs">
+      <DependentUpon>FormRegistrarEntidad.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegister.resx">
       <DependentUpon>FormRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegistrarEntidad.resx">
+      <DependentUpon>FormRegistrarEntidad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSplashScreen.resx">
       <DependentUpon>FormSplashScreen.cs</DependentUpon>

@@ -25,7 +25,12 @@ namespace Splash_Screen
         private void MostrarEntidades()
         {
             var datos = new clsLnEntidades();
-            tablaEntidades.DataSource = datos.Listar();
+            tablaEntidadesEntidadesCrud.DataSource = datos.Listar();
+        }
+
+        private void CrearEntidad(object sender, EventArgs e)
+        {
+            new FormRegistrarEntidad().Show();
         }
     }
 }
