@@ -96,21 +96,18 @@
             this.gruposEntidadesToolStripMenuItem.Name = "gruposEntidadesToolStripMenuItem";
             this.gruposEntidadesToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
             this.gruposEntidadesToolStripMenuItem.Text = "Grupos Entidades";
-            this.gruposEntidadesToolStripMenuItem.Click += new System.EventHandler(this.gruposEntidadesToolStripMenuItem_Click);
             // 
             // tiposEntidadesToolStripMenuItem
             // 
             this.tiposEntidadesToolStripMenuItem.Name = "tiposEntidadesToolStripMenuItem";
             this.tiposEntidadesToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
             this.tiposEntidadesToolStripMenuItem.Text = "Tipos Entidades";
-            this.tiposEntidadesToolStripMenuItem.Click += new System.EventHandler(this.tiposEntidadesToolStripMenuItem_Click);
             // 
             // entitadesToolStripMenuItem
             // 
             this.entitadesToolStripMenuItem.Name = "entitadesToolStripMenuItem";
             this.entitadesToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
             this.entitadesToolStripMenuItem.Text = "Entitades";
-            this.entitadesToolStripMenuItem.Click += new System.EventHandler(this.entitadesToolStripMenuItem_Click);
             // 
             // editMenu
             // 

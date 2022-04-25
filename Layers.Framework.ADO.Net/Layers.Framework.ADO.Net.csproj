@@ -45,7 +45,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\clsLnEntidades.cs" />
+    <Compile Include="Data\clsLnGruposEntidades.cs" />
+    <Compile Include="Data\clsLnTiposEntidades.cs" />
     <Compile Include="Data\DBActions.cs" />
+    <Compile Include="Data\Models\clsBeEntidades.cs" />
+    <Compile Include="Data\Models\clsBeGruposEntidades.cs" />
+    <Compile Include="Data\Models\clsBeTiposEntidades.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
