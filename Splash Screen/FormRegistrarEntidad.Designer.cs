@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegistrarEntidad));
             this.labelTituloRegistrarEntidad = new System.Windows.Forms.Label();
             this.groupBoxDatosGeneralesRegistrarEntidad = new System.Windows.Forms.GroupBox();
             this.textBoxTelefonoRegistrarEntidad = new System.Windows.Forms.TextBox();
@@ -56,6 +57,8 @@
             this.textBoxURLPáginaWebRegistrarEntidad = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBoxIdGrupoEntidadRegistrarEntidad = new System.Windows.Forms.TextBox();
+            this.textBoxIdTipoEntidadRegistrarEntidad = new System.Windows.Forms.TextBox();
             this.textBoxLimiteCreditoRegistrarEntidad = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -76,8 +79,6 @@
             this.textBoxUsernameRegistrarEntidad = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.buttonGuardarRegistrarEntidad = new System.Windows.Forms.Button();
-            this.textBoxIdTipoEntidadRegistrarEntidad = new System.Windows.Forms.TextBox();
-            this.textBoxIdGrupoEntidadRegistrarEntidad = new System.Windows.Forms.TextBox();
             this.groupBoxDatosGeneralesRegistrarEntidad.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -357,6 +358,20 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Grupo / Tipo / Límite";
             // 
+            // textBoxIdGrupoEntidadRegistrarEntidad
+            // 
+            this.textBoxIdGrupoEntidadRegistrarEntidad.Location = new System.Drawing.Point(16, 55);
+            this.textBoxIdGrupoEntidadRegistrarEntidad.Name = "textBoxIdGrupoEntidadRegistrarEntidad";
+            this.textBoxIdGrupoEntidadRegistrarEntidad.Size = new System.Drawing.Size(188, 22);
+            this.textBoxIdGrupoEntidadRegistrarEntidad.TabIndex = 12;
+            // 
+            // textBoxIdTipoEntidadRegistrarEntidad
+            // 
+            this.textBoxIdTipoEntidadRegistrarEntidad.Location = new System.Drawing.Point(16, 96);
+            this.textBoxIdTipoEntidadRegistrarEntidad.Name = "textBoxIdTipoEntidadRegistrarEntidad";
+            this.textBoxIdTipoEntidadRegistrarEntidad.Size = new System.Drawing.Size(188, 22);
+            this.textBoxIdTipoEntidadRegistrarEntidad.TabIndex = 11;
+            // 
             // textBoxLimiteCreditoRegistrarEntidad
             // 
             this.textBoxLimiteCreditoRegistrarEntidad.Location = new System.Drawing.Point(16, 156);
@@ -555,24 +570,11 @@
             this.buttonGuardarRegistrarEntidad.UseVisualStyleBackColor = true;
             this.buttonGuardarRegistrarEntidad.Click += new System.EventHandler(this.RegistrarEntidad);
             // 
-            // textBoxIdTipoEntidadRegistrarEntidad
-            // 
-            this.textBoxIdTipoEntidadRegistrarEntidad.Location = new System.Drawing.Point(16, 96);
-            this.textBoxIdTipoEntidadRegistrarEntidad.Name = "textBoxIdTipoEntidadRegistrarEntidad";
-            this.textBoxIdTipoEntidadRegistrarEntidad.Size = new System.Drawing.Size(188, 22);
-            this.textBoxIdTipoEntidadRegistrarEntidad.TabIndex = 11;
-            // 
-            // textBoxIdGrupoEntidadRegistrarEntidad
-            // 
-            this.textBoxIdGrupoEntidadRegistrarEntidad.Location = new System.Drawing.Point(16, 55);
-            this.textBoxIdGrupoEntidadRegistrarEntidad.Name = "textBoxIdGrupoEntidadRegistrarEntidad";
-            this.textBoxIdGrupoEntidadRegistrarEntidad.Size = new System.Drawing.Size(188, 22);
-            this.textBoxIdGrupoEntidadRegistrarEntidad.TabIndex = 12;
-            // 
             // FormRegistrarEntidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(884, 636);
             this.Controls.Add(this.buttonGuardarRegistrarEntidad);
             this.Controls.Add(this.groupBox3);
@@ -581,10 +583,11 @@
             this.Controls.Add(this.groupBoxDatosGeneralesRegistrarEntidad);
             this.Controls.Add(this.labelTituloRegistrarEntidad);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormRegistrarEntidad";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormRegistrarEntidad";
+            this.Text = "Sell Point";
             this.groupBoxDatosGeneralesRegistrarEntidad.ResumeLayout(false);
             this.groupBoxDatosGeneralesRegistrarEntidad.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -599,56 +602,55 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label labelTituloRegistrarEntidad;
         private System.Windows.Forms.GroupBox groupBoxDatosGeneralesRegistrarEntidad;
-        private System.Windows.Forms.TextBox textBoxLocalidadRegistrarEntidad;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBoxDireccionResgistrarEntidad;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBoxDescripcionRegistrarEntidad;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBoxTipoEntidadRegistrarEntidad;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBoxTipoDocumentoRegistrarEntidad;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBoxTelefonoRegistrarEntidad;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBoxNumeroDocumentoRegistrarEntidad;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBoxURLTwitterRegistrarEntidad;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBoxURLInstagramRegistrarEntidad;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBoxURLFacebookRegistrarEntidad;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBoxURLPáginaWebRegistrarEntidad;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBoxURLTikTokRegistrarEntidad;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBoxLimiteCreditoRegistrarEntidad;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.ComboBox comboBoxNoEliminableRegistrarEntidad;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.ComboBox comboBoxStatusRegistrarEntidad;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBoxComentarioRegistrarEntidad;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox textBoxUsernameRegistrarEntidad;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.DateTimePicker dateTimePickerRegistrarEntidad;
-        private System.Windows.Forms.TextBox textBoxPasswordRegistrarEntidad;
-        private System.Windows.Forms.ComboBox comboBoxRolUserRegistrarEntidad;
         private System.Windows.Forms.Button buttonGuardarRegistrarEntidad;
-        private System.Windows.Forms.TextBox textBoxIdGrupoEntidadRegistrarEntidad;
-        private System.Windows.Forms.TextBox textBoxIdTipoEntidadRegistrarEntidad;
+        public System.Windows.Forms.TextBox textBoxLocalidadRegistrarEntidad;
+        public System.Windows.Forms.TextBox textBoxDireccionResgistrarEntidad;
+        public System.Windows.Forms.TextBox textBoxDescripcionRegistrarEntidad;
+        public System.Windows.Forms.TextBox textBoxTelefonoRegistrarEntidad;
+        public System.Windows.Forms.TextBox textBoxNumeroDocumentoRegistrarEntidad;
+        public System.Windows.Forms.TextBox textBoxURLTwitterRegistrarEntidad;
+        public System.Windows.Forms.TextBox textBoxURLInstagramRegistrarEntidad;
+        public System.Windows.Forms.TextBox textBoxURLFacebookRegistrarEntidad;
+        public System.Windows.Forms.TextBox textBoxURLPáginaWebRegistrarEntidad;
+        public System.Windows.Forms.TextBox textBoxURLTikTokRegistrarEntidad;
+        public System.Windows.Forms.TextBox textBoxLimiteCreditoRegistrarEntidad;
+        public System.Windows.Forms.TextBox textBoxUsernameRegistrarEntidad;
+        public System.Windows.Forms.TextBox textBoxPasswordRegistrarEntidad;
+        public System.Windows.Forms.TextBox textBoxIdGrupoEntidadRegistrarEntidad;
+        public System.Windows.Forms.TextBox textBoxIdTipoEntidadRegistrarEntidad;
+        public System.Windows.Forms.ComboBox comboBoxTipoEntidadRegistrarEntidad;
+        public System.Windows.Forms.ComboBox comboBoxTipoDocumentoRegistrarEntidad;
+        public System.Windows.Forms.ComboBox comboBoxNoEliminableRegistrarEntidad;
+        public System.Windows.Forms.ComboBox comboBoxStatusRegistrarEntidad;
+        public System.Windows.Forms.ComboBox comboBoxRolUserRegistrarEntidad;
+        public System.Windows.Forms.Label labelTituloRegistrarEntidad;
+        public System.Windows.Forms.TextBox textBoxComentarioRegistrarEntidad;
+        public System.Windows.Forms.DateTimePicker dateTimePickerRegistrarEntidad;
     }
 }

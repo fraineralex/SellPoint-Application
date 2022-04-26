@@ -32,8 +32,8 @@ namespace Splash_Screen
 
         private void Registrarse(object sender, EventArgs e)
         {
+            new FormRegistrarEntidad().Show();
             this.Hide();
-            new FormRegister().Show();
         }
     }
 }

@@ -13,7 +13,7 @@ namespace Splash_Screen
 {
     public partial class FormRegistrarEntidad : Form
     {
-        private bool adecuadoParaRegistrar = true;
+        private bool actualizando = false;
 
         clsLnEntidades entidad = new clsLnEntidades();
         clsBeEntidades entidadesModel = new clsBeEntidades();
@@ -34,7 +34,7 @@ namespace Splash_Screen
 
         private void RegistrarEntidad(object sender, EventArgs e)
         {
-            if (adecuadoParaRegistrar)
+            if (!actualizando)
             {
                 entidadesModel.Descripcion = textBoxDescripcionRegistrarEntidad.Text.ToString().Trim();
                 entidadesModel.Direccion = textBoxDireccionResgistrarEntidad.Text.ToString().Trim();
@@ -62,7 +62,10 @@ namespace Splash_Screen
 
                 MessageBox.Show("Entidad guardada exitosamente.", "Guardada!");
                 this.Close();
+
+                return;
             }
+
         }
     }
 }

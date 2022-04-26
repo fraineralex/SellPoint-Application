@@ -101,7 +101,6 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Image = global::Splash_Screen.Properties.Resources.Prisma;
             this.pictureBox5.Location = new System.Drawing.Point(170, 396);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
@@ -148,7 +147,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Splash_Screen.Properties.Resources.Estrella_5;
             this.pictureBox1.Location = new System.Drawing.Point(120, 51);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
@@ -159,7 +157,6 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::Splash_Screen.Properties.Resources.Prisma;
             this.pictureBox3.Location = new System.Drawing.Point(2, 51);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
@@ -170,7 +167,6 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Splash_Screen.Properties.Resources.Estrella_41;
             this.pictureBox2.Location = new System.Drawing.Point(-44, 260);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
@@ -181,7 +177,6 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::Splash_Screen.Properties.Resources.Circulo1;
             this.pictureBox4.Location = new System.Drawing.Point(-297, 260);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
@@ -231,7 +226,6 @@
             // pictureBox7
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.pictureBox7.Image = global::Splash_Screen.Properties.Resources.Candado_32;
             this.pictureBox7.Location = new System.Drawing.Point(338, 262);
             this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox7.Name = "pictureBox7";
@@ -243,7 +237,6 @@
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.pictureBox6.Image = global::Splash_Screen.Properties.Resources.usuario_64;
             this.pictureBox6.Location = new System.Drawing.Point(338, 197);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";

@@ -46,7 +46,8 @@
             this.barraProgresiva.InnerColor = System.Drawing.Color.Gainsboro;
             this.barraProgresiva.InnerMargin = 2;
             this.barraProgresiva.InnerWidth = -1;
-            this.barraProgresiva.Location = new System.Drawing.Point(89, 145);
+            this.barraProgresiva.Location = new System.Drawing.Point(67, 118);
+            this.barraProgresiva.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.barraProgresiva.MarqueeAnimationSpeed = 2000;
             this.barraProgresiva.Name = "barraProgresiva";
             this.barraProgresiva.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(212)))), ((int)(((byte)(210)))));
@@ -55,7 +56,7 @@
             this.barraProgresiva.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(180)))), ((int)(((byte)(148)))));
             this.barraProgresiva.ProgressWidth = 6;
             this.barraProgresiva.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
-            this.barraProgresiva.Size = new System.Drawing.Size(180, 180);
+            this.barraProgresiva.Size = new System.Drawing.Size(135, 146);
             this.barraProgresiva.StartAngle = 270;
             this.barraProgresiva.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.barraProgresiva.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
@@ -75,9 +76,10 @@
             this.labelDataViewer.BackColor = System.Drawing.Color.Gainsboro;
             this.labelDataViewer.Font = new System.Drawing.Font("Agency FB", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDataViewer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(180)))), ((int)(((byte)(148)))));
-            this.labelDataViewer.Location = new System.Drawing.Point(65, 44);
+            this.labelDataViewer.Location = new System.Drawing.Point(49, 36);
+            this.labelDataViewer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDataViewer.Name = "labelDataViewer";
-            this.labelDataViewer.Size = new System.Drawing.Size(215, 61);
+            this.labelDataViewer.Size = new System.Drawing.Size(177, 50);
             this.labelDataViewer.TabIndex = 1;
             this.labelDataViewer.Text = "SELL POINT";
             this.labelDataViewer.UseWaitCursor = true;
@@ -87,9 +89,10 @@
             this.labelIniciando.AutoSize = true;
             this.labelIniciando.Font = new System.Drawing.Font("Agency FB", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelIniciando.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(180)))), ((int)(((byte)(148)))));
-            this.labelIniciando.Location = new System.Drawing.Point(102, 365);
+            this.labelIniciando.Location = new System.Drawing.Point(76, 297);
+            this.labelIniciando.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelIniciando.Name = "labelIniciando";
-            this.labelIniciando.Size = new System.Drawing.Size(142, 39);
+            this.labelIniciando.Size = new System.Drawing.Size(116, 34);
             this.labelIniciando.TabIndex = 2;
             this.labelIniciando.Text = "INICIANDO...";
             this.labelIniciando.UseWaitCursor = true;
@@ -101,10 +104,10 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(367, 453);
+            this.ClientSize = new System.Drawing.Size(275, 368);
             this.ControlBox = false;
             this.Controls.Add(this.labelIniciando);
             this.Controls.Add(this.labelDataViewer);
@@ -112,9 +115,11 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Sell Point";
             this.UseWaitCursor = true;
             this.ResumeLayout(false);
             this.PerformLayout();
