@@ -79,6 +79,7 @@
             this.buttonEditarTiposEntidadesCrud.TabIndex = 14;
             this.buttonEditarTiposEntidadesCrud.Text = "Editar";
             this.buttonEditarTiposEntidadesCrud.UseVisualStyleBackColor = true;
+            this.buttonEditarTiposEntidadesCrud.Click += new System.EventHandler(this.EditarTipoEntidad);
             // 
             // buttonNuevoTiposEntidadesCrud
             // 

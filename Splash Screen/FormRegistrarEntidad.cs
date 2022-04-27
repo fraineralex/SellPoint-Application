@@ -54,7 +54,7 @@ namespace Splash_Screen
 
                     logicaEntidad.Insertar(ref entidad);
 
-                    MessageBox.Show("Entidad guardada exitosamente.", "Guardada!");
+                    MessageBox.Show("Entidad guardada correctamente.", "Guardada!");
 
                     if (FormLogin.registrando)
                     {
@@ -67,7 +67,7 @@ namespace Splash_Screen
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Asegúrese de llenar todos los campos correctamente.", "Atención");
+                    MessageBox.Show("Asegúrese de llenar todos los campos correctamente.", "Atención!");
                 }
             }
 
@@ -101,12 +101,12 @@ namespace Splash_Screen
                     
                     logicaEntidad.Actualizar(ref entidad);
 
-                    MessageBox.Show("Entidad actualizada exitosamente.", "Actualizada!");
+                    MessageBox.Show("Entidad actualizada correctamente.", "Actualizada!");
                     this.Close();
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Asegúrese de llenar todos los campos correctamente.", "Atención");
+                    MessageBox.Show("Asegúrese de llenar todos los campos correctamente.", "Atención!");
                 }
             }
         }

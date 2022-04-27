@@ -39,19 +39,37 @@ namespace Splash_Screen
 
                     logicaTipoEntidad.Insertar(ref tipoEntidad);
 
-                    MessageBox.Show("Tipo de entidad guardada exitosamente.", "Guardada!");
+                    MessageBox.Show("Tipo de entidad guardada correctamente.", "Guardada!");
                     this.Close();
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    throw ex;
-                    
-                    /*MessageBox.Show("Asegúrese de llenar todos los campos correctamente.", "Atención");*/
+                    MessageBox.Show("Asegúrese de llenar todos los campos correctamente.", "Atención!");
                 }
             }
 
+            if (actualizando)
+            {
+                try
+                {
+                    tipoEntidad.IdGrupoEntidad = 1;
+                    tipoEntidad.IdTipoEntidad = Convert.ToInt32(textBoxIdTipoEntidadRegistrarTipoEntidad.Text.ToString());
+                    tipoEntidad.Descripcion = textBoxDescripcionRegistrarTipoEntidad.Text.ToString();
+                    tipoEntidad.Comentario = textBoxComentarioRegistrarTipoEntidad.Text.ToString();
+                    tipoEntidad.Status = comboBoxStatusRegistrarTipoEntidad.Text.ToString();
+                    tipoEntidad.NoEliminable = Convert.ToBoolean(comboBoxNoEliminableRegistrarTipoEntidad.Text.ToString());
+                    tipoEntidad.FechaRegistro = Convert.ToDateTime(dateTimePickerRegistrarTipoEntidad.Text.ToString());
 
+                    logicaTipoEntidad.Actualizar(ref tipoEntidad);
 
+                    MessageBox.Show("Tipo de entidad actualizada correctamente.", "Actualizada!");
+                    this.Close();
+                }
+                catch (Exception) 
+                {
+                    MessageBox.Show("Asegúrese de llenar todos los campos correctamente.", "Atención!");
+                }
+            }
         }
     }
 }
