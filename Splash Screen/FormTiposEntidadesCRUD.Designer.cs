@@ -70,6 +70,7 @@
             this.buttonEliminarTiposEntidadesCrud.TabIndex = 15;
             this.buttonEliminarTiposEntidadesCrud.Text = "Eliminar";
             this.buttonEliminarTiposEntidadesCrud.UseVisualStyleBackColor = true;
+            this.buttonEliminarTiposEntidadesCrud.Click += new System.EventHandler(this.EliminarTipoEntidad);
             // 
             // buttonEditarTiposEntidadesCrud
             // 

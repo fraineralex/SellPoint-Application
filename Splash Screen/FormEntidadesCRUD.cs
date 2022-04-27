@@ -89,11 +89,13 @@ namespace Splash_Screen
                 return;
             }
 
-            if (MessageBox.Show("Está seguro que quiere eliminar este usuario??", "Aviso!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("¿Está seguro que quiere eliminar este usuario?", "Aviso!", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 entidad.IdEntidad = Convert.ToInt32(tablaEntidadesCrud.CurrentRow.Cells[0].Value.ToString());
                 logicaEntidad.Eliminar(ref entidad);
+                
                 MessageBox.Show("Usuario eliminado exitosamente.", "Eliminado!");
+                
                 MostrarEntidades();
             }
         }

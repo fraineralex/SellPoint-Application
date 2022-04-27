@@ -94,10 +94,12 @@ public class clsLnTiposEntidades
             string storedProcedure = "SpTiposEntidadesEliminar";
 
             SqlConnection sqlConnection = new SqlConnection(Datos.DBConnection);
-            SqlCommand sqlCommand = new SqlCommand(storedProcedure, sqlConnection);
-            
             sqlConnection.Open();
+
+            SqlCommand sqlCommand = new SqlCommand(storedProcedure, sqlConnection);
+            sqlCommand.CommandType = CommandType.StoredProcedure;
             sqlCommand.Parameters.Add(new SqlParameter("@IDTIPOENTIDAD", oBeTiposEntidades.IdTipoEntidad));
+            
             rowsAffected = sqlCommand.ExecuteNonQuery();
 
             return rowsAffected;
