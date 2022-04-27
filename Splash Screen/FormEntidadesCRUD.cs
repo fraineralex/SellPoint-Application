@@ -26,52 +26,52 @@ namespace Splash_Screen
         {
             var datos = new clsLnEntidades();
             tablaEntidadesCrud.ReadOnly = true;
-            tablaEntidadesCrud.DataSource = datos.Listar();
             tablaEntidadesCrud.ClearSelection();
+            tablaEntidadesCrud.DataSource = datos.Listar();
         }
 
         private void CrearEntidad(object sender, EventArgs e)
         {
-            var formCrear = new FormRegistrarEntidad();
-            formCrear.actualizando = false;
-            formCrear.buttonHomeRegistrarEntidad.Visible = false;
-            formCrear.ShowDialog();
+            var formCreaEntidad = new FormRegistrarEntidad();
+            formCreaEntidad.actualizando = false;
+            formCreaEntidad.buttonHomeRegistrarEntidad.Visible = false;
+            formCreaEntidad.ShowDialog();
             
             MostrarEntidades();
         }
 
         private void EditarEntidad(object sender, EventArgs e)
         {
-            var formEditar = new FormRegistrarEntidad();
+            var formEditarEntidad = new FormRegistrarEntidad();
 
             if (tablaEntidadesCrud.SelectedColumns.Count > -1)
             {
-                formEditar.actualizando = true;
-                formEditar.buttonHomeRegistrarEntidad.Visible = false;
-                formEditar.labelTituloRegistrarEntidad.Text = "Editar Entidad";
-                formEditar.textBoxIdEntidadRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[0].Value.ToString();
-                formEditar.textBoxDescripcionRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[1].Value.ToString();
-                formEditar.textBoxDireccionResgistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[2].Value.ToString();
-                formEditar.textBoxLocalidadRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[3].Value.ToString();
-                formEditar.comboBoxTipoEntidadRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[4].Value.ToString();
-                formEditar.comboBoxTipoDocumentoRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[5].Value.ToString();
-                formEditar.textBoxNumeroDocumentoRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[6].Value.ToString();
-                formEditar.textBoxTelefonoRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[7].Value.ToString();
-                formEditar.textBoxURLPáginaWebRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[8].Value.ToString();
-                formEditar.textBoxURLFacebookRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[9].Value.ToString();
-                formEditar.textBoxURLInstagramRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[10].Value.ToString();
-                formEditar.textBoxURLTwitterRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[11].Value.ToString();
-                formEditar.textBoxURLTikTokRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[12].Value.ToString();
-                formEditar.textBoxIdGrupoEntidadRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[13].Value.ToString();
-                formEditar.textBoxIdTipoEntidadRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[14].Value.ToString();
-                formEditar.textBoxLimiteCreditoRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[15].Value.ToString();
-                formEditar.textBoxUsernameRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[16].Value.ToString();
-                formEditar.textBoxPasswordRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[17].Value.ToString();
-                formEditar.comboBoxRolUserRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[18].Value.ToString();
-                formEditar.textBoxComentarioRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[19].Value.ToString();
-                formEditar.comboBoxStatusRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[19].Value.ToString();
-                formEditar.comboBoxNoEliminableRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[21].Value.ToString();
-                formEditar.ShowDialog();
+                formEditarEntidad.actualizando = true;
+                formEditarEntidad.buttonHomeRegistrarEntidad.Visible = false;
+                formEditarEntidad.labelTituloRegistrarEntidad.Text = "Editar Entidad";
+                formEditarEntidad.textBoxIdEntidadRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[0].Value.ToString();
+                formEditarEntidad.textBoxDescripcionRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[1].Value.ToString();
+                formEditarEntidad.textBoxDireccionResgistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[2].Value.ToString();
+                formEditarEntidad.textBoxLocalidadRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[3].Value.ToString();
+                formEditarEntidad.comboBoxTipoEntidadRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[4].Value.ToString();
+                formEditarEntidad.comboBoxTipoDocumentoRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[5].Value.ToString();
+                formEditarEntidad.textBoxNumeroDocumentoRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[6].Value.ToString();
+                formEditarEntidad.textBoxTelefonoRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[7].Value.ToString();
+                formEditarEntidad.textBoxURLPáginaWebRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[8].Value.ToString();
+                formEditarEntidad.textBoxURLFacebookRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[9].Value.ToString();
+                formEditarEntidad.textBoxURLInstagramRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[10].Value.ToString();
+                formEditarEntidad.textBoxURLTwitterRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[11].Value.ToString();
+                formEditarEntidad.textBoxURLTikTokRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[12].Value.ToString();
+                formEditarEntidad.textBoxIdGrupoEntidadRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[13].Value.ToString();
+                formEditarEntidad.textBoxIdTipoEntidadRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[14].Value.ToString();
+                formEditarEntidad.textBoxLimiteCreditoRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[15].Value.ToString();
+                formEditarEntidad.textBoxUsernameRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[16].Value.ToString();
+                formEditarEntidad.textBoxPasswordRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[17].Value.ToString();
+                formEditarEntidad.comboBoxRolUserRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[18].Value.ToString();
+                formEditarEntidad.textBoxComentarioRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[19].Value.ToString();
+                formEditarEntidad.comboBoxStatusRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[19].Value.ToString();
+                formEditarEntidad.comboBoxNoEliminableRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[21].Value.ToString();
+                formEditarEntidad.ShowDialog();
 
                 MostrarEntidades();
 

@@ -36,6 +36,7 @@
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.archiivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.entidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tiposEntidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -69,7 +70,8 @@
             // archiivoToolStripMenuItem
             // 
             this.archiivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.entidadesToolStripMenuItem});
+            this.entidadesToolStripMenuItem,
+            this.tiposEntidadesToolStripMenuItem});
             this.archiivoToolStripMenuItem.Name = "archiivoToolStripMenuItem";
             this.archiivoToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.archiivoToolStripMenuItem.Text = "Archiivo";
@@ -77,9 +79,16 @@
             // entidadesToolStripMenuItem
             // 
             this.entidadesToolStripMenuItem.Name = "entidadesToolStripMenuItem";
-            this.entidadesToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.entidadesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.entidadesToolStripMenuItem.Text = "Entidades";
             this.entidadesToolStripMenuItem.Click += new System.EventHandler(this.IrAlCrudEntidades);
+            // 
+            // tiposEntidadesToolStripMenuItem
+            // 
+            this.tiposEntidadesToolStripMenuItem.Name = "tiposEntidadesToolStripMenuItem";
+            this.tiposEntidadesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tiposEntidadesToolStripMenuItem.Text = "Tipos Entidades";
+            this.tiposEntidadesToolStripMenuItem.Click += new System.EventHandler(this.IrAlCrudTiposEntidades);
             // 
             // MenuPrincipal
             // 
@@ -112,6 +121,7 @@
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem archiivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem entidadesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tiposEntidadesToolStripMenuItem;
     }
 }
 

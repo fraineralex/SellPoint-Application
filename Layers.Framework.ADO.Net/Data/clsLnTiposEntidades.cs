@@ -33,12 +33,11 @@ public class clsLnTiposEntidades
             string storedProcedure = "SpTiposEntidadesInsertar";
 
             SqlConnection sqlConnection = new SqlConnection(Datos.DBConnection);
-            SqlCommand sqlCommand = new SqlCommand(storedProcedure, sqlConnection);
-            
             sqlConnection.Open();
 
-            sqlCommand.Parameters.Add(new SqlParameter("@IDTIPOENTIDAD", oBeTiposEntidades.IdTipoEntidad));
-            sqlCommand.Parameters["@IDTIPOENTIDAD"].Direction = ParameterDirection.Output;
+            SqlCommand sqlCommand = new SqlCommand(storedProcedure, sqlConnection);
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+
             sqlCommand.Parameters.Add(new SqlParameter("@DESCRIPCION", oBeTiposEntidades.Descripcion));
             sqlCommand.Parameters.Add(new SqlParameter("@IDGRUPOENTIDAD", oBeTiposEntidades.IdGrupoEntidad));
             sqlCommand.Parameters.Add(new SqlParameter("@COMENTARIO", oBeTiposEntidades.Comentario));
@@ -47,7 +46,6 @@ public class clsLnTiposEntidades
             sqlCommand.Parameters.Add(new SqlParameter("@FECHAREGISTRO", oBeTiposEntidades.FechaRegistro));
 
             rowsAffected = sqlCommand.ExecuteNonQuery();
-            oBeTiposEntidades.IdTipoEntidad = Convert.ToInt32(sqlCommand.Parameters["@IDTIPOENTIDAD"].Value.ToString());
             
             return rowsAffected;
         }

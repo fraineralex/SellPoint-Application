@@ -23,15 +23,6 @@ namespace Splash_Screen
             InitializeComponent();
         }
 
-        public void CargarComboBoxesSelectIndex()
-        {
-            comboBoxTipoEntidadRegistrarEntidad.SelectedIndex = 0;
-            comboBoxTipoDocumentoRegistrarEntidad.SelectedIndex = 0;
-            comboBoxRolUserRegistrarEntidad.SelectedIndex = 0;
-            comboBoxStatusRegistrarEntidad.SelectedIndex = 0;
-            comboBoxNoEliminableRegistrarEntidad.SelectedIndex = 1;
-        }
-
         private void RegistrarEntidad(object sender, EventArgs e)
         {
             if (!actualizando)
@@ -76,9 +67,8 @@ namespace Splash_Screen
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Asegúrese de llenar todos los campos.", "Atención");
+                    MessageBox.Show("Asegúrese de llenar todos los campos correctamente.", "Atención");
                 }
-
             }
 
             if (actualizando)
@@ -116,7 +106,7 @@ namespace Splash_Screen
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Asegúrese de llenar todos los campos.", "Atención");
+                    MessageBox.Show("Asegúrese de llenar todos los campos correctamente.", "Atención");
                 }
             }
         }
