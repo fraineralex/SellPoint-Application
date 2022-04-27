@@ -78,6 +78,7 @@
             this.buttonEliminarGruposEntidadesCrud.TabIndex = 21;
             this.buttonEliminarGruposEntidadesCrud.Text = "Eliminar";
             this.buttonEliminarGruposEntidadesCrud.UseVisualStyleBackColor = true;
+            this.buttonEliminarGruposEntidadesCrud.Click += new System.EventHandler(this.EliminarGrupoEntidad);
             // 
             // buttonEditarGruposEntidadesCrud
             // 

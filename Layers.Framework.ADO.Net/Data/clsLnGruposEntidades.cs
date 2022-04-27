@@ -91,10 +91,12 @@ public class clsLnGruposEntidades
             string storedProcedure = "SpGruposEntidadesEliminar";
 
             SqlConnection sqlConnection = new SqlConnection(Datos.DBConnection);
-            SqlCommand sqlCommand = new SqlCommand(storedProcedure, sqlConnection);
-            
             sqlConnection.Open();
+
+            SqlCommand sqlCommand = new SqlCommand(storedProcedure, sqlConnection);
+            sqlCommand.CommandType = CommandType.StoredProcedure;
             sqlCommand.Parameters.Add(new SqlParameter("@IDGRUPOENTIDAD", oBeGruposEntidades.IdGrupoEntidad));
+            
             rowsAffected = sqlCommand.ExecuteNonQuery();
 
             return rowsAffected;

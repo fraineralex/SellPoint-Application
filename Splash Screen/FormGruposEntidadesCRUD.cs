@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Layers.Framework.ADO.Net;
 
 namespace Splash_Screen
 {
     public partial class FormGruposEntidadesCRUD : Form
     {
+
+        private clsBeGruposEntidades grupoEntidad = new clsBeGruposEntidades();
+        private readonly clsLnGruposEntidades logicaGrupoEntidad = new clsLnGruposEntidades();
+
         public FormGruposEntidadesCRUD()
         {
             InitializeComponent();
@@ -56,6 +61,25 @@ namespace Splash_Screen
             }
 
             MessageBox.Show("Seleccione el usuario que desea editar.", "Atención!");
+        }
+
+        private void EliminarGrupoEntidad(object sender, EventArgs e)
+        {
+            if (tablaGruposEntidadesCRUD.SelectedColumns.Count < 0)
+            {
+                MessageBox.Show("Seleccione el usuario que desea eliminar.", "Atención!");
+                return;
+            }
+
+            if (MessageBox.Show("¿Está seguro que quiere eliminar este usuario?", "Aviso!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                grupoEntidad.IdGrupoEntidad = Convert.ToInt32(tablaGruposEntidadesCRUD.CurrentRow.Cells[0].Value.ToString());
+                logicaGrupoEntidad.Eliminar(ref grupoEntidad);
+
+                MessageBox.Show("Usuario eliminado correctamente.", "Eliminado!");
+
+                MostrarGrupoEntidades();
+            }
         }
     }
 }
