@@ -1,6 +1,7 @@
 using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 using Layers.Framework.ADO.Net;
 using Layers.Framework.ADO.Net.Data;
 
@@ -78,6 +79,7 @@ public class clsLnEntidades
             SqlCommand sqlCommand = new SqlCommand(storedProcedure, sqlConnection);
             sqlCommand.CommandType = CommandType.StoredProcedure;
 
+            sqlCommand.Parameters.Add(new SqlParameter("@IDENTIDAD", oBeEntidades.IdEntidad));
             sqlCommand.Parameters.Add(new SqlParameter("@DESCRIPCION", oBeEntidades.Descripcion));
             sqlCommand.Parameters.Add(new SqlParameter("@DIRECCION", oBeEntidades.Direccion));
             sqlCommand.Parameters.Add(new SqlParameter("@LOCALIDAD", oBeEntidades.Localidad));

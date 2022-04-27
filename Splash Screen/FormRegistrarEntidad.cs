@@ -13,7 +13,7 @@ namespace Splash_Screen
 {
     public partial class FormRegistrarEntidad : Form
     {
-        private bool actualizando = false;
+        public bool actualizando = false;
 
         clsLnEntidades entidad = new clsLnEntidades();
         clsBeEntidades entidadesModel = new clsBeEntidades();
@@ -36,36 +36,81 @@ namespace Splash_Screen
         {
             if (!actualizando)
             {
-                entidadesModel.Descripcion = textBoxDescripcionRegistrarEntidad.Text.ToString().Trim();
-                entidadesModel.Direccion = textBoxDireccionResgistrarEntidad.Text.ToString().Trim();
-                entidadesModel.Localidad = textBoxLocalidadRegistrarEntidad.Text.ToString().Trim();
-                entidadesModel.TipoEntidad = comboBoxTipoEntidadRegistrarEntidad.Text.ToString().Trim();
-                entidadesModel.TipoDocumento = comboBoxTipoDocumentoRegistrarEntidad.Text.ToString().Trim();
-                entidadesModel.NumeroDocumento = Convert.ToDouble(textBoxNumeroDocumentoRegistrarEntidad.Text.ToString().Trim());
-                entidadesModel.Telefono = textBoxTelefonoRegistrarEntidad.Text.ToString().Trim();
-                entidadesModel.URLPaginaWeb = textBoxURLPáginaWebRegistrarEntidad.Text.ToString().Trim();
-                entidadesModel.URLFacebook = textBoxURLFacebookRegistrarEntidad.Text.ToString().Trim();
-                entidadesModel.URLInstagram = textBoxURLInstagramRegistrarEntidad.Text.ToString().Trim();
-                entidadesModel.URLTwitter = textBoxURLTwitterRegistrarEntidad.Text.ToString().Trim();
-                entidadesModel.URLTiktok = textBoxURLTikTokRegistrarEntidad.Text.ToString().Trim();
-                entidadesModel.IdGrupoEntidad = Convert.ToInt32(textBoxIdGrupoEntidadRegistrarEntidad.Text.ToString().Trim());
-                entidadesModel.IdTipoEntidad = Convert.ToInt32(textBoxIdTipoEntidadRegistrarEntidad.Text.ToString().Trim());
-                entidadesModel.LimiteCredito = Convert.ToDouble(textBoxLimiteCreditoRegistrarEntidad.Text.ToString().Trim());
-                entidadesModel.UserNameEntidad = textBoxUsernameRegistrarEntidad.Text.ToString().Trim();
-                entidadesModel.PasswordEntidad = textBoxPasswordRegistrarEntidad.Text.ToString().Trim();
-                entidadesModel.RolUserEntidad = comboBoxRolUserRegistrarEntidad.Text.ToString().Trim();
-                entidadesModel.Status = comboBoxStatusRegistrarEntidad.Text.ToString().Trim();
-                entidadesModel.NoEliminable = Convert.ToBoolean(comboBoxNoEliminableRegistrarEntidad.Text.ToString().Trim());
-                entidadesModel.FechaRegistro = Convert.ToDateTime(dateTimePickerRegistrarEntidad.Text.ToString().Trim());
+                try
+                {
+                    entidadesModel.Descripcion = textBoxDescripcionRegistrarEntidad.Text.ToString();
+                    entidadesModel.Direccion = textBoxDireccionResgistrarEntidad.Text.ToString();
+                    entidadesModel.Localidad = textBoxLocalidadRegistrarEntidad.Text.ToString();
+                    entidadesModel.TipoEntidad = comboBoxTipoEntidadRegistrarEntidad.Text.ToString();
+                    entidadesModel.TipoDocumento = comboBoxTipoDocumentoRegistrarEntidad.Text.ToString();
+                    entidadesModel.NumeroDocumento = Convert.ToDouble(textBoxNumeroDocumentoRegistrarEntidad.Text.ToString());
+                    entidadesModel.Telefono = textBoxTelefonoRegistrarEntidad.Text.ToString();
+                    entidadesModel.URLPaginaWeb = textBoxURLPáginaWebRegistrarEntidad.Text.ToString();
+                    entidadesModel.URLFacebook = textBoxURLFacebookRegistrarEntidad.Text.ToString();
+                    entidadesModel.URLInstagram = textBoxURLInstagramRegistrarEntidad.Text.ToString();
+                    entidadesModel.URLTwitter = textBoxURLTwitterRegistrarEntidad.Text.ToString();
+                    entidadesModel.URLTiktok = textBoxURLTikTokRegistrarEntidad.Text.ToString();
+                    entidadesModel.IdGrupoEntidad = Convert.ToInt32(textBoxIdGrupoEntidadRegistrarEntidad.Text.ToString());
+                    entidadesModel.IdTipoEntidad = Convert.ToInt32(textBoxIdTipoEntidadRegistrarEntidad.Text.ToString());
+                    entidadesModel.LimiteCredito = Convert.ToDouble(textBoxLimiteCreditoRegistrarEntidad.Text.ToString());
+                    entidadesModel.UserNameEntidad = textBoxUsernameRegistrarEntidad.Text.ToString();
+                    entidadesModel.PasswordEntidad = textBoxPasswordRegistrarEntidad.Text.ToString();
+                    entidadesModel.RolUserEntidad = comboBoxRolUserRegistrarEntidad.Text.ToString();
+                    entidadesModel.Comentario = textBoxComentarioRegistrarEntidad.Text.ToString();
+                    entidadesModel.Status = comboBoxStatusRegistrarEntidad.Text.ToString();
+                    entidadesModel.NoEliminable = Convert.ToBoolean(comboBoxNoEliminableRegistrarEntidad.Text.ToString());
+                    entidadesModel.FechaRegistro = Convert.ToDateTime(dateTimePickerRegistrarEntidad.Text.ToString());
 
-                entidad.Insertar(ref entidadesModel);
+                    entidad.Insertar(ref entidadesModel);
 
-                MessageBox.Show("Entidad guardada exitosamente.", "Guardada!");
-                this.Close();
+                    MessageBox.Show("Entidad guardada exitosamente.", "Guardada!");
+                    this.Close();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Asegúrese de llenar todos los campos.", "Atención");
+                }
 
-                return;
             }
 
+            if (actualizando)
+            {
+                try
+                {
+                    entidadesModel.IdEntidad = Convert.ToInt32(textBoxIdEntidadRegistrarEntidad.Text.ToString());
+                    entidadesModel.Descripcion = textBoxDescripcionRegistrarEntidad.Text.ToString();
+                    entidadesModel.Direccion = textBoxDireccionResgistrarEntidad.Text.ToString();
+                    entidadesModel.Localidad = textBoxLocalidadRegistrarEntidad.Text.ToString();
+                    entidadesModel.TipoEntidad = comboBoxTipoEntidadRegistrarEntidad.Text.ToString();
+                    entidadesModel.TipoDocumento = comboBoxTipoDocumentoRegistrarEntidad.Text.ToString();
+                    entidadesModel.NumeroDocumento = Convert.ToDouble(textBoxNumeroDocumentoRegistrarEntidad.Text.ToString());
+                    entidadesModel.Telefono = textBoxTelefonoRegistrarEntidad.Text.ToString();
+                    entidadesModel.URLPaginaWeb = textBoxURLPáginaWebRegistrarEntidad.Text.ToString();
+                    entidadesModel.URLFacebook = textBoxURLFacebookRegistrarEntidad.Text.ToString();
+                    entidadesModel.URLInstagram = textBoxURLInstagramRegistrarEntidad.Text.ToString();
+                    entidadesModel.URLTwitter = textBoxURLTwitterRegistrarEntidad.Text.ToString();
+                    entidadesModel.URLTiktok = textBoxURLTikTokRegistrarEntidad.Text.ToString();
+                    entidadesModel.IdGrupoEntidad = Convert.ToInt32(textBoxIdGrupoEntidadRegistrarEntidad.Text.ToString());
+                    entidadesModel.IdTipoEntidad = Convert.ToInt32(textBoxIdTipoEntidadRegistrarEntidad.Text.ToString());
+                    entidadesModel.LimiteCredito = Convert.ToDouble(textBoxLimiteCreditoRegistrarEntidad.Text.ToString());
+                    entidadesModel.UserNameEntidad = textBoxUsernameRegistrarEntidad.Text.ToString();
+                    entidadesModel.PasswordEntidad = textBoxPasswordRegistrarEntidad.Text.ToString();
+                    entidadesModel.RolUserEntidad = comboBoxRolUserRegistrarEntidad.Text.ToString();
+                    entidadesModel.Comentario = textBoxComentarioRegistrarEntidad.Text.ToString();
+                    entidadesModel.Status = comboBoxStatusRegistrarEntidad.Text.ToString();
+                    entidadesModel.NoEliminable = Convert.ToBoolean(comboBoxNoEliminableRegistrarEntidad.Text);
+                    entidadesModel.FechaRegistro = Convert.ToDateTime(dateTimePickerRegistrarEntidad.Text.ToString());
+
+                    entidad.Actualizar(ref entidadesModel);
+
+                    MessageBox.Show("Entidad actualizada exitosamente.", "Actualizada!");
+                    this.Close();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Asegúrese de llenar todos los campos.", "Atención");
+                }
+            }
         }
     }
 }

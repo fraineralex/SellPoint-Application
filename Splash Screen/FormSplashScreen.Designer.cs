@@ -47,7 +47,7 @@
             this.barraProgresiva.InnerMargin = 2;
             this.barraProgresiva.InnerWidth = -1;
             this.barraProgresiva.Location = new System.Drawing.Point(67, 118);
-            this.barraProgresiva.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.barraProgresiva.Margin = new System.Windows.Forms.Padding(2);
             this.barraProgresiva.MarqueeAnimationSpeed = 2000;
             this.barraProgresiva.Name = "barraProgresiva";
             this.barraProgresiva.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(212)))), ((int)(((byte)(210)))));
@@ -115,7 +115,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

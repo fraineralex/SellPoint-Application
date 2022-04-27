@@ -79,6 +79,8 @@
             this.textBoxUsernameRegistrarEntidad = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.buttonGuardarRegistrarEntidad = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxIdEntidadRegistrarEntidad = new System.Windows.Forms.TextBox();
             this.groupBoxDatosGeneralesRegistrarEntidad.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -97,6 +99,8 @@
             // 
             // groupBoxDatosGeneralesRegistrarEntidad
             // 
+            this.groupBoxDatosGeneralesRegistrarEntidad.Controls.Add(this.textBoxIdEntidadRegistrarEntidad);
+            this.groupBoxDatosGeneralesRegistrarEntidad.Controls.Add(this.label1);
             this.groupBoxDatosGeneralesRegistrarEntidad.Controls.Add(this.textBoxTelefonoRegistrarEntidad);
             this.groupBoxDatosGeneralesRegistrarEntidad.Controls.Add(this.label8);
             this.groupBoxDatosGeneralesRegistrarEntidad.Controls.Add(this.textBoxNumeroDocumentoRegistrarEntidad);
@@ -112,16 +116,16 @@
             this.groupBoxDatosGeneralesRegistrarEntidad.Controls.Add(this.textBoxDescripcionRegistrarEntidad);
             this.groupBoxDatosGeneralesRegistrarEntidad.Controls.Add(this.label2);
             this.groupBoxDatosGeneralesRegistrarEntidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxDatosGeneralesRegistrarEntidad.Location = new System.Drawing.Point(29, 77);
+            this.groupBoxDatosGeneralesRegistrarEntidad.Location = new System.Drawing.Point(23, 77);
             this.groupBoxDatosGeneralesRegistrarEntidad.Name = "groupBoxDatosGeneralesRegistrarEntidad";
-            this.groupBoxDatosGeneralesRegistrarEntidad.Size = new System.Drawing.Size(235, 408);
+            this.groupBoxDatosGeneralesRegistrarEntidad.Size = new System.Drawing.Size(241, 415);
             this.groupBoxDatosGeneralesRegistrarEntidad.TabIndex = 1;
             this.groupBoxDatosGeneralesRegistrarEntidad.TabStop = false;
             this.groupBoxDatosGeneralesRegistrarEntidad.Text = "Datos Generales";
             // 
             // textBoxTelefonoRegistrarEntidad
             // 
-            this.textBoxTelefonoRegistrarEntidad.Location = new System.Drawing.Point(0, 320);
+            this.textBoxTelefonoRegistrarEntidad.Location = new System.Drawing.Point(24, 365);
             this.textBoxTelefonoRegistrarEntidad.Name = "textBoxTelefonoRegistrarEntidad";
             this.textBoxTelefonoRegistrarEntidad.Size = new System.Drawing.Size(188, 22);
             this.textBoxTelefonoRegistrarEntidad.TabIndex = 15;
@@ -129,7 +133,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 301);
+            this.label8.Location = new System.Drawing.Point(30, 346);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(69, 16);
             this.label8.TabIndex = 14;
@@ -138,7 +142,7 @@
             // textBoxNumeroDocumentoRegistrarEntidad
             // 
             this.textBoxNumeroDocumentoRegistrarEntidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNumeroDocumentoRegistrarEntidad.Location = new System.Drawing.Point(3, 276);
+            this.textBoxNumeroDocumentoRegistrarEntidad.Location = new System.Drawing.Point(27, 321);
             this.textBoxNumeroDocumentoRegistrarEntidad.Name = "textBoxNumeroDocumentoRegistrarEntidad";
             this.textBoxNumeroDocumentoRegistrarEntidad.Size = new System.Drawing.Size(188, 22);
             this.textBoxNumeroDocumentoRegistrarEntidad.TabIndex = 13;
@@ -146,7 +150,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 257);
+            this.label7.Location = new System.Drawing.Point(30, 302);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(167, 16);
             this.label7.TabIndex = 12;
@@ -155,7 +159,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 211);
+            this.label6.Location = new System.Drawing.Point(30, 256);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(145, 16);
             this.label6.TabIndex = 11;
@@ -168,7 +172,7 @@
             this.comboBoxTipoDocumentoRegistrarEntidad.Items.AddRange(new object[] {
             "RNC",
             "CEDULA"});
-            this.comboBoxTipoDocumentoRegistrarEntidad.Location = new System.Drawing.Point(6, 230);
+            this.comboBoxTipoDocumentoRegistrarEntidad.Location = new System.Drawing.Point(30, 275);
             this.comboBoxTipoDocumentoRegistrarEntidad.Name = "comboBoxTipoDocumentoRegistrarEntidad";
             this.comboBoxTipoDocumentoRegistrarEntidad.Size = new System.Drawing.Size(185, 24);
             this.comboBoxTipoDocumentoRegistrarEntidad.TabIndex = 10;
@@ -176,7 +180,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 165);
+            this.label5.Location = new System.Drawing.Point(30, 210);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(121, 16);
             this.label5.TabIndex = 9;
@@ -189,14 +193,14 @@
             this.comboBoxTipoEntidadRegistrarEntidad.Items.AddRange(new object[] {
             "Fisica",
             "Juridica"});
-            this.comboBoxTipoEntidadRegistrarEntidad.Location = new System.Drawing.Point(6, 184);
+            this.comboBoxTipoEntidadRegistrarEntidad.Location = new System.Drawing.Point(30, 229);
             this.comboBoxTipoEntidadRegistrarEntidad.Name = "comboBoxTipoEntidadRegistrarEntidad";
             this.comboBoxTipoEntidadRegistrarEntidad.Size = new System.Drawing.Size(185, 24);
             this.comboBoxTipoEntidadRegistrarEntidad.TabIndex = 8;
             // 
             // textBoxLocalidadRegistrarEntidad
             // 
-            this.textBoxLocalidadRegistrarEntidad.Location = new System.Drawing.Point(9, 140);
+            this.textBoxLocalidadRegistrarEntidad.Location = new System.Drawing.Point(33, 185);
             this.textBoxLocalidadRegistrarEntidad.Name = "textBoxLocalidadRegistrarEntidad";
             this.textBoxLocalidadRegistrarEntidad.Size = new System.Drawing.Size(188, 22);
             this.textBoxLocalidadRegistrarEntidad.TabIndex = 7;
@@ -204,7 +208,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 121);
+            this.label4.Location = new System.Drawing.Point(30, 166);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 16);
             this.label4.TabIndex = 6;
@@ -212,7 +216,7 @@
             // 
             // textBoxDireccionResgistrarEntidad
             // 
-            this.textBoxDireccionResgistrarEntidad.Location = new System.Drawing.Point(6, 96);
+            this.textBoxDireccionResgistrarEntidad.Location = new System.Drawing.Point(30, 141);
             this.textBoxDireccionResgistrarEntidad.Name = "textBoxDireccionResgistrarEntidad";
             this.textBoxDireccionResgistrarEntidad.Size = new System.Drawing.Size(188, 22);
             this.textBoxDireccionResgistrarEntidad.TabIndex = 5;
@@ -220,7 +224,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 77);
+            this.label3.Location = new System.Drawing.Point(30, 122);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 16);
             this.label3.TabIndex = 4;
@@ -228,7 +232,7 @@
             // 
             // textBoxDescripcionRegistrarEntidad
             // 
-            this.textBoxDescripcionRegistrarEntidad.Location = new System.Drawing.Point(6, 52);
+            this.textBoxDescripcionRegistrarEntidad.Location = new System.Drawing.Point(30, 97);
             this.textBoxDescripcionRegistrarEntidad.Name = "textBoxDescripcionRegistrarEntidad";
             this.textBoxDescripcionRegistrarEntidad.Size = new System.Drawing.Size(188, 22);
             this.textBoxDescripcionRegistrarEntidad.TabIndex = 3;
@@ -236,7 +240,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 32);
+            this.label2.Location = new System.Drawing.Point(30, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 16);
             this.label2.TabIndex = 2;
@@ -570,6 +574,23 @@
             this.buttonGuardarRegistrarEntidad.UseVisualStyleBackColor = true;
             this.buttonGuardarRegistrarEntidad.Click += new System.EventHandler(this.RegistrarEntidad);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(30, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(83, 16);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "ID Entidad:";
+            // 
+            // textBoxIdEntidadRegistrarEntidad
+            // 
+            this.textBoxIdEntidadRegistrarEntidad.Location = new System.Drawing.Point(33, 52);
+            this.textBoxIdEntidadRegistrarEntidad.Name = "textBoxIdEntidadRegistrarEntidad";
+            this.textBoxIdEntidadRegistrarEntidad.ReadOnly = true;
+            this.textBoxIdEntidadRegistrarEntidad.Size = new System.Drawing.Size(188, 22);
+            this.textBoxIdEntidadRegistrarEntidad.TabIndex = 17;
+            // 
             // FormRegistrarEntidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -652,5 +673,7 @@
         public System.Windows.Forms.Label labelTituloRegistrarEntidad;
         public System.Windows.Forms.TextBox textBoxComentarioRegistrarEntidad;
         public System.Windows.Forms.DateTimePicker dateTimePickerRegistrarEntidad;
+        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.TextBox textBoxIdEntidadRegistrarEntidad;
     }
 }
