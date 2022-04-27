@@ -69,15 +69,33 @@ namespace Splash_Screen
                 formEditar.textBoxPasswordRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[17].Value.ToString();
                 formEditar.comboBoxRolUserRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[18].Value.ToString();
                 formEditar.textBoxComentarioRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[19].Value.ToString();
-                formEditar.comboBoxStatusRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[20].Value.ToString();
+                formEditar.comboBoxStatusRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[19].Value.ToString();
                 formEditar.comboBoxNoEliminableRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[21].Value.ToString();
-
                 formEditar.ShowDialog();
+                
                 MostrarEntidades();
+
                 return;
             }
 
             MessageBox.Show("Seleccione el usuario que desea editar.", "Atención!");
+        }
+
+        private void Eliminar(object sender, EventArgs e)
+        {
+            if (tablaEntidadesCrud.SelectedColumns.Count < 0)
+            {
+                MessageBox.Show("Seleccione el usuario que desea eliminar.", "Atención!");
+                return;
+            }
+
+            if (MessageBox.Show("Está seguro que quiere eliminar este usuario??", "Aviso!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                entidad.IdEntidad = Convert.ToInt32(tablaEntidadesCrud.CurrentRow.Cells[0].Value.ToString());
+                datosEntidad.Eliminar(ref entidad);
+                MessageBox.Show("Usuario eliminado exitosamente.", "Eliminado!");
+                MostrarEntidades();
+            }
         }
     }
 }

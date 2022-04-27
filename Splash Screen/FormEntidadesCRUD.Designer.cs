@@ -77,6 +77,7 @@
             this.buttonEliminarEntidadesCrud.TabIndex = 4;
             this.buttonEliminarEntidadesCrud.Text = "Eliminar";
             this.buttonEliminarEntidadesCrud.UseVisualStyleBackColor = true;
+            this.buttonEliminarEntidadesCrud.Click += new System.EventHandler(this.Eliminar);
             // 
             // textBoxBuscarEntidadesCrud
             // 
