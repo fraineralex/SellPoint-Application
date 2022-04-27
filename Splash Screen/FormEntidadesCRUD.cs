@@ -33,9 +33,10 @@ namespace Splash_Screen
         private void CrearEntidad(object sender, EventArgs e)
         {
             var formCrear = new FormRegistrarEntidad();
-            formCrear.textBoxIdEntidadRegistrarEntidad.Text = "Automatizado";
             formCrear.actualizando = false;
+            formCrear.buttonHomeRegistrarEntidad.Visible = false;
             formCrear.ShowDialog();
+            
             MostrarEntidades();
         }
 
@@ -46,8 +47,7 @@ namespace Splash_Screen
             if (tablaEntidadesCrud.SelectedColumns.Count > -1)
             {
                 formEditar.actualizando = true;
-                formEditar.textBoxIdTipoEntidadRegistrarEntidad.ReadOnly = true;
-                formEditar.textBoxIdGrupoEntidadRegistrarEntidad.ReadOnly = true;
+                formEditar.buttonHomeRegistrarEntidad.Visible = false;
                 formEditar.labelTituloRegistrarEntidad.Text = "Editar Entidad";
                 formEditar.textBoxIdEntidadRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[0].Value.ToString();
                 formEditar.textBoxDescripcionRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[1].Value.ToString();

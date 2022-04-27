@@ -6,6 +6,8 @@ namespace Splash_Screen
 {
     public partial class FormLogin : Form
     {
+        public static bool registrando = false;
+
         public FormLogin()
         {
             InitializeComponent();
@@ -16,8 +18,8 @@ namespace Splash_Screen
             clsBeEntidades entidad = new clsBeEntidades();
             clsLnEntidades logicaEntidad = new clsLnEntidades();
 
-            entidad.UserNameEntidad = textBoxUserLogin.Text.ToString().Trim();
-            entidad.PasswordEntidad = textBoxPasswordLogin.Text.ToString().Trim();
+            entidad.UserNameEntidad = textBoxUserLogin.Text.ToString();
+            entidad.PasswordEntidad = textBoxPasswordLogin.Text.ToString();
 
             if (logicaEntidad.Obtener(ref entidad))
             {
@@ -33,6 +35,7 @@ namespace Splash_Screen
         private void Registrarse(object sender, EventArgs e)
         {
             new FormRegistrarEntidad().Show();
+            registrando = true;
             this.Hide();
         }
     }

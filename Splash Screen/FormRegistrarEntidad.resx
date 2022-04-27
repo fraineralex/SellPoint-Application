@@ -118,6 +118,15 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="buttonHomeRegistrarEntidad.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAANBJREFUOE/t
+        kj8OAUEUhyc0DqBVcAEFrahIOISOlppC4xIKTqCUSJQSKonOIZzC95vMFjuxO/tHI/ElX/Lemze/TDZr
+        MjJ2lqaKGzw6VWtWiDqecI0Vp2rNdLZ19jBIFx84sl0czXT2RL14hqlM8YZN231GZ9o5Y2JgDXe4d3UI
+        7Wj34OoYDbzg3Hb5mOAVW7aDPr5wYbti6K4ylGXauMTgx01Bd5WhLIsGZQNj95MCVxj9b5Ga+WQOvGPH
+        UzOfXIE+/0DLDwYOUYtlHOC3MeYNdB1EAhH7hLEAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA

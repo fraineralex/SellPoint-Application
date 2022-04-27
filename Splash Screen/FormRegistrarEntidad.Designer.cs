@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegistrarEntidad));
             this.labelTituloRegistrarEntidad = new System.Windows.Forms.Label();
             this.groupBoxDatosGeneralesRegistrarEntidad = new System.Windows.Forms.GroupBox();
+            this.textBoxIdEntidadRegistrarEntidad = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.textBoxTelefonoRegistrarEntidad = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxNumeroDocumentoRegistrarEntidad = new System.Windows.Forms.TextBox();
@@ -79,8 +81,7 @@
             this.textBoxUsernameRegistrarEntidad = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.buttonGuardarRegistrarEntidad = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBoxIdEntidadRegistrarEntidad = new System.Windows.Forms.TextBox();
+            this.buttonHomeRegistrarEntidad = new System.Windows.Forms.Button();
             this.groupBoxDatosGeneralesRegistrarEntidad.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -122,6 +123,24 @@
             this.groupBoxDatosGeneralesRegistrarEntidad.TabIndex = 1;
             this.groupBoxDatosGeneralesRegistrarEntidad.TabStop = false;
             this.groupBoxDatosGeneralesRegistrarEntidad.Text = "Datos Generales";
+            // 
+            // textBoxIdEntidadRegistrarEntidad
+            // 
+            this.textBoxIdEntidadRegistrarEntidad.Location = new System.Drawing.Point(33, 52);
+            this.textBoxIdEntidadRegistrarEntidad.Name = "textBoxIdEntidadRegistrarEntidad";
+            this.textBoxIdEntidadRegistrarEntidad.ReadOnly = true;
+            this.textBoxIdEntidadRegistrarEntidad.Size = new System.Drawing.Size(188, 22);
+            this.textBoxIdEntidadRegistrarEntidad.TabIndex = 17;
+            this.textBoxIdEntidadRegistrarEntidad.Text = "Automatizado";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(30, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(83, 16);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "ID Entidad:";
             // 
             // textBoxTelefonoRegistrarEntidad
             // 
@@ -366,15 +385,19 @@
             // 
             this.textBoxIdGrupoEntidadRegistrarEntidad.Location = new System.Drawing.Point(16, 55);
             this.textBoxIdGrupoEntidadRegistrarEntidad.Name = "textBoxIdGrupoEntidadRegistrarEntidad";
+            this.textBoxIdGrupoEntidadRegistrarEntidad.ReadOnly = true;
             this.textBoxIdGrupoEntidadRegistrarEntidad.Size = new System.Drawing.Size(188, 22);
             this.textBoxIdGrupoEntidadRegistrarEntidad.TabIndex = 12;
+            this.textBoxIdGrupoEntidadRegistrarEntidad.Text = "Automatizado";
             // 
             // textBoxIdTipoEntidadRegistrarEntidad
             // 
             this.textBoxIdTipoEntidadRegistrarEntidad.Location = new System.Drawing.Point(16, 96);
             this.textBoxIdTipoEntidadRegistrarEntidad.Name = "textBoxIdTipoEntidadRegistrarEntidad";
+            this.textBoxIdTipoEntidadRegistrarEntidad.ReadOnly = true;
             this.textBoxIdTipoEntidadRegistrarEntidad.Size = new System.Drawing.Size(188, 22);
             this.textBoxIdTipoEntidadRegistrarEntidad.TabIndex = 11;
+            this.textBoxIdTipoEntidadRegistrarEntidad.Text = "Automatizado";
             // 
             // textBoxLimiteCreditoRegistrarEntidad
             // 
@@ -566,7 +589,7 @@
             // 
             // buttonGuardarRegistrarEntidad
             // 
-            this.buttonGuardarRegistrarEntidad.Location = new System.Drawing.Point(408, 601);
+            this.buttonGuardarRegistrarEntidad.Location = new System.Drawing.Point(395, 601);
             this.buttonGuardarRegistrarEntidad.Name = "buttonGuardarRegistrarEntidad";
             this.buttonGuardarRegistrarEntidad.Size = new System.Drawing.Size(75, 23);
             this.buttonGuardarRegistrarEntidad.TabIndex = 5;
@@ -574,22 +597,15 @@
             this.buttonGuardarRegistrarEntidad.UseVisualStyleBackColor = true;
             this.buttonGuardarRegistrarEntidad.Click += new System.EventHandler(this.RegistrarEntidad);
             // 
-            // label1
+            // buttonHomeRegistrarEntidad
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 16);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "ID Entidad:";
-            // 
-            // textBoxIdEntidadRegistrarEntidad
-            // 
-            this.textBoxIdEntidadRegistrarEntidad.Location = new System.Drawing.Point(33, 52);
-            this.textBoxIdEntidadRegistrarEntidad.Name = "textBoxIdEntidadRegistrarEntidad";
-            this.textBoxIdEntidadRegistrarEntidad.ReadOnly = true;
-            this.textBoxIdEntidadRegistrarEntidad.Size = new System.Drawing.Size(188, 22);
-            this.textBoxIdEntidadRegistrarEntidad.TabIndex = 17;
+            this.buttonHomeRegistrarEntidad.Image = ((System.Drawing.Image)(resources.GetObject("buttonHomeRegistrarEntidad.Image")));
+            this.buttonHomeRegistrarEntidad.Location = new System.Drawing.Point(10, 10);
+            this.buttonHomeRegistrarEntidad.Name = "buttonHomeRegistrarEntidad";
+            this.buttonHomeRegistrarEntidad.Size = new System.Drawing.Size(29, 34);
+            this.buttonHomeRegistrarEntidad.TabIndex = 6;
+            this.buttonHomeRegistrarEntidad.UseVisualStyleBackColor = true;
+            this.buttonHomeRegistrarEntidad.Click += new System.EventHandler(this.Home);
             // 
             // FormRegistrarEntidad
             // 
@@ -597,6 +613,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(884, 636);
+            this.Controls.Add(this.buttonHomeRegistrarEntidad);
             this.Controls.Add(this.buttonGuardarRegistrarEntidad);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -675,5 +692,6 @@
         public System.Windows.Forms.DateTimePicker dateTimePickerRegistrarEntidad;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox textBoxIdEntidadRegistrarEntidad;
+        public System.Windows.Forms.Button buttonHomeRegistrarEntidad;
     }
 }
