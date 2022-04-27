@@ -259,7 +259,7 @@
             this.MaximizeBox = false;
             this.Name = "FormRegistarTipoEntidad";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sell Poin";
+            this.Text = "Sell Point";
             this.groupBoxDatosGeneralesRegistrarEntidad.ResumeLayout(false);
             this.groupBoxDatosGeneralesRegistrarEntidad.PerformLayout();
             this.groupBox2.ResumeLayout(false);

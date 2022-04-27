@@ -37,6 +37,7 @@
             this.archiivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.entidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tiposEntidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gruposEntidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -71,7 +72,8 @@
             // 
             this.archiivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.entidadesToolStripMenuItem,
-            this.tiposEntidadesToolStripMenuItem});
+            this.tiposEntidadesToolStripMenuItem,
+            this.gruposEntidadesToolStripMenuItem});
             this.archiivoToolStripMenuItem.Name = "archiivoToolStripMenuItem";
             this.archiivoToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.archiivoToolStripMenuItem.Text = "Archiivo";
@@ -89,6 +91,13 @@
             this.tiposEntidadesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.tiposEntidadesToolStripMenuItem.Text = "Tipos Entidades";
             this.tiposEntidadesToolStripMenuItem.Click += new System.EventHandler(this.IrAlCrudTiposEntidades);
+            // 
+            // gruposEntidadesToolStripMenuItem
+            // 
+            this.gruposEntidadesToolStripMenuItem.Name = "gruposEntidadesToolStripMenuItem";
+            this.gruposEntidadesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.gruposEntidadesToolStripMenuItem.Text = "Grupos Entidades";
+            this.gruposEntidadesToolStripMenuItem.Click += new System.EventHandler(this.IrAlCrudGruposEntidades);
             // 
             // MenuPrincipal
             // 
@@ -122,6 +131,7 @@
         private System.Windows.Forms.ToolStripMenuItem archiivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem entidadesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tiposEntidadesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gruposEntidadesToolStripMenuItem;
     }
 }
 

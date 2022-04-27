@@ -30,5 +30,12 @@ namespace Splash_Screen
             crud.MdiParent = this;
             crud.Show();
         }
+
+        private void IrAlCrudGruposEntidades(object sender, EventArgs e)
+        {
+            FormGruposEntidadesCRUD crud = new FormGruposEntidadesCRUD();
+            crud.MdiParent = this;
+            crud.Show();
+        }
     }
 }

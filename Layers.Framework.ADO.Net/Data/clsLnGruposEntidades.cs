@@ -32,12 +32,11 @@ public class clsLnGruposEntidades
             string storedProcedure = "SpGruposEntidadesInsertar";
 
             SqlConnection sqlConnection = new SqlConnection(Datos.DBConnection);
-            SqlCommand sqlCommand = new SqlCommand(storedProcedure, sqlConnection);
-            
             sqlConnection.Open();
 
-            sqlCommand.Parameters.Add(new SqlParameter("@IDGRUPOENTIDAD", oBeGruposEntidades.IdGrupoEntidad));
-            sqlCommand.Parameters["@IDGRUPOENTIDAD"].Direction = ParameterDirection.Output;
+            SqlCommand sqlCommand = new SqlCommand(storedProcedure, sqlConnection);
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+
             sqlCommand.Parameters.Add(new SqlParameter("@DESCRIPCION", oBeGruposEntidades.Descripcion));
             sqlCommand.Parameters.Add(new SqlParameter("@COMENTARIO", oBeGruposEntidades.Comentario));
             sqlCommand.Parameters.Add(new SqlParameter("@STATUS", oBeGruposEntidades.Status));
@@ -45,7 +44,6 @@ public class clsLnGruposEntidades
             sqlCommand.Parameters.Add(new SqlParameter("@FECHAREGISTRO", oBeGruposEntidades.FechaRegistro));
 
             rowsAffected = sqlCommand.ExecuteNonQuery();
-            oBeGruposEntidades.IdGrupoEntidad = Convert.ToInt32(sqlCommand.Parameters["@IDGRUPOENTIDAD"].Value.ToString());
 
             return rowsAffected;
         }
@@ -63,9 +61,10 @@ public class clsLnGruposEntidades
             string storedProcedure = "SpGruposEntidadesActualizar";
 
             SqlConnection sqlConnection = new SqlConnection(Datos.DBConnection);
-            SqlCommand sqlCommand = new SqlCommand(storedProcedure, sqlConnection);
-            
             sqlConnection.Open();
+
+            SqlCommand sqlCommand = new SqlCommand(storedProcedure, sqlConnection);
+            sqlCommand.CommandType = CommandType.StoredProcedure;
 
             sqlCommand.Parameters.Add(new SqlParameter("@IDGRUPOENTIDAD", oBeGruposEntidades.IdGrupoEntidad));
             sqlCommand.Parameters.Add(new SqlParameter("@DESCRIPCION", oBeGruposEntidades.Descripcion));
