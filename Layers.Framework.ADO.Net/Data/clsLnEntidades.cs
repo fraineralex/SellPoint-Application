@@ -190,4 +190,29 @@ public class clsLnEntidades
             return false;
         }
     }
+
+    public DataTable BuscarEntidad(ref clsBeEntidades oBeEntidades)
+    {
+        try
+        {
+            string storedProcedure = "SpEntidadesObtener";
+
+            DataTable dataTable = new DataTable();
+            SqlConnection sqlConnection = new SqlConnection(Datos.DBConnection);
+
+            SqlCommand sqlCommand = new SqlCommand(storedProcedure, sqlConnection);
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+
+            SqlDataAdapter sqlAdapter = new SqlDataAdapter(sqlCommand);
+            sqlAdapter.SelectCommand.Parameters.Add(new SqlParameter("@IDENTIDAD", oBeEntidades.IdEntidad));
+            sqlAdapter.Fill(dataTable);
+
+            return dataTable;
+
+        }
+        catch (Exception ex)
+        {
+            throw ex;
+        }
+    }
 }

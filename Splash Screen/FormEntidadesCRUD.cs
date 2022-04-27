@@ -13,8 +13,8 @@ namespace Splash_Screen
 {
     public partial class FormEntidadesCRUD : Form
     {
-        clsBeEntidades entidad = new clsBeEntidades();
-        clsLnEntidades datosEntidad = new clsLnEntidades();
+        private clsBeEntidades entidad = new clsBeEntidades();
+        private readonly clsLnEntidades logicaEntidad = new clsLnEntidades();
 
         public FormEntidadesCRUD()
         {
@@ -72,7 +72,7 @@ namespace Splash_Screen
                 formEditar.comboBoxStatusRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[19].Value.ToString();
                 formEditar.comboBoxNoEliminableRegistrarEntidad.Text = tablaEntidadesCrud.CurrentRow.Cells[21].Value.ToString();
                 formEditar.ShowDialog();
-                
+
                 MostrarEntidades();
 
                 return;
@@ -92,10 +92,27 @@ namespace Splash_Screen
             if (MessageBox.Show("Está seguro que quiere eliminar este usuario??", "Aviso!", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 entidad.IdEntidad = Convert.ToInt32(tablaEntidadesCrud.CurrentRow.Cells[0].Value.ToString());
-                datosEntidad.Eliminar(ref entidad);
+                logicaEntidad.Eliminar(ref entidad);
                 MessageBox.Show("Usuario eliminado exitosamente.", "Eliminado!");
                 MostrarEntidades();
             }
+        }
+
+        private void ObtenerEntidad(string idEntidad)
+        {
+            entidad.IdEntidad = Convert.ToInt32(idEntidad);
+            tablaEntidadesCrud.DataSource = logicaEntidad.BuscarEntidad(ref entidad);
+        }
+
+        private void Buscar(object sender, EventArgs e)
+        {
+            if ((string.IsNullOrEmpty(textBoxBuscarEntidadesCrud.Text) || string.IsNullOrWhiteSpace(textBoxBuscarEntidadesCrud.Text)))
+            {
+                MostrarEntidades();
+                return;
+            }
+            
+            ObtenerEntidad(textBoxBuscarEntidadesCrud.Text);
         }
     }
 }

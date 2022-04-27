@@ -15,8 +15,8 @@ namespace Splash_Screen
     {
         public bool actualizando = false;
 
-        clsLnEntidades entidad = new clsLnEntidades();
-        clsBeEntidades entidadesModel = new clsBeEntidades();
+        clsBeEntidades entidad = new clsBeEntidades();
+        clsLnEntidades logicaEntidad = new clsLnEntidades();
 
         public FormRegistrarEntidad()
         {
@@ -38,30 +38,30 @@ namespace Splash_Screen
             {
                 try
                 {
-                    entidadesModel.Descripcion = textBoxDescripcionRegistrarEntidad.Text.ToString();
-                    entidadesModel.Direccion = textBoxDireccionResgistrarEntidad.Text.ToString();
-                    entidadesModel.Localidad = textBoxLocalidadRegistrarEntidad.Text.ToString();
-                    entidadesModel.TipoEntidad = comboBoxTipoEntidadRegistrarEntidad.Text.ToString();
-                    entidadesModel.TipoDocumento = comboBoxTipoDocumentoRegistrarEntidad.Text.ToString();
-                    entidadesModel.NumeroDocumento = Convert.ToDouble(textBoxNumeroDocumentoRegistrarEntidad.Text.ToString());
-                    entidadesModel.Telefono = textBoxTelefonoRegistrarEntidad.Text.ToString();
-                    entidadesModel.URLPaginaWeb = textBoxURLPáginaWebRegistrarEntidad.Text.ToString();
-                    entidadesModel.URLFacebook = textBoxURLFacebookRegistrarEntidad.Text.ToString();
-                    entidadesModel.URLInstagram = textBoxURLInstagramRegistrarEntidad.Text.ToString();
-                    entidadesModel.URLTwitter = textBoxURLTwitterRegistrarEntidad.Text.ToString();
-                    entidadesModel.URLTiktok = textBoxURLTikTokRegistrarEntidad.Text.ToString();
-                    entidadesModel.IdGrupoEntidad = Convert.ToInt32(textBoxIdGrupoEntidadRegistrarEntidad.Text.ToString());
-                    entidadesModel.IdTipoEntidad = Convert.ToInt32(textBoxIdTipoEntidadRegistrarEntidad.Text.ToString());
-                    entidadesModel.LimiteCredito = Convert.ToDouble(textBoxLimiteCreditoRegistrarEntidad.Text.ToString());
-                    entidadesModel.UserNameEntidad = textBoxUsernameRegistrarEntidad.Text.ToString();
-                    entidadesModel.PasswordEntidad = textBoxPasswordRegistrarEntidad.Text.ToString();
-                    entidadesModel.RolUserEntidad = comboBoxRolUserRegistrarEntidad.Text.ToString();
-                    entidadesModel.Comentario = textBoxComentarioRegistrarEntidad.Text.ToString();
-                    entidadesModel.Status = comboBoxStatusRegistrarEntidad.Text.ToString();
-                    entidadesModel.NoEliminable = Convert.ToBoolean(comboBoxNoEliminableRegistrarEntidad.Text.ToString());
-                    entidadesModel.FechaRegistro = Convert.ToDateTime(dateTimePickerRegistrarEntidad.Text.ToString());
+                    entidad.Descripcion = textBoxDescripcionRegistrarEntidad.Text.ToString();
+                    entidad.Direccion = textBoxDireccionResgistrarEntidad.Text.ToString();
+                    entidad.Localidad = textBoxLocalidadRegistrarEntidad.Text.ToString();
+                    entidad.TipoEntidad = comboBoxTipoEntidadRegistrarEntidad.Text.ToString();
+                    entidad.TipoDocumento = comboBoxTipoDocumentoRegistrarEntidad.Text.ToString();
+                    entidad.NumeroDocumento = Convert.ToDouble(textBoxNumeroDocumentoRegistrarEntidad.Text.ToString());
+                    entidad.Telefono = textBoxTelefonoRegistrarEntidad.Text.ToString();
+                    entidad.URLPaginaWeb = textBoxURLPáginaWebRegistrarEntidad.Text.ToString();
+                    entidad.URLFacebook = textBoxURLFacebookRegistrarEntidad.Text.ToString();
+                    entidad.URLInstagram = textBoxURLInstagramRegistrarEntidad.Text.ToString();
+                    entidad.URLTwitter = textBoxURLTwitterRegistrarEntidad.Text.ToString();
+                    entidad.URLTiktok = textBoxURLTikTokRegistrarEntidad.Text.ToString();
+                    entidad.IdGrupoEntidad = Convert.ToInt32(textBoxIdGrupoEntidadRegistrarEntidad.Text.ToString());
+                    entidad.IdTipoEntidad = Convert.ToInt32(textBoxIdTipoEntidadRegistrarEntidad.Text.ToString());
+                    entidad.LimiteCredito = Convert.ToDouble(textBoxLimiteCreditoRegistrarEntidad.Text.ToString());
+                    entidad.UserNameEntidad = textBoxUsernameRegistrarEntidad.Text.ToString();
+                    entidad.PasswordEntidad = textBoxPasswordRegistrarEntidad.Text.ToString();
+                    entidad.RolUserEntidad = comboBoxRolUserRegistrarEntidad.Text.ToString();
+                    entidad.Comentario = textBoxComentarioRegistrarEntidad.Text.ToString();
+                    entidad.Status = comboBoxStatusRegistrarEntidad.Text.ToString();
+                    entidad.NoEliminable = Convert.ToBoolean(comboBoxNoEliminableRegistrarEntidad.Text.ToString());
+                    entidad.FechaRegistro = Convert.ToDateTime(dateTimePickerRegistrarEntidad.Text.ToString());
 
-                    entidad.Insertar(ref entidadesModel);
+                    logicaEntidad.Insertar(ref entidad);
 
                     MessageBox.Show("Entidad guardada exitosamente.", "Guardada!");
                     this.Close();
@@ -77,31 +77,31 @@ namespace Splash_Screen
             {
                 try
                 {
-                    entidadesModel.IdEntidad = Convert.ToInt32(textBoxIdEntidadRegistrarEntidad.Text.ToString());
-                    entidadesModel.Descripcion = textBoxDescripcionRegistrarEntidad.Text.ToString();
-                    entidadesModel.Direccion = textBoxDireccionResgistrarEntidad.Text.ToString();
-                    entidadesModel.Localidad = textBoxLocalidadRegistrarEntidad.Text.ToString();
-                    entidadesModel.TipoEntidad = comboBoxTipoEntidadRegistrarEntidad.Text.ToString();
-                    entidadesModel.TipoDocumento = comboBoxTipoDocumentoRegistrarEntidad.Text.ToString();
-                    entidadesModel.NumeroDocumento = Convert.ToDouble(textBoxNumeroDocumentoRegistrarEntidad.Text.ToString());
-                    entidadesModel.Telefono = textBoxTelefonoRegistrarEntidad.Text.ToString();
-                    entidadesModel.URLPaginaWeb = textBoxURLPáginaWebRegistrarEntidad.Text.ToString();
-                    entidadesModel.URLFacebook = textBoxURLFacebookRegistrarEntidad.Text.ToString();
-                    entidadesModel.URLInstagram = textBoxURLInstagramRegistrarEntidad.Text.ToString();
-                    entidadesModel.URLTwitter = textBoxURLTwitterRegistrarEntidad.Text.ToString();
-                    entidadesModel.URLTiktok = textBoxURLTikTokRegistrarEntidad.Text.ToString();
-                    entidadesModel.IdGrupoEntidad = Convert.ToInt32(textBoxIdGrupoEntidadRegistrarEntidad.Text.ToString());
-                    entidadesModel.IdTipoEntidad = Convert.ToInt32(textBoxIdTipoEntidadRegistrarEntidad.Text.ToString());
-                    entidadesModel.LimiteCredito = Convert.ToDouble(textBoxLimiteCreditoRegistrarEntidad.Text.ToString());
-                    entidadesModel.UserNameEntidad = textBoxUsernameRegistrarEntidad.Text.ToString();
-                    entidadesModel.PasswordEntidad = textBoxPasswordRegistrarEntidad.Text.ToString();
-                    entidadesModel.RolUserEntidad = comboBoxRolUserRegistrarEntidad.Text.ToString();
-                    entidadesModel.Comentario = textBoxComentarioRegistrarEntidad.Text.ToString();
-                    entidadesModel.Status = comboBoxStatusRegistrarEntidad.Text.ToString();
-                    entidadesModel.NoEliminable = Convert.ToBoolean(comboBoxNoEliminableRegistrarEntidad.Text);
-                    entidadesModel.FechaRegistro = Convert.ToDateTime(dateTimePickerRegistrarEntidad.Text.ToString());
+                    entidad.IdEntidad = Convert.ToInt32(textBoxIdEntidadRegistrarEntidad.Text.ToString());
+                    entidad.Descripcion = textBoxDescripcionRegistrarEntidad.Text.ToString();
+                    entidad.Direccion = textBoxDireccionResgistrarEntidad.Text.ToString();
+                    entidad.Localidad = textBoxLocalidadRegistrarEntidad.Text.ToString();
+                    entidad.TipoEntidad = comboBoxTipoEntidadRegistrarEntidad.Text.ToString();
+                    entidad.TipoDocumento = comboBoxTipoDocumentoRegistrarEntidad.Text.ToString();
+                    entidad.NumeroDocumento = Convert.ToDouble(textBoxNumeroDocumentoRegistrarEntidad.Text.ToString());
+                    entidad.Telefono = textBoxTelefonoRegistrarEntidad.Text.ToString();
+                    entidad.URLPaginaWeb = textBoxURLPáginaWebRegistrarEntidad.Text.ToString();
+                    entidad.URLFacebook = textBoxURLFacebookRegistrarEntidad.Text.ToString();
+                    entidad.URLInstagram = textBoxURLInstagramRegistrarEntidad.Text.ToString();
+                    entidad.URLTwitter = textBoxURLTwitterRegistrarEntidad.Text.ToString();
+                    entidad.URLTiktok = textBoxURLTikTokRegistrarEntidad.Text.ToString();
+                    entidad.IdGrupoEntidad = Convert.ToInt32(textBoxIdGrupoEntidadRegistrarEntidad.Text.ToString());
+                    entidad.IdTipoEntidad = Convert.ToInt32(textBoxIdTipoEntidadRegistrarEntidad.Text.ToString());
+                    entidad.LimiteCredito = Convert.ToDouble(textBoxLimiteCreditoRegistrarEntidad.Text.ToString());
+                    entidad.UserNameEntidad = textBoxUsernameRegistrarEntidad.Text.ToString();
+                    entidad.PasswordEntidad = textBoxPasswordRegistrarEntidad.Text.ToString();
+                    entidad.RolUserEntidad = comboBoxRolUserRegistrarEntidad.Text.ToString();
+                    entidad.Comentario = textBoxComentarioRegistrarEntidad.Text.ToString();
+                    entidad.Status = comboBoxStatusRegistrarEntidad.Text.ToString();
+                    entidad.NoEliminable = Convert.ToBoolean(comboBoxNoEliminableRegistrarEntidad.Text);
+                    entidad.FechaRegistro = Convert.ToDateTime(dateTimePickerRegistrarEntidad.Text.ToString());
 
-                    entidad.Actualizar(ref entidadesModel);
+                    logicaEntidad.Actualizar(ref entidad);
 
                     MessageBox.Show("Entidad actualizada exitosamente.", "Actualizada!");
                     this.Close();

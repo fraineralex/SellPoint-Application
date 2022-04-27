@@ -13,13 +13,13 @@ namespace Splash_Screen
 
         private void Login(object sender, EventArgs e)
         {
-            clsLnEntidades entidad = new clsLnEntidades();
-            clsBeEntidades entidadesModel = new clsBeEntidades();
+            clsBeEntidades entidad = new clsBeEntidades();
+            clsLnEntidades logicaEntidad = new clsLnEntidades();
 
-            entidadesModel.UserNameEntidad = textBoxUserLogin.Text.ToString().Trim();
-            entidadesModel.PasswordEntidad = textBoxPasswordLogin.Text.ToString().Trim();
+            entidad.UserNameEntidad = textBoxUserLogin.Text.ToString().Trim();
+            entidad.PasswordEntidad = textBoxPasswordLogin.Text.ToString().Trim();
 
-            if (entidad.Obtener(ref entidadesModel))
+            if (logicaEntidad.Obtener(ref entidad))
             {
                 this.Hide();
                 new MenuPrincipal().Show();

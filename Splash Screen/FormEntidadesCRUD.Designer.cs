@@ -34,8 +34,8 @@
             this.buttonEditarEntidadesCrud = new System.Windows.Forms.Button();
             this.buttonEliminarEntidadesCrud = new System.Windows.Forms.Button();
             this.textBoxBuscarEntidadesCrud = new System.Windows.Forms.TextBox();
-            this.buttonBuscarEntidadesCrud = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tablaEntidadesCrud)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,20 +81,12 @@
             // 
             // textBoxBuscarEntidadesCrud
             // 
-            this.textBoxBuscarEntidadesCrud.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBoxBuscarEntidadesCrud.Location = new System.Drawing.Point(102, 82);
+            this.textBoxBuscarEntidadesCrud.BackColor = System.Drawing.Color.Silver;
+            this.textBoxBuscarEntidadesCrud.Location = new System.Drawing.Point(67, 79);
             this.textBoxBuscarEntidadesCrud.Name = "textBoxBuscarEntidadesCrud";
-            this.textBoxBuscarEntidadesCrud.Size = new System.Drawing.Size(107, 20);
+            this.textBoxBuscarEntidadesCrud.Size = new System.Drawing.Size(162, 20);
             this.textBoxBuscarEntidadesCrud.TabIndex = 6;
-            // 
-            // buttonBuscarEntidadesCrud
-            // 
-            this.buttonBuscarEntidadesCrud.Location = new System.Drawing.Point(21, 80);
-            this.buttonBuscarEntidadesCrud.Name = "buttonBuscarEntidadesCrud";
-            this.buttonBuscarEntidadesCrud.Size = new System.Drawing.Size(75, 23);
-            this.buttonBuscarEntidadesCrud.TabIndex = 7;
-            this.buttonBuscarEntidadesCrud.Text = "Buscar";
-            this.buttonBuscarEntidadesCrud.UseVisualStyleBackColor = true;
+            this.textBoxBuscarEntidadesCrud.TextChanged += new System.EventHandler(this.Buscar);
             // 
             // label3
             // 
@@ -109,14 +101,24 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "CRUD Entidades";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 80);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 16);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Buscar";
+            // 
             // FormEntidadesCRUD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(790, 531);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.buttonBuscarEntidadesCrud);
             this.Controls.Add(this.textBoxBuscarEntidadesCrud);
             this.Controls.Add(this.buttonEliminarEntidadesCrud);
             this.Controls.Add(this.buttonEditarEntidadesCrud);
@@ -140,7 +142,7 @@
         private System.Windows.Forms.Button buttonEditarEntidadesCrud;
         private System.Windows.Forms.Button buttonEliminarEntidadesCrud;
         private System.Windows.Forms.TextBox textBoxBuscarEntidadesCrud;
-        private System.Windows.Forms.Button buttonBuscarEntidadesCrud;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
     }
 }
