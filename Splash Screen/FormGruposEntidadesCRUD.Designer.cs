@@ -69,6 +69,7 @@
             this.textBoxBuscarGruposEntidadesCrud.Name = "textBoxBuscarGruposEntidadesCrud";
             this.textBoxBuscarGruposEntidadesCrud.Size = new System.Drawing.Size(162, 20);
             this.textBoxBuscarGruposEntidadesCrud.TabIndex = 18;
+            this.textBoxBuscarGruposEntidadesCrud.TextChanged += new System.EventHandler(this.BuscarGrupoEntidad);
             // 
             // buttonEliminarGruposEntidadesCrud
             // 

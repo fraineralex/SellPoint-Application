@@ -81,5 +81,22 @@ namespace Splash_Screen
                 MostrarGrupoEntidades();
             }
         }
+
+        private void ObtenerGrupoEntidad(string idGrupoEntidad)
+        {
+            grupoEntidad.IdGrupoEntidad = Convert.ToInt32(idGrupoEntidad);
+            tablaGruposEntidadesCRUD.DataSource = logicaGrupoEntidad.BuscarGrupoEntidad(ref grupoEntidad);
+        }
+
+        private void BuscarGrupoEntidad(object sender, EventArgs e)
+        {
+            if ((string.IsNullOrEmpty(textBoxBuscarGruposEntidadesCrud.Text) || string.IsNullOrWhiteSpace(textBoxBuscarGruposEntidadesCrud.Text)))
+            {
+                MostrarGrupoEntidades();
+                return;
+            }
+            
+            ObtenerGrupoEntidad(textBoxBuscarGruposEntidadesCrud.Text);
+        }
     }
 }

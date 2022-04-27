@@ -163,4 +163,29 @@ public class clsLnGruposEntidades
             throw ex;
         }
     }
+
+    public DataTable BuscarGrupoEntidad(ref clsBeGruposEntidades oBeGrupoEntidades)
+    {
+        try
+        {
+            string storedProcedure = "SpGruposEntidadesObtener";
+
+            DataTable dataTable = new DataTable();
+            SqlConnection sqlConnection = new SqlConnection(Datos.DBConnection);
+
+            SqlCommand sqlCommand = new SqlCommand(storedProcedure, sqlConnection);
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+
+            SqlDataAdapter sqlAdapter = new SqlDataAdapter(sqlCommand);
+            sqlAdapter.SelectCommand.Parameters.Add(new SqlParameter("@IDGRUPOENTIDAD", oBeGrupoEntidades.IdGrupoEntidad));
+            sqlAdapter.Fill(dataTable);
+
+            return dataTable;
+
+        }
+        catch (Exception ex)
+        {
+            throw ex;
+        }
+    }
 }
