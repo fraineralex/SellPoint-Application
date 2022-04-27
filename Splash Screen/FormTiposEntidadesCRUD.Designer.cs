@@ -109,6 +109,7 @@
             this.textBoxBuscarTiposEntidadesCrud.Name = "textBoxBuscarTiposEntidadesCrud";
             this.textBoxBuscarTiposEntidadesCrud.Size = new System.Drawing.Size(162, 20);
             this.textBoxBuscarTiposEntidadesCrud.TabIndex = 17;
+            this.textBoxBuscarTiposEntidadesCrud.TextChanged += new System.EventHandler(this.BuscarTipoEntidad);
             // 
             // FormTiposEntidadesCRUD
             // 

@@ -165,4 +165,29 @@ public class clsLnTiposEntidades
             throw ex;
         }
     }
+
+    public DataTable BuscarTipoEntidad(ref clsBeTiposEntidades oBeTiposEntidades)
+    {
+        try
+        {
+            string storedProcedure = "SpTiposEntidadesObtener";
+
+            DataTable dataTable = new DataTable();
+            SqlConnection sqlConnection = new SqlConnection(Datos.DBConnection);
+
+            SqlCommand sqlCommand = new SqlCommand(storedProcedure, sqlConnection);
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+
+            SqlDataAdapter sqlAdapter = new SqlDataAdapter(sqlCommand);
+            sqlAdapter.SelectCommand.Parameters.Add(new SqlParameter("@IDTIPOENTIDAD", oBeTiposEntidades.IdTipoEntidad));
+            sqlAdapter.Fill(dataTable);
+
+            return dataTable;
+
+        }
+        catch (Exception ex)
+        {
+            throw ex;
+        }
+    }
 }

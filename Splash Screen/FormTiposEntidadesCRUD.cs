@@ -81,5 +81,22 @@ namespace Splash_Screen
                 MostrarTipoEntidades();
             }
         }
+
+        private void ObtenerTipoEntidad(string idEntidad)
+        {
+            tipoEntidad.IdTipoEntidad = Convert.ToInt32(idEntidad);
+            tablaTiposEntidadesCRUD.DataSource = logicaTipoEntidad.BuscarTipoEntidad(ref tipoEntidad);
+        }
+
+        private void BuscarTipoEntidad(object sender, EventArgs e)
+        {
+            if ((string.IsNullOrEmpty(textBoxBuscarTiposEntidadesCrud.Text) || string.IsNullOrWhiteSpace(textBoxBuscarTiposEntidadesCrud.Text)))
+            {
+                MostrarTipoEntidades();
+                return;
+            }
+
+            ObtenerTipoEntidad(textBoxBuscarTiposEntidadesCrud.Text);
+        }
     }
 }
