@@ -37,5 +37,29 @@ namespace Splash_Screen
             crud.MdiParent = this;
             crud.Show();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            statusBar1.Panels[0].Text = FormLogin.entidad.UserNameEntidad.ToString();
+            statusBar1.Panels[1].Text = DateTime.Now.ToString();
+        }
+
+        private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormColaboradores crud = new FormColaboradores();
+            crud.MdiParent = this;
+            crud.Show();
+        }
+
+        private void loginToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new FormLogin().Show();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

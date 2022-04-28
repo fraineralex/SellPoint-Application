@@ -45,12 +45,12 @@
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(177, 9);
+            this.label1.Location = new System.Drawing.Point(126, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(480, 46);
+            this.label1.Size = new System.Drawing.Size(568, 46);
             this.label1.TabIndex = 12;
-            this.label1.Text = "CRUD Grupo de Entidad";
+            this.label1.Text = "CRUD GRUPO DE ENTIDAD";
             // 
             // label2
             // 
@@ -73,7 +73,7 @@
             // 
             // buttonEliminarGruposEntidadesCrud
             // 
-            this.buttonEliminarGruposEntidadesCrud.Location = new System.Drawing.Point(744, 82);
+            this.buttonEliminarGruposEntidadesCrud.Location = new System.Drawing.Point(683, 79);
             this.buttonEliminarGruposEntidadesCrud.Name = "buttonEliminarGruposEntidadesCrud";
             this.buttonEliminarGruposEntidadesCrud.Size = new System.Drawing.Size(75, 23);
             this.buttonEliminarGruposEntidadesCrud.TabIndex = 21;
@@ -83,7 +83,7 @@
             // 
             // buttonEditarGruposEntidadesCrud
             // 
-            this.buttonEditarGruposEntidadesCrud.Location = new System.Drawing.Point(663, 82);
+            this.buttonEditarGruposEntidadesCrud.Location = new System.Drawing.Point(602, 79);
             this.buttonEditarGruposEntidadesCrud.Name = "buttonEditarGruposEntidadesCrud";
             this.buttonEditarGruposEntidadesCrud.Size = new System.Drawing.Size(75, 23);
             this.buttonEditarGruposEntidadesCrud.TabIndex = 20;
@@ -93,7 +93,7 @@
             // 
             // buttonNuevoGruposEntidadesCrud
             // 
-            this.buttonNuevoGruposEntidadesCrud.Location = new System.Drawing.Point(582, 82);
+            this.buttonNuevoGruposEntidadesCrud.Location = new System.Drawing.Point(521, 79);
             this.buttonNuevoGruposEntidadesCrud.Name = "buttonNuevoGruposEntidadesCrud";
             this.buttonNuevoGruposEntidadesCrud.Size = new System.Drawing.Size(75, 23);
             this.buttonNuevoGruposEntidadesCrud.TabIndex = 19;
@@ -106,7 +106,7 @@
             this.tablaGruposEntidadesCRUD.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tablaGruposEntidadesCRUD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tablaGruposEntidadesCRUD.GridColor = System.Drawing.Color.Silver;
-            this.tablaGruposEntidadesCRUD.Location = new System.Drawing.Point(36, 127);
+            this.tablaGruposEntidadesCRUD.Location = new System.Drawing.Point(15, 112);
             this.tablaGruposEntidadesCRUD.Name = "tablaGruposEntidadesCRUD";
             this.tablaGruposEntidadesCRUD.Size = new System.Drawing.Size(743, 369);
             this.tablaGruposEntidadesCRUD.TabIndex = 22;
@@ -115,7 +115,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 546);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(771, 498);
             this.Controls.Add(this.tablaGruposEntidadesCRUD);
             this.Controls.Add(this.buttonEliminarGruposEntidadesCrud);
             this.Controls.Add(this.buttonEditarGruposEntidadesCrud);

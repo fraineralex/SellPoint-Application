@@ -4,9 +4,11 @@ using Layers.Framework.ADO.Net;
 
 namespace Splash_Screen
 {
+
     public partial class FormLogin : Form
     {
         public static bool registrando = false;
+        public static clsBeEntidades entidad = new clsBeEntidades();
 
         public FormLogin()
         {
@@ -15,7 +17,6 @@ namespace Splash_Screen
 
         private void Login(object sender, EventArgs e)
         {
-            clsBeEntidades entidad = new clsBeEntidades();
             clsLnEntidades logicaEntidad = new clsLnEntidades();
 
             entidad.UserNameEntidad = textBoxUserLogin.Text.ToString();

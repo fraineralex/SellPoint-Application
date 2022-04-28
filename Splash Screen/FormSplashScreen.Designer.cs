@@ -40,9 +40,9 @@
             // 
             this.barraProgresiva.AnimationFunction = ((WinFormAnimation.AnimationFunctions.Function)(resources.GetObject("barraProgresiva.AnimationFunction")));
             this.barraProgresiva.AnimationSpeed = 500;
-            this.barraProgresiva.BackColor = System.Drawing.Color.Gainsboro;
+            this.barraProgresiva.BackColor = System.Drawing.Color.White;
             this.barraProgresiva.Font = new System.Drawing.Font("Agency FB", 45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.barraProgresiva.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(180)))), ((int)(((byte)(148)))));
+            this.barraProgresiva.ForeColor = System.Drawing.Color.Black;
             this.barraProgresiva.InnerColor = System.Drawing.Color.Gainsboro;
             this.barraProgresiva.InnerMargin = 2;
             this.barraProgresiva.InnerWidth = -1;
@@ -53,7 +53,7 @@
             this.barraProgresiva.OuterColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(212)))), ((int)(((byte)(210)))));
             this.barraProgresiva.OuterMargin = -25;
             this.barraProgresiva.OuterWidth = 26;
-            this.barraProgresiva.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(180)))), ((int)(((byte)(148)))));
+            this.barraProgresiva.ProgressColor = System.Drawing.Color.Black;
             this.barraProgresiva.ProgressWidth = 6;
             this.barraProgresiva.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
             this.barraProgresiva.Size = new System.Drawing.Size(135, 146);
@@ -73,9 +73,9 @@
             // labelDataViewer
             // 
             this.labelDataViewer.AutoSize = true;
-            this.labelDataViewer.BackColor = System.Drawing.Color.Gainsboro;
+            this.labelDataViewer.BackColor = System.Drawing.Color.White;
             this.labelDataViewer.Font = new System.Drawing.Font("Agency FB", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDataViewer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(180)))), ((int)(((byte)(148)))));
+            this.labelDataViewer.ForeColor = System.Drawing.Color.Black;
             this.labelDataViewer.Location = new System.Drawing.Point(49, 36);
             this.labelDataViewer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDataViewer.Name = "labelDataViewer";
@@ -88,7 +88,7 @@
             // 
             this.labelIniciando.AutoSize = true;
             this.labelIniciando.Font = new System.Drawing.Font("Agency FB", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIniciando.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(180)))), ((int)(((byte)(148)))));
+            this.labelIniciando.ForeColor = System.Drawing.Color.Black;
             this.labelIniciando.Location = new System.Drawing.Point(76, 297);
             this.labelIniciando.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelIniciando.Name = "labelIniciando";
@@ -106,7 +106,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(275, 368);
             this.ControlBox = false;
             this.Controls.Add(this.labelIniciando);

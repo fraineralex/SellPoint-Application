@@ -57,15 +57,15 @@
             // 
             this.labelTituloRegistrarTipoEntidad.AutoSize = true;
             this.labelTituloRegistrarTipoEntidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTituloRegistrarTipoEntidad.Location = new System.Drawing.Point(194, 9);
+            this.labelTituloRegistrarTipoEntidad.Location = new System.Drawing.Point(172, 9);
             this.labelTituloRegistrarTipoEntidad.Name = "labelTituloRegistrarTipoEntidad";
-            this.labelTituloRegistrarTipoEntidad.Size = new System.Drawing.Size(218, 24);
+            this.labelTituloRegistrarTipoEntidad.Size = new System.Drawing.Size(274, 24);
             this.labelTituloRegistrarTipoEntidad.TabIndex = 1;
-            this.labelTituloRegistrarTipoEntidad.Text = "Registrar Tipo Entidad";
+            this.labelTituloRegistrarTipoEntidad.Text = "REGISTRAR TIPO ENTIDAD";
             // 
             // buttonGuardarRegistrarTipoEntidad
             // 
-            this.buttonGuardarRegistrarTipoEntidad.Location = new System.Drawing.Point(236, 422);
+            this.buttonGuardarRegistrarTipoEntidad.Location = new System.Drawing.Point(265, 382);
             this.buttonGuardarRegistrarTipoEntidad.Name = "buttonGuardarRegistrarTipoEntidad";
             this.buttonGuardarRegistrarTipoEntidad.Size = new System.Drawing.Size(75, 23);
             this.buttonGuardarRegistrarTipoEntidad.TabIndex = 6;
@@ -248,7 +248,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(603, 459);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(589, 419);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBoxDatosGeneralesRegistrarEntidad);

@@ -59,6 +59,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormColaboradores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormColaboradores.Designer.cs">
+      <DependentUpon>FormColaboradores.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormEntidadesCRUD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +124,9 @@
     <Compile Include="RJButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="FormColaboradores.resx">
+      <DependentUpon>FormColaboradores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormEntidadesCRUD.resx">
       <DependentUpon>FormEntidadesCRUD.cs</DependentUpon>
     </EmbeddedResource>

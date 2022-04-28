@@ -53,11 +53,11 @@
             // 
             this.labelTituloRegistrarGrupoEntidad.AutoSize = true;
             this.labelTituloRegistrarGrupoEntidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTituloRegistrarGrupoEntidad.Location = new System.Drawing.Point(256, 9);
+            this.labelTituloRegistrarGrupoEntidad.Location = new System.Drawing.Point(160, 9);
             this.labelTituloRegistrarGrupoEntidad.Name = "labelTituloRegistrarGrupoEntidad";
-            this.labelTituloRegistrarGrupoEntidad.Size = new System.Drawing.Size(234, 24);
+            this.labelTituloRegistrarGrupoEntidad.Size = new System.Drawing.Size(299, 24);
             this.labelTituloRegistrarGrupoEntidad.TabIndex = 2;
-            this.labelTituloRegistrarGrupoEntidad.Text = "Registrar Grupo Entidad";
+            this.labelTituloRegistrarGrupoEntidad.Text = "REGISTRAR GRUPO ENTIDAD";
             // 
             // groupBoxDatosGeneralesRegistrarEntidad
             // 
@@ -202,7 +202,7 @@
             // 
             // buttonGuardarRegistrarGrupoEntidad
             // 
-            this.buttonGuardarRegistrarGrupoEntidad.Location = new System.Drawing.Point(313, 415);
+            this.buttonGuardarRegistrarGrupoEntidad.Location = new System.Drawing.Point(280, 396);
             this.buttonGuardarRegistrarGrupoEntidad.Name = "buttonGuardarRegistrarGrupoEntidad";
             this.buttonGuardarRegistrarGrupoEntidad.Size = new System.Drawing.Size(75, 23);
             this.buttonGuardarRegistrarGrupoEntidad.TabIndex = 11;
@@ -214,7 +214,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(667, 450);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(605, 432);
             this.Controls.Add(this.buttonGuardarRegistrarGrupoEntidad);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBoxDatosGeneralesRegistrarEntidad);

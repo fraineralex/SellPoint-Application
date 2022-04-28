@@ -94,12 +94,12 @@
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(214, 9);
+            this.label3.Location = new System.Drawing.Point(203, 9);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(338, 46);
+            this.label3.Size = new System.Drawing.Size(390, 46);
             this.label3.TabIndex = 10;
-            this.label3.Text = "CRUD Entidades";
+            this.label3.Text = "CRUD ENTIDADES";
             // 
             // label1
             // 
@@ -116,7 +116,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(784, 541);
+            this.ClientSize = new System.Drawing.Size(766, 499);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxBuscarEntidadesCrud);

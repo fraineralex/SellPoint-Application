@@ -92,11 +92,11 @@
             // 
             this.labelTituloRegistrarEntidad.AutoSize = true;
             this.labelTituloRegistrarEntidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTituloRegistrarEntidad.Location = new System.Drawing.Point(359, 9);
+            this.labelTituloRegistrarEntidad.Location = new System.Drawing.Point(351, 9);
             this.labelTituloRegistrarEntidad.Name = "labelTituloRegistrarEntidad";
-            this.labelTituloRegistrarEntidad.Size = new System.Drawing.Size(170, 24);
+            this.labelTituloRegistrarEntidad.Size = new System.Drawing.Size(221, 24);
             this.labelTituloRegistrarEntidad.TabIndex = 0;
-            this.labelTituloRegistrarEntidad.Text = "Registrar Entidad";
+            this.labelTituloRegistrarEntidad.Text = "REGISTRAR ENTIDAD";
             // 
             // groupBoxDatosGeneralesRegistrarEntidad
             // 
@@ -278,7 +278,7 @@
             this.groupBox1.Controls.Add(this.textBoxURLPáginaWebRegistrarEntidad);
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(314, 77);
+            this.groupBox1.Location = new System.Drawing.Point(314, 58);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(235, 272);
             this.groupBox1.TabIndex = 2;
@@ -450,7 +450,7 @@
             this.groupBox3.Controls.Add(this.textBoxUsernameRegistrarEntidad);
             this.groupBox3.Controls.Add(this.label24);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(579, 77);
+            this.groupBox3.Location = new System.Drawing.Point(592, 77);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(280, 472);
             this.groupBox3.TabIndex = 4;
@@ -589,7 +589,7 @@
             // 
             // buttonGuardarRegistrarEntidad
             // 
-            this.buttonGuardarRegistrarEntidad.Location = new System.Drawing.Point(395, 601);
+            this.buttonGuardarRegistrarEntidad.Location = new System.Drawing.Point(443, 601);
             this.buttonGuardarRegistrarEntidad.Name = "buttonGuardarRegistrarEntidad";
             this.buttonGuardarRegistrarEntidad.Size = new System.Drawing.Size(75, 23);
             this.buttonGuardarRegistrarEntidad.TabIndex = 5;
@@ -612,7 +612,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(884, 636);
+            this.ClientSize = new System.Drawing.Size(892, 636);
             this.Controls.Add(this.buttonHomeRegistrarEntidad);
             this.Controls.Add(this.buttonGuardarRegistrarEntidad);
             this.Controls.Add(this.groupBox3);
