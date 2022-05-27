@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{97578682-1B14-4256-94E3-67073A7B8750}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CapaPresentacion</RootNamespace>
+    <AssemblyName>CapaPresentacion</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CapaDatos">
+      <HintPath>..\CapaDatos\bin\Debug\CapaDatos.dll</HintPath>
+    </Reference>
+    <Reference Include="CapaNegocio">
+      <HintPath>..\CapaNegocio\bin\Debug\CapaNegocio.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CRUDs\FormCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUDs\FormCursos.Designer.cs">
+      <DependentUpon>FormCursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\FormAcercaDe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\FormAcercaDe.Designer.cs">
+      <DependentUpon>FormAcercaDe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUDs\FormCursosRegistrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUDs\FormCursosRegistrar.Designer.cs">
+      <DependentUpon>FormCursosRegistrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUDs\FormEstudiantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUDs\FormEstudiantes.Designer.cs">
+      <DependentUpon>FormEstudiantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\FormMenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\FormMenuPrincipal.Designer.cs">
+      <DependentUpon>FormMenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUDs\FormEstudiantesRegistrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUDs\FormEstudiantesRegistrar.Designer.cs">
+      <DependentUpon>FormEstudiantesRegistrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUDs\FormProfesores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUDs\FormProfesores.Designer.cs">
+      <DependentUpon>FormProfesores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\FormSplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administracion\FormSplashScreen.Designer.cs">
+      <DependentUpon>FormSplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUDs\FormProfesoresRegistrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUDs\FormProfesoresRegistrar.Designer.cs">
+      <DependentUpon>FormProfesoresRegistrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUDs\Privilegios.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Administracion\FormAcercaDe.resx">
+      <DependentUpon>FormAcercaDe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUDs\FormCursos.resx">
+      <DependentUpon>FormCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUDs\FormCursosRegistrar.resx">
+      <DependentUpon>FormCursosRegistrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUDs\FormEstudiantes.resx">
+      <DependentUpon>FormEstudiantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\FormMenuPrincipal.resx">
+      <DependentUpon>FormMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administracion\FormSplashScreen.resx">
+      <DependentUpon>FormSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUDs\FormEstudiantesRegistrar.resx">
+      <DependentUpon>FormEstudiantesRegistrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUDs\FormProfesores.resx">
+      <DependentUpon>FormProfesores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUDs\FormProfesoresRegistrar.resx">
+      <DependentUpon>FormProfesoresRegistrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaSoporte\CapaSoporte.csproj">
+      <Project>{a090a6f3-3eb4-4a4d-8d99-4940d36e838b}</Project>
+      <Name>CapaSoporte</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

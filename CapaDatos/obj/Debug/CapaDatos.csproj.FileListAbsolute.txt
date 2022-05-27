@@ -1,0 +1,11 @@
+C:\Users\river\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Desktop\Projects\academia-bufalo\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\river\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Desktop\Projects\academia-bufalo\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\river\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Desktop\Projects\academia-bufalo\CapaDatos\bin\Debug\CapaNegocio.dll
+C:\Users\river\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Desktop\Projects\academia-bufalo\CapaDatos\bin\Debug\CapaNegocio.pdb
+C:\Users\river\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Desktop\Projects\academia-bufalo\CapaDatos\obj\Debug\CapaDatos.csproj.AssemblyReference.cache
+C:\Users\river\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Desktop\Projects\academia-bufalo\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+C:\Users\river\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Desktop\Projects\academia-bufalo\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
+C:\Users\river\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Desktop\Projects\academia-bufalo\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\river\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Desktop\Projects\academia-bufalo\CapaDatos\obj\Debug\CapaDatos.pdb
+C:\Users\river\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Desktop\Projects\academia-bufalo\CapaDatos\bin\Debug\CapaSoporte.dll
+C:\Users\river\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Desktop\Projects\academia-bufalo\CapaDatos\bin\Debug\CapaSoporte.pdb

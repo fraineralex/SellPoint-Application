@@ -1,0 +1,14 @@
+C:\Users\river\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Desktop\Projects\academia-bufalo\CapaNegocio\bin\Debug\CapaNegocio.dll
+C:\Users\river\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Desktop\Projects\academia-bufalo\CapaNegocio\bin\Debug\CapaNegocio.pdb
+C:\Users\river\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Desktop\Projects\academia-bufalo\CapaNegocio\bin\Debug\CapaPresentacion.exe
+C:\Users\river\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Desktop\Projects\academia-bufalo\CapaNegocio\bin\Debug\CapaPresentacion.pdb
+C:\Users\river\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Desktop\Projects\academia-bufalo\CapaNegocio\bin\Debug\CapaPresentacion.exe.config
+C:\Users\river\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Desktop\Projects\academia-bufalo\CapaNegocio\obj\Debug\CapaNegocio.csproj.AssemblyReference.cache
+C:\Users\river\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Desktop\Projects\academia-bufalo\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\river\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Desktop\Projects\academia-bufalo\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
+C:\Users\river\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Desktop\Projects\academia-bufalo\CapaNegocio\obj\Debug\CapaNegocio.dll
+C:\Users\river\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Desktop\Projects\academia-bufalo\CapaNegocio\obj\Debug\CapaNegocio.pdb
+C:\Users\river\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Desktop\Projects\academia-bufalo\CapaNegocio\bin\Debug\CapaDatos.dll
+C:\Users\river\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Desktop\Projects\academia-bufalo\CapaNegocio\bin\Debug\CapaDatos.pdb
+C:\Users\river\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Desktop\Projects\academia-bufalo\CapaNegocio\bin\Debug\CapaSoporte.dll
+C:\Users\river\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Desktop\Projects\academia-bufalo\CapaNegocio\bin\Debug\CapaSoporte.pdb

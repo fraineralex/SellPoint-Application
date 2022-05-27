@@ -1,0 +1,6 @@
+C:\Users\river\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Desktop\Projects\academia-bufalo\CapaSoporte\bin\Debug\CapaSoporte.dll
+C:\Users\river\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Desktop\Projects\academia-bufalo\CapaSoporte\bin\Debug\CapaSoporte.pdb
+C:\Users\river\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Desktop\Projects\academia-bufalo\CapaSoporte\obj\Debug\CapaSoporte.csproj.AssemblyReference.cache
+C:\Users\river\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Desktop\Projects\academia-bufalo\CapaSoporte\obj\Debug\CapaSoporte.csproj.CoreCompileInputs.cache
+C:\Users\river\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Desktop\Projects\academia-bufalo\CapaSoporte\obj\Debug\CapaSoporte.dll
+C:\Users\river\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\Desktop\Projects\academia-bufalo\CapaSoporte\obj\Debug\CapaSoporte.pdb
